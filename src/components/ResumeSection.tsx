@@ -76,7 +76,7 @@ const ResumeSection = () => {
             Experience and talks
           </h2>
           <p className="mt-5 max-w-5xl text-lg leading-relaxed text-muted-foreground/90 md:text-xl">
-            A lightweight timeline of roles, promotions, education, and speaking work.
+            A lightweight timeline of roles, education, and speaking work. Reach out for a full CV.
           </p>
         </div>
 

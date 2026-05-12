@@ -13,7 +13,7 @@ const HeroSection = () => {
           <div className="mb-8 flex items-center gap-4">
             <div className="h-px w-14 bg-accent" />
             <p className="text-sm font-semibold uppercase tracking-[0.28em] text-accent">
-              UX / AI / Product Strategy
+              UX / AI / Content / Product Strategy
             </p>
           </div>
 

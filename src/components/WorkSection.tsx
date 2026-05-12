@@ -26,6 +26,18 @@ const WorkSection = () => {
       ),
       tags: ["Content strategy", "A/B testing", "First-Time experience", "UX writing"],
       slug: "empty-states"
+    },
+    {
+      title: "The PCX CLUE Index",
+      description: (
+        <>
+          Copy reviews came fast and furious, taking time away from larger, strategic initiatives. We needed a way to democratize UX writing. 
+          <br /><br />
+          I built the CLUE Index, which stood for Content Legibility for User Ease. An AI-assisted tool for evaluating content against Cloudflare's voice, tone, terminology, and usability standards.
+        </>
+      ),
+      tags: ["AI-assisted UX", "Content strategy", "UX writing systems"],
+      slug: "clue-index"
     }
   ]
 

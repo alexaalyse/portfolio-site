@@ -289,25 +289,25 @@ const portfolioPieces = {
     prevProject: 'overview-pages'
   },
   'clue-index': {
-    title: 'CLUE Index Framework',
-    subtitle: 'Customer Lifecycle User Experience measurement framework',
-    problem: 'Product teams lacked a comprehensive way to measure user experience across the customer lifecycle. There was no standardized approach to track UX metrics, making it difficult to identify improvement opportunities and measure the impact of UX initiatives.',
+    title: 'The PCX CLUE Index',
+    subtitle: 'AI-assisted infrastructure for scalable UX writing quality',
+    problem: "As Cloudflare's product suite scaled, customer-facing content became increasingly inconsistent across dashboards, APIs, emails, and onboarding flows. UX writing reviews could not keep pace with the speed of product development, and emerging AI-generated content introduced even more variability in tone, terminology, and clarity.",
     impact: [
       {
-        header: 'Comprehensive UX measurement framework',
-        description: 'Established a complete framework for measuring and tracking user experience metrics.'
+        header: 'Improved dashboard content quality by 34.8%',
+        description: 'Initial testing across Zero Trust page descriptions increased the average CLUE score from 7.42 to 10 after revisions generated from the system recommendations.'
       },
       {
-        header: 'Data-driven decision making across product teams',
-        description: 'Enabled teams to make informed decisions based on user experience data.'
+        header: 'Standardized UX writing guidance across multiple content types',
+        description: 'Expanded the framework beyond UI copy to support error messages, API descriptions, changelogs, customer emails, and blog content.'
       },
       {
-        header: 'Improved customer journey understanding',
-        description: 'Better insights into how users interact with products across their journey.'
+        header: 'Reduced dependency on manual UX writing reviews',
+        description: 'Provided immediate, actionable feedback directly to teams, enabling faster iteration and reducing review bottlenecks for urgent releases.'
       },
       {
-        header: 'Reduced customer churn by 25%',
-        description: 'Significant reduction in customer churn through improved user experience.'
+        header: 'Created an operational system for measuring content quality',
+        description: 'Transformed UX writing guidance from subjective review feedback into a repeatable scoring framework tied to terminology, readability, tone, and usability standards.'
       }
     ],
     process: [
@@ -343,8 +343,8 @@ const portfolioPieces = {
       }
     ],
     beforeAfter: undefined,
-    tags: ['UX Metrics', 'Framework Development', 'Customer Journey', 'Analytics'],
-    nextProject: 'cloudy-ai',
+    tags: ['AI-assisted UX', 'Content quality', 'UX writing systems', 'Measurement'],
+    nextProject: null,
     prevProject: 'empty-states'
   },
   'cloudy-ai': {
@@ -454,6 +454,10 @@ export default async function PortfolioPiece({ params }: { params: Promise<{ slu
     return <EmptyStatesCaseStudy piece={piece} />
   }
 
+  if (slug === 'clue-index') {
+    return <ClueIndexCaseStudy piece={piece} />
+  }
+
   return (
     <PortfolioPieceClient piece={piece} />
   )
@@ -477,6 +481,15 @@ const emptyStatesSteps = [
   { id: "reflection", label: "Reflection", iconName: "book-open" as const, href: "#reflection" },
 ]
 
+const clueSteps = [
+  { id: "hero", label: "Summary", iconName: "book-open" as const, href: "#hero" },
+  { id: "impact", label: "Impact", iconName: "trending-up" as const, href: "#impact" },
+  { id: "problem", label: "Problem", iconName: "target" as const, href: "#problem" },
+  { id: "system", label: "Framework", iconName: "layers" as const, href: "#system" },
+  { id: "usage", label: "Use", iconName: "flask" as const, href: "#usage" },
+  { id: "reflection", label: "Reflection", iconName: "book-open" as const, href: "#reflection" },
+]
+
 const emptyStatesImpact = [
   {
     title: "Increased onboarding completion by up to 42.8%",
@@ -493,6 +506,25 @@ const emptyStatesImpact = [
   {
     title: "Introduced measurable onboarding experimentation",
     body: "Partnered with product, design, and engineering to implement analytics instrumentation, event tracking, and A/B testing that connected onboarding education directly to user success metrics.",
+  },
+]
+
+const clueImpact = [
+  {
+    title: "Improved dashboard content quality by 34.8%",
+    body: "Initial testing across Zero Trust page descriptions increased the average CLUE score from 7.42 to 10 after revisions generated from the system's recommendations.",
+  },
+  {
+    title: "Standardized UX writing guidance across multiple content types",
+    body: "The framework expanded beyond UI copy to support error messages, API descriptions, changelogs, customer emails, and blog content.",
+  },
+  {
+    title: "Reduced dependency on manual UX writing reviews",
+    body: "CLUE provided immediate, actionable feedback directly to teams, enabling faster iteration and reducing review bottlenecks for urgent releases.",
+  },
+  {
+    title: "Created an operational system for measuring content quality",
+    body: "The project transformed UX writing guidance from subjective review feedback into a repeatable scoring framework tied to terminology, readability, tone, and usability standards.",
   },
 ]
 
@@ -945,6 +977,235 @@ function EmptyStatesCaseStudy({ piece }: { piece: PortfolioPiece }) {
                   {
                     title: "Understanding the why increases motivation",
                     body: "The strongest results came from moments where users understood how a supporting task connected to their larger goal. When users understood why they needed to configure an identity provider or complete Zones onboarding, they were significantly more likely to follow through.",
+                  },
+                ].map((principle, index) => (
+                  <div key={principle.title} className="grid gap-3 border-t border-primary/20 pt-5 md:grid-cols-[4rem_minmax(0,1fr)]">
+                    <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+                      {String(index + 1).padStart(2, "0")}
+                    </p>
+                    <div>
+                      <h3 className="text-xl font-semibold text-primary">{principle.title}</h3>
+                      <p className="mt-3">{principle.body}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </CaseStudySection>
+
+            <section className="border-t border-primary/20 py-16">
+              <div className="flex justify-between items-center">
+                {piece.prevProject && (
+                  <Link href={`/work/${piece.prevProject}`}>
+                    <Button variant="outline" size="lg">
+                      <ArrowLeft className="w-4 h-4 mr-2" />
+                      Previous case study
+                    </Button>
+                  </Link>
+                )}
+                <div className="flex-1" />
+                {piece.nextProject && (
+                  <Link href={`/work/${piece.nextProject}`}>
+                    <Button size="lg">
+                      Next case study
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Button>
+                  </Link>
+                )}
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+    </>
+  )
+}
+
+function ClueIndexCaseStudy({ piece }: { piece: PortfolioPiece }) {
+  return (
+    <>
+      <PortfolioProcessNavigation steps={clueSteps} />
+      <main className="min-h-screen bg-background">
+        <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+          <div className="flex h-16 w-full items-center justify-between px-6 md:px-8">
+            <Link href="/" className="flex items-center space-x-2">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              <span className="text-xl font-bold">Alexa Mavrogianis</span>
+            </Link>
+            <div className="hidden md:flex items-center space-x-6">
+              <Link href="/#about" className="text-sm font-medium transition-colors hover:text-accent">Philosophy</Link>
+              <Link href="/#work" className="text-sm font-medium transition-colors hover:text-accent">Work</Link>
+              <Link href="/#resume" className="text-sm font-medium transition-colors hover:text-accent">Resume</Link>
+              <Link href="/#contact" className="text-sm font-medium transition-colors hover:text-accent">Contact</Link>
+            </div>
+          </div>
+        </nav>
+
+        <div className="relative overflow-hidden lg:pl-28">
+          <div aria-hidden="true" className="pointer-events-none absolute -right-24 top-32 hidden h-72 w-72 rotate-12 border border-accent/15 lg:block" />
+          <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[24vw] bg-[linear-gradient(90deg,transparent,rgba(45,212,191,0.04))] lg:block" />
+
+          <div className="relative z-10 w-full max-w-[1440px] px-6 py-20 md:px-10 md:py-24 lg:pr-20">
+            <section id="hero" className="pb-16 md:pb-20">
+              <div className="mb-8 flex items-center gap-4">
+                <div className="h-px w-14 bg-accent" />
+                <p className="text-sm font-semibold uppercase tracking-[0.28em] text-accent">
+                  Case study
+                </p>
+              </div>
+              <h1 className="max-w-6xl text-5xl font-bold leading-[0.98] text-primary md:text-7xl">
+                AI-assisted infrastructure for scalable UX writing quality
+              </h1>
+              <div className="mt-8 max-w-6xl">
+                <div className="text-xl leading-relaxed text-muted-foreground/90 md:text-2xl">
+                  <div className="mb-6 overflow-hidden border border-primary/20 bg-background lg:float-right lg:mb-6 lg:ml-10 lg:mt-2 lg:w-[48%]">
+                    <video
+                      className="aspect-video w-full object-cover"
+                      controls
+                      muted
+                      playsInline
+                      preload="metadata"
+                    >
+                      <source src="/clue-demo.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <p>
+                    As Cloudflare's product suite scaled, customer-facing content became increasingly inconsistent across dashboards, APIs, emails, and onboarding flows. UX writing reviews could not keep pace with the speed of product development, and emerging AI-generated content introduced even more variability in tone, terminology, and clarity.
+                  </p>
+                  <p className="mt-5">
+                    I saw an opportunity to turn UX writing guidance into something measurable and operationalized: a system that could evaluate content against Cloudflare's voice, tone, terminology, and usability standards in real time.
+                  </p>
+                  <p className="mt-5">
+                    The result was the PCX CLUE Index. CLUE stood for Content Legibility for User Ease, and I designed and built it to scale UX writing quality across the organization.
+                  </p>
+                </div>
+                <div className="clear-both mt-10 flex flex-wrap gap-3">
+                  {piece.tags.map((tag) => (
+                    <span key={tag} className="border border-primary/20 px-3 py-1 text-sm font-medium text-muted-foreground">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            <CaseStudySection id="impact" eyebrow="Impact" title="My impact">
+              <div className="grid gap-6 md:grid-cols-2">
+                {clueImpact.map((item) => (
+                  <div key={item.title} className="border-t border-primary/20 pt-5">
+                    <h3 className="text-xl font-semibold text-primary">{item.title}</h3>
+                    <p className="mt-3">{item.body}</p>
+                  </div>
+                ))}
+              </div>
+            </CaseStudySection>
+
+            <CaseStudySection id="problem" eyebrow="The problem" title="UX writing standards were treated like reference material, not operational infrastructure">
+              <div className="max-w-6xl space-y-6">
+                <p>
+                  Most organizations treat UX writing standards as reference material. The assumption is that if teams have access to a glossary or style guide, consistency will naturally follow.
+                </p>
+                <p>
+                  In practice, that rarely happens. Teams were shipping content from dozens of different perspectives, each with their own assumptions about terminology, tone, and user familiarity. Some descriptions were overly technical. Others were vague or abstract. Many explained implementation details without clarifying user outcomes.
+                </p>
+                <p>
+                  The inconsistencies became especially visible in the Zero Trust dashboard, where users were already navigating highly complex workflows. Even small wording differences changed how users interpreted products, policies, and system behavior.
+                </p>
+                <div className="space-y-4 border-t border-primary/20 pt-6">
+                  <p>
+                    What initially appeared to be a writing consistency issue revealed a larger systems problem. UX writing guidance was difficult to operationalize at scale, teams lacked immediate feedback loops during content creation, and content quality could not be measured consistently.
+                  </p>
+                  <p>
+                    Review processes also relied heavily on institutional knowledge, while AI-generated copy introduced additional variability in tone and terminology.
+                  </p>
+                </div>
+                <p>
+                  The introduction of generative AI accelerated the urgency of the problem. Teams could now generate content faster than ever, but speed amplified inconsistency. AI tools were effective at producing drafts, yet they lacked awareness of Cloudflare-specific terminology, UX conventions, and product context.
+                </p>
+                <p className="text-foreground">
+                  The challenge was no longer just "How do we review more content?" It became: "How do we create a scalable system that helps teams produce clearer content before UX review is needed?"
+                </p>
+              </div>
+            </CaseStudySection>
+
+            <CaseStudySection id="system" eyebrow="The framework" title="A custom AI-assisted evaluation system for Cloudflare UX writing">
+              <div className="grid gap-8 md:grid-cols-[minmax(0,0.8fr)_minmax(18rem,0.45fr)]">
+                <div className="space-y-6">
+                  <p>
+                    I designed and built the PCX CLUE Index as a custom AI-assisted UX writing evaluation system tailored specifically to Cloudflare's products, terminology, and voice guidelines.
+                  </p>
+                  <p>
+                    At the time, AI writing workflows were still in their infancy, and primarily focused on generating copy with ChatGPT or Gemini. I approached the problem differently: how could AI help evaluate and improve content quality instead?
+                  </p>
+                  <p>
+                    The system transformed UX writing principles into programmable scoring logic. I translated subjective writing guidance into measurable evaluation criteria using regex-based language detection, indexed terminology validation, structural writing checks, contextual AI analysis, and content-type-specific scoring models.
+                  </p>
+                  <p>
+                    This meant CLUE could evaluate far more than grammar. The system identified passive voice, missing Oxford commas, unclear action framing, terminology inconsistencies, tone mismatches, and UX writing anti-patterns using custom-built rules and AI interpretation layers.
+                  </p>
+                  <p>
+                    I was able to write the regex expressions and scoring heuristics in a way that effectively turned UX writing standards into mathematical evaluation systems.
+                  </p>
+                </div>
+                <div className="grid gap-4">
+                  {["Regex-based language detection", "Indexed terminology validation", "Structural writing checks", "Contextual AI analysis", "Content-type-specific scoring"].map((item) => (
+                    <div key={item} className="border-t border-accent/40 pt-4 text-foreground">{item}</div>
+                  ))}
+                </div>
+              </div>
+            </CaseStudySection>
+
+            <CaseStudySection id="usage" eyebrow="How it worked" title="Fast feedback loops, tailored scoring, and actionable recommendations">
+              <div className="space-y-8">
+                <p>
+                  Different content types, including error messages, API parameter descriptions, UI descriptions, emails, changelogs, and blog content, each used tailored scoring criteria based on their user context and communication goals.
+                </p>
+                <p>
+                  I also designed the product experience for the tool itself, focusing on fast iteration loops and actionable recommendations rather than abstract scoring. Teams could paste content into CLUE, receive immediate feedback, generate AI-assisted revisions, and iterate toward stronger content quality directly within the workflow.
+                </p>
+                <p>
+                  The result was not a generic grammar checker. It was a Cloudflare-specific UX writing system designed to scale clarity, consistency, and usability across a rapidly growing enterprise platform.
+                </p>
+                <div className="grid gap-6 md:grid-cols-3">
+                  {[
+                    {
+                      title: "Evaluate",
+                      body: "Analyze content against Cloudflare-specific terminology, voice, tone, usability, and content-type expectations.",
+                    },
+                    {
+                      title: "Recommend",
+                      body: "Surface specific issues and generate actionable AI-assisted revisions instead of only returning a score.",
+                    },
+                    {
+                      title: "Iterate",
+                      body: "Help teams refine content quickly inside the workflow before a manual UX writing review was needed.",
+                    },
+                  ].map((step, index) => (
+                    <div key={step.title} className="border-t border-primary/20 pt-5">
+                      <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+                        {String(index + 1).padStart(2, "0")}
+                      </p>
+                      <h3 className="mt-4 text-xl font-semibold text-primary">{step.title}</h3>
+                      <p className="mt-3">{step.body}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </CaseStudySection>
+
+            <CaseStudySection id="reflection" eyebrow="Reflection" title="Scalable UX systems matter more than isolated copy improvements">
+              <div className="grid gap-6">
+                {[
+                  {
+                    title: "Scalable UX systems matter more than isolated copy improvements",
+                    body: "The long-term value of CLUE was not individual recommendations. It was the creation of a reusable system that embedded UX writing standards directly into day-to-day workflows. That shift made consistency more sustainable as the organization scaled.",
+                  },
+                  {
+                    title: "AI content generation increases the importance of UX standards",
+                    body: "Generative AI dramatically accelerates content creation, but acceleration without guardrails increases inconsistency. Systems like CLUE become more valuable in AI-assisted environments because they provide measurable standards for clarity, terminology, and usability.",
+                  },
+                  {
+                    title: "Content quality is a product experience issue",
+                    body: "One of the strongest takeaways from this project was that unclear content often signals unclear product thinking. The most effective revisions were rarely cosmetic. They clarified intent, simplified mental models, and made system behavior easier to predict.",
                   },
                 ].map((principle, index) => (
                   <div key={principle.title} className="grid gap-3 border-t border-primary/20 pt-5 md:grid-cols-[4rem_minmax(0,1fr)]">
