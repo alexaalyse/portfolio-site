@@ -73,7 +73,7 @@ const portfolioPieces = {
     ],
     beforeAfter: undefined,
     tags: ['UX Strategy', 'Information architecture', 'User research'],
-    nextProject: 'zero-trust-onboarding',
+    nextProject: 'empty-states',
     prevProject: null
   },
   'zero-trust-onboarding': {
@@ -286,7 +286,7 @@ const portfolioPieces = {
     ],
     tags: ['Content Strategy', 'User Engagement', 'First-Time Experience', 'UX Writing', 'A/B Testing'],
     nextProject: 'clue-index',
-    prevProject: 'overview-pages'
+    prevProject: 'zero-trust-navigation'
   },
   'clue-index': {
     title: 'The PCX CLUE Index',
