@@ -9,7 +9,7 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
 
   const navItems = [
-    { name: "About", href: "#about" },
+    { name: "Philosophy", href: "#about" },
     { name: "Work", href: "#work" },
     { name: "Resume", href: "#resume" },
     { name: "Contact", href: "#contact" }

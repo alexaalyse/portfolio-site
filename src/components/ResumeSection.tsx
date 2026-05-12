@@ -52,7 +52,7 @@ const ResumeSection = () => {
       icon: BasketballIcon,
       roles: [
         { title: "Creative Copywriter", dates: "Nov 2021 - Jul 2022" },
-        { title: "Associate Copywriter", dates: "Sep 2018 - Nov 2021", location: "Greater Pittsburgh Region" },
+        { title: "Associate Copywriter", dates: "Sep 2018 - Nov 2021" },
         { title: "Contract Copywriter", dates: "Aug 2017 - Sep 2018" },
       ],
     },

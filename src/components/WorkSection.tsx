@@ -16,30 +16,6 @@ const WorkSection = () => {
       slug: "zero-trust-navigation"
     },
     {
-      title: "Zero Trust Onboarding",
-      description: ( 
-        <>
-        We advertised VPN replacement as a use case for our Zero Trust platform. But there was a problem. Once you were in the dashboard, there was no mention of how to get started. 
-        <br /><br /> 
-        I led content strategy for new intent-based onboarding flows to help more users get started faster.
-        </>
-      ),
-      tags: ["Journey mapping", "Content strategy", "Data-driven"],
-      slug: "zero-trust-onboarding"
-    },
-    {
-      title: "Overview Pages",
-      description: (
-        <>
-          While doing some exploratory analysis, I noticed a pattern in our product data. Users would click straight down the side navigation before getting started - if they did at all.
-          <br /><br />
-          I advocated for the introduction of overview pages for top-level navigation items, and led content strategy once product signed off. 
-        </>
-      ),
-      tags: ["Product strategy", "UX writing", "Data analysis"],
-      slug: "overview-pages"
-    },
-    {
       title: "Empty States Strategy",
       description: (
         <>
@@ -50,30 +26,6 @@ const WorkSection = () => {
       ),
       tags: ["Content Strategy", "User Engagement", "First-Time Experience", "UX Writing"],
       slug: "empty-states"
-    },
-    {
-      title: "CLUE Index",
-      description: (
-        <>
-          The organization lacked a comprehensive framework for measuring and improving user experience across the customer lifecycle. UX initiatives were prioritized based on gut feelings rather than data, making it difficult to demonstrate ROI and secure resources for improvements.
-          <br /><br />
-          I created the CLUE Index (Content Legibility for User Ease) - a tool that grades content according to our style guide and democratizes UX writing through AI-powered rules.
-        </>
-      ),
-      tags: ["UX Metrics", "Framework Development", "Content Strategy", "AI Tools"],
-      slug: "clue-index"
-    },
-    {
-      title: "Cloudy AI",
-      description: (
-        <>
-          A user reported that an error message scared them so badly they stopped using the platform for 3 months. Our AI-powered dashboard agent lacked the ability to explain errors in human-friendly terms, leaving users confused and frustrated when things went wrong.
-          <br /><br />
-          I designed an error explainer system that uses AI to translate technical errors into clear explanations with actionable next steps, building user confidence and reducing support tickets.
-        </>
-      ),
-      tags: ["AI/UX", "Error Management", "User Trust", "Contextual Help"],
-      slug: "cloudy-ai"
     }
   ]
 
