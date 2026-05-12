@@ -38,6 +38,18 @@ const WorkSection = () => {
       ),
       tags: ["AI-assisted UX", "Content strategy", "UX writing systems"],
       slug: "clue-index"
+    },
+    {
+      title: "Gateway Firewall Policy Builder",
+      description: (
+        <>
+          Gateway administrators were configuring highly conditional DNS, HTTP, and Network policies through fragmented, scroll-heavy workflows.
+          <br /><br />
+          I led a redesign of the policy builder around a simpler "If / Then" mental model, using AI-assisted prototyping to accelerate alignment and make a complex enterprise workflow feel achievable.
+        </>
+      ),
+      tags: ["Enterprise UX", "AI prototyping", "UX design"],
+      slug: "gateway-policy-builder"
     }
   ]
 

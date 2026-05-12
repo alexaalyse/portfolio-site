@@ -344,8 +344,36 @@ const portfolioPieces = {
     ],
     beforeAfter: undefined,
     tags: ['AI-assisted UX', 'Content quality', 'UX writing systems', 'Measurement'],
-    nextProject: null,
+    nextProject: 'gateway-policy-builder',
     prevProject: 'empty-states'
+  },
+  'gateway-policy-builder': {
+    title: 'Gateway Firewall Policy Builder',
+    subtitle: 'Building a policy builder for how administrators actually think',
+    problem: 'The Gateway firewall policy builder was a heavily used Zero Trust surface, but administrators had to configure conditional DNS, HTTP, and Network policies through fragmented, scroll-heavy workflows shaped around implementation details instead of user intent.',
+    impact: [
+      {
+        header: 'Unified fragmented workflows',
+        description: 'Consolidated separate DNS, HTTP, and Network policy experiences into a single workflow aligned to how administrators naturally think about policy creation.'
+      },
+      {
+        header: 'Reduced cognitive overhead',
+        description: 'Introduced a persistent If / Then structure that kept conditions, actions, and downstream settings visible simultaneously.'
+      },
+      {
+        header: 'Accelerated organizational momentum',
+        description: 'Used AI-assisted prototyping to rapidly transform abstract UX concepts into interactive workflows stakeholders could immediately react to.'
+      },
+      {
+        header: 'Improved policy validation',
+        description: 'Added visual previews, natural-language summaries, and advanced expression views to help users better understand policy behavior before deployment.'
+      }
+    ],
+    process: [],
+    beforeAfter: undefined,
+    tags: ['Enterprise UX', 'Workflow Design', 'AI Prototyping', 'Zero Trust'],
+    nextProject: null,
+    prevProject: 'clue-index'
   },
   'cloudy-ai': {
     title: 'Cloudy AI',
@@ -404,7 +432,7 @@ const portfolioPieces = {
     beforeAfter: undefined,
     tags: ['AI/UX', 'Complex Systems', 'User Research', 'Interface Design'],
     nextProject: null,
-    prevProject: 'clue-index'
+    prevProject: 'gateway-policy-builder'
   }
 }
 
@@ -458,6 +486,10 @@ export default async function PortfolioPiece({ params }: { params: Promise<{ slu
     return <ClueIndexCaseStudy piece={piece} />
   }
 
+  if (slug === 'gateway-policy-builder') {
+    return <GatewayPolicyBuilderCaseStudy piece={piece} />
+  }
+
   return (
     <PortfolioPieceClient piece={piece} />
   )
@@ -487,6 +519,15 @@ const clueSteps = [
   { id: "problem", label: "Problem", iconName: "target" as const, href: "#problem" },
   { id: "system", label: "Framework", iconName: "layers" as const, href: "#system" },
   { id: "usage", label: "Use", iconName: "flask" as const, href: "#usage" },
+  { id: "reflection", label: "Reflection", iconName: "book-open" as const, href: "#reflection" },
+]
+
+const gatewaySteps = [
+  { id: "hero", label: "Summary", iconName: "book-open" as const, href: "#hero" },
+  { id: "impact", label: "Impact", iconName: "trending-up" as const, href: "#impact" },
+  { id: "problem", label: "Problem", iconName: "target" as const, href: "#problem" },
+  { id: "solution", label: "Solution", iconName: "layers" as const, href: "#solution" },
+  { id: "validation", label: "Validation", iconName: "flask" as const, href: "#validation" },
   { id: "reflection", label: "Reflection", iconName: "book-open" as const, href: "#reflection" },
 ]
 
@@ -525,6 +566,25 @@ const clueImpact = [
   {
     title: "Created an operational system for measuring content quality",
     body: "The project transformed UX writing guidance from subjective review feedback into a repeatable scoring framework tied to terminology, readability, tone, and usability standards.",
+  },
+]
+
+const gatewayImpact = [
+  {
+    title: "Unified fragmented workflows",
+    body: "Consolidated separate DNS, HTTP, and Network policy experiences into a single workflow aligned to how administrators naturally think about policy creation.",
+  },
+  {
+    title: "Reduced cognitive overhead",
+    body: "Introduced a persistent If / Then structure that kept conditions, actions, and downstream settings visible simultaneously.",
+  },
+  {
+    title: "Accelerated organizational momentum",
+    body: "Used AI-assisted prototyping to rapidly transform abstract UX concepts into interactive workflows stakeholders could immediately react to.",
+  },
+  {
+    title: "Improved policy validation",
+    body: "Added visual previews, natural-language summaries, and advanced expression views to help users better understand policy behavior before deployment.",
   },
 ]
 
@@ -1206,6 +1266,236 @@ function ClueIndexCaseStudy({ piece }: { piece: PortfolioPiece }) {
                   {
                     title: "Content quality is a product experience issue",
                     body: "One of the strongest takeaways from this project was that unclear content often signals unclear product thinking. The most effective revisions were rarely cosmetic. They clarified intent, simplified mental models, and made system behavior easier to predict.",
+                  },
+                ].map((principle, index) => (
+                  <div key={principle.title} className="grid gap-3 border-t border-primary/20 pt-5 md:grid-cols-[4rem_minmax(0,1fr)]">
+                    <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+                      {String(index + 1).padStart(2, "0")}
+                    </p>
+                    <div>
+                      <h3 className="text-xl font-semibold text-primary">{principle.title}</h3>
+                      <p className="mt-3">{principle.body}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </CaseStudySection>
+
+            <section className="border-t border-primary/20 py-16">
+              <div className="flex justify-between items-center">
+                {piece.prevProject && (
+                  <Link href={`/work/${piece.prevProject}`}>
+                    <Button variant="outline" size="lg">
+                      <ArrowLeft className="w-4 h-4 mr-2" />
+                      Previous case study
+                    </Button>
+                  </Link>
+                )}
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+    </>
+  )
+}
+
+function GatewayPolicyBuilderCaseStudy({ piece }: { piece: PortfolioPiece }) {
+  return (
+    <>
+      <PortfolioProcessNavigation steps={gatewaySteps} />
+      <main className="min-h-screen bg-background">
+        <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+          <div className="flex h-16 w-full items-center justify-between px-6 md:px-8">
+            <Link href="/" className="flex items-center space-x-2">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              <span className="text-xl font-bold">Alexa Mavrogianis</span>
+            </Link>
+            <div className="hidden md:flex items-center space-x-6">
+              <Link href="/#about" className="text-sm font-medium transition-colors hover:text-accent">Philosophy</Link>
+              <Link href="/#work" className="text-sm font-medium transition-colors hover:text-accent">Work</Link>
+              <Link href="/#resume" className="text-sm font-medium transition-colors hover:text-accent">Resume</Link>
+              <Link href="/#contact" className="text-sm font-medium transition-colors hover:text-accent">Contact</Link>
+            </div>
+          </div>
+        </nav>
+
+        <div className="relative overflow-hidden lg:pl-28">
+          <div aria-hidden="true" className="pointer-events-none absolute -right-24 top-32 hidden h-72 w-72 rotate-12 border border-accent/15 lg:block" />
+          <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[24vw] bg-[linear-gradient(90deg,transparent,rgba(168,85,247,0.04))] lg:block" />
+
+          <div className="relative z-10 w-full max-w-[1440px] px-6 py-20 md:px-10 md:py-24 lg:pr-20">
+            <section id="hero" className="pb-16 md:pb-20">
+              <div className="mb-8 flex items-center gap-4">
+                <div className="h-px w-14 bg-accent" />
+                <p className="text-sm font-semibold uppercase tracking-[0.28em] text-accent">
+                  Case study
+                </p>
+              </div>
+              <h1 className="max-w-6xl text-5xl font-bold leading-[0.98] text-primary md:text-7xl">
+                Building a policy builder for how adminstrators actually think
+              </h1>
+              <div className="mt-8 max-w-6xl space-y-5 text-xl leading-relaxed text-muted-foreground/90 md:text-2xl">
+                <p>
+                  The Gateway firewall policy builder was a fragmented, scroll-heavy configuration experience. I led a redesign to turn it into a unified visual workflow built around real user mental models.
+                </p>
+                <p>
+                  This work reframed policy creation around a persistent If / Then structure while using AI-assisted prototyping to rapidly accelerate alignment, iteration, and organizational momentum.
+                </p>
+              </div>
+              <div className="mt-10 flex flex-wrap gap-3">
+                {piece.tags.map((tag) => (
+                  <span key={tag} className="border border-primary/20 px-3 py-1 text-sm font-medium text-muted-foreground">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </section>
+
+            <CaseStudySection id="impact" eyebrow="Impact" title="My impact">
+              <div className="grid gap-6 md:grid-cols-2">
+                {gatewayImpact.map((item) => (
+                  <div key={item.title} className="border-t border-primary/20 pt-5">
+                    <h3 className="text-xl font-semibold text-primary">{item.title}</h3>
+                    <p className="mt-3">{item.body}</p>
+                  </div>
+                ))}
+              </div>
+            </CaseStudySection>
+
+            <CaseStudySection id="problem" eyebrow="The problem" title="A critical enterprise workflow had become a wall of scroll">
+              <div className="max-w-6xl space-y-6">
+                <p>
+                  The Gateway firewall policy builder was one of the most heavily used surfaces in the Zero Trust dashboard, but over time the experience became increasingly difficult to scale. Administrators needed to configure highly conditional policies across DNS, HTTP, and Network traffic, yet the UI separated those workflows into distinct policy types despite sharing the same underlying logic.
+                </p>
+                <p>
+                  As more controls, exceptions, and conditional settings were introduced, the experience gradually evolved into what many internally referred to as a wall of scroll: a vertically stacked workflow with excessive whitespace, limited progressive disclosure, and disconnected relationships between policy conditions and their resulting actions.
+                </p>
+                <p>
+                  Through customer calls, feedbask sessions, and competitive analysis, a recurring pattern emerged. Users generally understood the security outcomes they wanted, but struggled to map those goals to the structure of the interface itself. Administrators were not naturally thinking in terms of traffic categories or sequential configuration flows. They were thinking: If this happens, then do this.
+                </p>
+                <p>
+                  Redesigning such a critical enterprise workflow also carried significant organizational friction. Conversations around improving the policy builder had existed for a long time, but the sheer amount of conditionality made it difficult to communicate a radically different approach through static wireframes alone.
+                </p>
+                <p className="text-foreground">
+                  The challenge was not just simplifying the experience. It was creating enough momentum to make a large-scale redesign feel achievable.
+                </p>
+              </div>
+            </CaseStudySection>
+
+            <CaseStudySection id="solution" eyebrow="The solution" title="A unified If / Then workflow that preserved technical flexibility">
+              <div className="space-y-8">
+                <div className="max-w-6xl space-y-6">
+                  <p>
+                    I began by reframing the builder around a much simpler mental model: outcomes instead of implementation details. Rather than separating policies into distinct DNS, HTTP, and Network builders, traffic type became another component of policy scope itself.
+                  </p>
+                  <p>
+                    The redesigned experience centered around a persistent dual-column If / Then structure. Conditions and traffic scope remained visible on the left, while actions and downstream settings remained visible on the right. This preserved the relationship between policy inputs and outcomes at all times.
+                  </p>
+                  <p>
+                    To further reduce visual noise, the builder introduced progressive disclosure patterns that revealed advanced settings only when relevant. Instead of forcing users to parse every possible configuration state simultaneously, the interface adapted dynamically based on the policy selections being made.
+                  </p>
+                  <p>
+                    The redesign also introduced multiple ways to validate policy behavior depending on user expertise and preference: visual flow previews, natural-language summaries, and raw Wirefilter expressions for advanced users.
+                  </p>
+                </div>
+
+                <div className="grid gap-6 md:grid-cols-3">
+                  {[
+                    {
+                      title: "If",
+                      body: "Keep conditions, selectors, traffic scope, and exceptions visible as the policy is built.",
+                    },
+                    {
+                      title: "Then",
+                      body: "Show actions and downstream settings beside the conditions they depend on.",
+                    },
+                    {
+                      title: "Validate",
+                      body: "Help administrators preview behavior through visual flows, summaries, and advanced expressions.",
+                    },
+                  ].map((step, index) => (
+                    <div key={step.title} className="border-t border-primary/20 pt-5">
+                      <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+                        {String(index + 1).padStart(2, "0")}
+                      </p>
+                      <h3 className="mt-4 text-xl font-semibold text-primary">{step.title}</h3>
+                      <p className="mt-3">{step.body}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="border-t border-primary/20 pt-8">
+                  <div className="grid gap-6 lg:grid-cols-2">
+                    {[
+                      {
+                        label: "Before",
+                        src: "/gateway-policy-builder-before.png",
+                        alt: "Original Gateway policy builder with a long vertical configuration flow",
+                        caption: "The original builder spread related policy decisions across a long sequential form.",
+                      },
+                      {
+                        label: "After",
+                        src: "/gateway-policy-builder-solution.jpeg",
+                        alt: "Redesigned Gateway firewall policy builder with If and Then columns and a visual policy preview",
+                        caption: "The redesigned builder kept conditions, actions, and preview behavior visible together.",
+                      },
+                    ].map((image) => (
+                      <figure key={image.label}>
+                        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+                          {image.label}
+                        </p>
+                        <div className="overflow-hidden border border-primary/20 bg-card/40">
+                          <img src={image.src} alt={image.alt} className="h-auto w-full" />
+                        </div>
+                        <figcaption className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                          {image.caption}
+                        </figcaption>
+                      </figure>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </CaseStudySection>
+
+            <CaseStudySection id="validation" eyebrow="Validation" title="AI-assisted prototyping turned abstract alignment into tangible momentum">
+              <div className="grid gap-8 md:grid-cols-[minmax(0,0.8fr)_minmax(18rem,0.45fr)]">
+                <div className="space-y-6">
+                  <p>
+                    One of the most important parts of this project was not just the redesign itself. It was how AI dramatically accelerated the ability to explore and communicate complex UX ideas.
+                  </p>
+                  <p>
+                    Instead of relying solely on static wireframes, I used Figma Make alongside natural-language prompting and reference materials to rapidly generate interactive workflow concepts that stakeholders could immediately engage with. This moved conversations beyond abstract discussions and into tangible experiences much earlier in the process.
+                  </p>
+                  <p>
+                    I also used AI-assisted analysis of internal documentation to quickly extract and categorize the large number of conditional settings and behaviors supported by Gateway policies. This made it possible to simulate realistic progressive disclosure behaviors within the prototype itself.
+                  </p>
+                  <p>
+                    Although the redesigned policy builder is still early in its lifecycle, the prototype created a shared visual language for alignment discussions and compressed the path from concept to design refinement and engineering handoff.
+                  </p>
+                </div>
+                <div className="grid gap-4">
+                  {["Interactive workflows over static screens", "AI-assisted settings analysis", "Realistic progressive disclosure", "Faster stakeholder alignment"].map((item) => (
+                    <div key={item} className="border-t border-accent/40 pt-4 text-foreground">{item}</div>
+                  ))}
+                </div>
+              </div>
+            </CaseStudySection>
+
+            <CaseStudySection id="reflection" eyebrow="Reflection" title="Enterprise complexity becomes easier to manage when interfaces reflect user intent">
+              <div className="grid gap-6">
+                {[
+                  {
+                    title: "Enterprise complexity becomes easier to manage when interfaces reflect user intent",
+                    body: "Administrators already understood the security outcomes they wanted to achieve. The friction came from needing to translate those goals into workflows shaped around implementation details, protocol categories, and fragmented configuration patterns.",
+                  },
+                  {
+                    title: "Progressive disclosure is critical for scalable enterprise UX",
+                    body: "The issue was not the existence of advanced functionality. It was exposing too much of it simultaneously. Contextual progressive disclosure allowed the builder to support highly conditional workflows while reducing cognitive overhead and visual noise.",
+                  },
+                  {
+                    title: "AI is most valuable when it accelerates momentum, not just production",
+                    body: "The biggest impact AI had on this project was reducing the friction required to explore ambitious UX changes. By rapidly prototyping conditional workflows and simulating realistic interactions, AI helped transform abstract redesign conversations into tangible experiences teams could immediately align around.",
                   },
                 ].map((principle, index) => (
                   <div key={principle.title} className="grid gap-3 border-t border-primary/20 pt-5 md:grid-cols-[4rem_minmax(0,1fr)]">
