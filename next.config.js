@@ -7,9 +7,6 @@ const nextConfig = {
   },
   basePath: '/portfolio-site',
   assetPrefix: '/portfolio-site',
-  experimental: {
-    appDir: true,
-  },
 }
 
 module.exports = nextConfig

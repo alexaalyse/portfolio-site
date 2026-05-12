@@ -2,13 +2,23 @@
 
 import * as React from "react"
 import { cn } from "@/lib/utils"
-import { ChevronRight, Target, TrendingUp, Cog } from "lucide-react"
+import { ChevronRight, Target, TrendingUp, Cog, BookOpen, Layers, FlaskConical } from "lucide-react"
 
 type ProcessStep = {
   id: string
   label: string
-  icon: React.ComponentType<{ className?: string }>
+  icon?: React.ComponentType<{ className?: string }>
+  iconName?: "target" | "trending-up" | "cog" | "book-open" | "layers" | "flask"
   href: string
+}
+
+const navIconMap = {
+  target: Target,
+  "trending-up": TrendingUp,
+  cog: Cog,
+  "book-open": BookOpen,
+  layers: Layers,
+  flask: FlaskConical,
 }
 
 const defaultProcessSteps = [
@@ -72,7 +82,7 @@ const PortfolioProcessNavigation = ({ steps = defaultProcessSteps }: { steps?: P
       <div className="flex flex-col items-center space-y-6">
         {processSteps.map((step, index) => {
           const status = getStepStatus(step.id)
-          const Icon = step.icon
+          const Icon = step.icon ?? (step.iconName ? navIconMap[step.iconName] : Cog)
           
           return (
             <div key={step.id} className="relative flex flex-col items-center group">
