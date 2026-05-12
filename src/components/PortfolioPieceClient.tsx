@@ -85,7 +85,7 @@ export default function PortfolioPieceClient({ piece }: { piece: PortfolioPiece 
       <PortfolioProcessNavigation />
       <main className="min-h-screen bg-background">
         <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-          <div className="container flex h-16 items-center justify-between">
+          <div className="flex h-16 w-full items-center justify-between px-6 md:px-8">
             <Link href="/" className="flex items-center space-x-2">
               <ArrowLeft className="w-4 h-4 mr-2" />
               <span className="text-xl font-bold">Alexa Mavrogianis</span>
@@ -283,7 +283,7 @@ export default function PortfolioPieceClient({ piece }: { piece: PortfolioPiece 
                 {piece.prevProject && (
                   <Link href={`/work/${piece.prevProject}`}>
                     <Button variant="outline" size="lg">
-                      Previous project
+                      Previous case study
                     </Button>
                   </Link>
                 )}
@@ -291,7 +291,7 @@ export default function PortfolioPieceClient({ piece }: { piece: PortfolioPiece 
                 {piece.nextProject && (
                   <Link href={`/work/${piece.nextProject}`}>
                     <Button size="lg">
-                      Next project
+                      Next case study
                     </Button>
                   </Link>
                 )}

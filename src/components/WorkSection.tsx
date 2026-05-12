@@ -24,7 +24,7 @@ const WorkSection = () => {
           I developed a comprehensive empty states framework with engaging copy and visual designs that provided contextual guidance and clear next steps.
         </>
       ),
-      tags: ["Content Strategy", "User Engagement", "First-Time Experience", "UX Writing"],
+      tags: ["Content strategy", "A/B testing", "First-Time experience", "UX writing"],
       slug: "empty-states"
     }
   ]

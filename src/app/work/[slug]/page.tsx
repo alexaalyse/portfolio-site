@@ -591,7 +591,7 @@ function NavigationOverhaulCaseStudy({ piece }: { piece: PortfolioPiece }) {
       <PortfolioProcessNavigation steps={navigationSteps} />
       <main className="min-h-screen bg-background">
         <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-          <div className="container flex h-16 items-center justify-between">
+          <div className="flex h-16 w-full items-center justify-between px-6 md:px-8">
             <Link href="/" className="flex items-center space-x-2">
               <ArrowLeft className="w-4 h-4 mr-2" />
               <span className="text-xl font-bold">Alexa Mavrogianis</span>
@@ -773,7 +773,7 @@ function NavigationOverhaulCaseStudy({ piece }: { piece: PortfolioPiece }) {
                 {piece.nextProject && (
                   <Link href={`/work/${piece.nextProject}`}>
                     <Button size="lg">
-                      Next project
+                      Next case study
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                   </Link>
@@ -793,7 +793,7 @@ function EmptyStatesCaseStudy({ piece }: { piece: PortfolioPiece }) {
       <PortfolioProcessNavigation steps={emptyStatesSteps} />
       <main className="min-h-screen bg-background">
         <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-          <div className="container flex h-16 items-center justify-between">
+          <div className="flex h-16 w-full items-center justify-between px-6 md:px-8">
             <Link href="/" className="flex items-center space-x-2">
               <ArrowLeft className="w-4 h-4 mr-2" />
               <span className="text-xl font-bold">Alexa Mavrogianis</span>
@@ -887,7 +887,7 @@ function EmptyStatesCaseStudy({ piece }: { piece: PortfolioPiece }) {
                 <div className="grid gap-6 border-t border-primary/20 pt-8 lg:grid-cols-2">
                   {[
                     { label: "Before", src: "/empty-state-before.webp", alt: "Original tunnel empty state" },
-                    { label: "After", src: "/empty-state-after.webp", alt: "Redesigned tunnel onboarding empty state" },
+                    { label: "After", src: "/empty-state-after-cropped.jpg", alt: "Redesigned tunnel onboarding empty state" },
                   ].map((image) => (
                     <figure key={image.label}>
                       <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-accent">
@@ -966,7 +966,7 @@ function EmptyStatesCaseStudy({ piece }: { piece: PortfolioPiece }) {
                   <Link href={`/work/${piece.prevProject}`}>
                     <Button variant="outline" size="lg">
                       <ArrowLeft className="w-4 h-4 mr-2" />
-                      Previous project
+                      Previous case study
                     </Button>
                   </Link>
                 )}

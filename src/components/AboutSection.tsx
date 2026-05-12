@@ -16,7 +16,7 @@ const AboutSection = () => {
 
         <div>
           <h2 className="max-w-6xl text-4xl font-bold leading-tight text-primary md:text-6xl">
-            Listen. Learn. Build Better Systems.
+            Listen. Learn. Build better systems.
           </h2>
 
           <div className="mt-10 max-w-6xl space-y-6 text-xl leading-relaxed text-muted-foreground/90 md:text-2xl">

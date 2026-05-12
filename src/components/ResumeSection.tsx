@@ -48,7 +48,7 @@ const ResumeSection = () => {
     },
     {
       company: "DICK'S Sporting Goods",
-      summary: "Content strategy, customer journeys, analytics-informed copy, and cross-functional marketing work.",
+      summary: "Content strategy, customer journeys, and analytics-informed copy.",
       icon: BasketballIcon,
       roles: [
         { title: "Creative Copywriter", dates: "Nov 2021 - Jul 2022" },
