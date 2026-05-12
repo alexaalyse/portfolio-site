@@ -17,7 +17,7 @@ const Navigation = () => {
 
   return (
     <nav className="w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between pl-8">
+      <div className="flex h-16 w-full max-w-[1440px] items-center justify-between px-6 md:px-10 lg:pl-28 lg:pr-20">
         <div className="flex items-center space-x-2">
           <h1 className="text-xl font-bold">Alexa Mavrogianis</h1>
         </div>
@@ -49,7 +49,7 @@ const Navigation = () => {
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
         <div className="md:hidden">
-          <div className="container py-4 space-y-2">
+          <div className="w-full px-6 py-4 space-y-2 md:px-10">
             {navItems.map((item) => (
               <a
                 key={item.name}
