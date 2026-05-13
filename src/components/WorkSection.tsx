@@ -4,7 +4,7 @@ import Link from "next/link"
 const WorkSection = () => {
   const projects = [
     {
-      title: "Zero Trust Navigation Overhaul",
+      title: "Zero Trust navigation overhaul",
       description: (
         <>
           A user once described the previous navigation as "the house of mirrors at the carnival." We needed a better way to help users quickly find what they needed.
@@ -16,7 +16,7 @@ const WorkSection = () => {
       slug: "zero-trust-navigation"
     },
     {
-      title: "Empty States Strategy",
+      title: "Empty states strategy",
       description: (
         <>
           Empty states across the platform were generic and failed to guide users toward meaningful actions. First-time users often felt lost when encountering zero-data scenarios, leading to high bounce rates and poor user retention.
@@ -40,7 +40,7 @@ const WorkSection = () => {
       slug: "clue-index"
     },
     {
-      title: "Gateway Firewall Policy Builder",
+      title: "Gateway firewall policy builder",
       description: (
         <>
           Gateway administrators were configuring highly conditional DNS, HTTP, and Network policies through fragmented, scroll-heavy workflows.
@@ -50,6 +50,18 @@ const WorkSection = () => {
       ),
       tags: ["Enterprise UX", "AI prototyping", "UX design"],
       slug: "gateway-policy-builder"
+    },
+    {
+      title: "Designing documentation for retrieval",
+      description: (
+        <>
+          Technically correct documentation was still producing unreliable AI answers once it was fragmented and retrieved by LLM systems.
+          <br /><br />
+          I created a chunkability framework for evaluating whether documentation could remain understandable, trustworthy, and actionable in isolation.
+        </>
+      ),
+      tags: ["AI content strategy", "Documentation IA", "RAG systems"],
+      slug: "documentation-for-retrieval"
     }
   ]
 
