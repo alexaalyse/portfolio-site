@@ -533,7 +533,7 @@ const navigationSteps = [
   { id: "problem", label: "Problem", iconName: "target" as const, href: "#problem" },
   { id: "system", label: "Solution", iconName: "layers" as const, href: "#system" },
   { id: "validated", label: "Validation", iconName: "flask" as const, href: "#validated" },
-  { id: "reflection", label: "Reflection", iconName: "book-open" as const, href: "#reflection" },
+  { id: "reflection", label: "Principles", iconName: "book-open" as const, href: "#reflection" },
 ]
 
 const emptyStatesSteps = [
@@ -542,7 +542,7 @@ const emptyStatesSteps = [
   { id: "problem", label: "Problem", iconName: "target" as const, href: "#problem" },
   { id: "solution", label: "Solution", iconName: "layers" as const, href: "#solution" },
   { id: "validation", label: "Metrics", iconName: "flask" as const, href: "#validation" },
-  { id: "reflection", label: "Reflection", iconName: "book-open" as const, href: "#reflection" },
+  { id: "reflection", label: "Principles", iconName: "book-open" as const, href: "#reflection" },
 ]
 
 const clueSteps = [
@@ -551,7 +551,7 @@ const clueSteps = [
   { id: "problem", label: "Problem", iconName: "target" as const, href: "#problem" },
   { id: "system", label: "Framework", iconName: "layers" as const, href: "#system" },
   { id: "usage", label: "Use", iconName: "flask" as const, href: "#usage" },
-  { id: "reflection", label: "Reflection", iconName: "book-open" as const, href: "#reflection" },
+  { id: "reflection", label: "Principles", iconName: "book-open" as const, href: "#reflection" },
 ]
 
 const gatewaySteps = [
@@ -560,7 +560,7 @@ const gatewaySteps = [
   { id: "problem", label: "Problem", iconName: "target" as const, href: "#problem" },
   { id: "solution", label: "Solution", iconName: "layers" as const, href: "#solution" },
   { id: "validation", label: "Validation", iconName: "flask" as const, href: "#validation" },
-  { id: "reflection", label: "Reflection", iconName: "book-open" as const, href: "#reflection" },
+  { id: "reflection", label: "Principles", iconName: "book-open" as const, href: "#reflection" },
 ]
 
 const retrievalSteps = [
@@ -569,7 +569,7 @@ const retrievalSteps = [
   { id: "problem", label: "Problem", iconName: "target" as const, href: "#problem" },
   { id: "solution", label: "Solution", iconName: "layers" as const, href: "#solution" },
   { id: "metrics", label: "Metrics", iconName: "flask" as const, href: "#metrics" },
-  { id: "reflection", label: "Reflection", iconName: "book-open" as const, href: "#reflection" },
+  { id: "reflection", label: "Principles", iconName: "book-open" as const, href: "#reflection" },
 ]
 
 const emptyStatesImpact = [
@@ -884,10 +884,10 @@ function NavigationOverhaulCaseStudy({ piece }: { piece: PortfolioPiece }) {
               </div>
             </CaseStudySection>
 
-            <CaseStudySection id="reflection" eyebrow="Reflection" title="Navigation shapes how users understand complex systems">
+            <CaseStudySection id="reflection" eyebrow="Transferable principles" title="Navigation shapes how users understand complex systems">
               <div className="space-y-8">
                 <p>
-                  This project fundamentally changed how I think about enterprise UX systems. I left with three principles:
+                  Here are principles I would carry into any complex product environment:
                 </p>
 
                 <div className="grid gap-6">
@@ -1087,8 +1087,13 @@ function EmptyStatesCaseStudy({ piece }: { piece: PortfolioPiece }) {
               </div>
             </CaseStudySection>
 
-            <CaseStudySection id="reflection" eyebrow="Reflection" title="Small moments of clarity can change whether users keep going">
-              <div className="grid gap-6">
+            <CaseStudySection id="reflection" eyebrow="Transferable principles" title="Small moments of clarity can change whether users keep going">
+              <div className="space-y-8">
+                <p>
+                  Here are principles I would carry into any complex onboarding experience:
+                </p>
+
+                <div className="grid gap-6">
                 {[
                   {
                     title: "Educated users are more successful users",
@@ -1109,6 +1114,7 @@ function EmptyStatesCaseStudy({ piece }: { piece: PortfolioPiece }) {
                     </div>
                   </div>
                 ))}
+                </div>
               </div>
             </CaseStudySection>
 
@@ -1424,8 +1430,13 @@ function ClueIndexCaseStudy({ piece }: { piece: PortfolioPiece }) {
               </div>
             </CaseStudySection>
 
-            <CaseStudySection id="reflection" eyebrow="Reflection" title="Scalable UX systems matter more than isolated copy improvements">
-              <div className="grid gap-6">
+            <CaseStudySection id="reflection" eyebrow="Transferable principles" title="Scalable UX systems matter more than isolated copy improvements">
+              <div className="space-y-8">
+                <p>
+                  Here are principles I would carry into any organization trying to make UX quality measurable and repeatable:
+                </p>
+
+                <div className="grid gap-6">
                 {[
                   {
                     title: "Scalable UX systems matter more than isolated copy improvements",
@@ -1450,6 +1461,7 @@ function ClueIndexCaseStudy({ piece }: { piece: PortfolioPiece }) {
                     </div>
                   </div>
                 ))}
+                </div>
               </div>
             </CaseStudySection>
 
@@ -1600,8 +1612,13 @@ function DocumentationForRetrievalCaseStudy({ piece }: { piece: PortfolioPiece }
               </div>
             </CaseStudySection>
 
-            <CaseStudySection id="reflection" eyebrow="Reflection" title="AI-ready documentation is fundamentally an information architecture problem">
-              <div className="grid gap-6">
+            <CaseStudySection id="reflection" eyebrow="Transferable principles" title="AI-ready documentation is fundamentally an information architecture problem">
+              <div className="space-y-8">
+                <p>
+                  Here are principles I would carry into any content system that needs to remain accurate when retrieved, fragmented, or read out of order:
+                </p>
+
+                <div className="grid gap-6">
                 {[
                   {
                     title: "AI-ready documentation is fundamentally an information architecture problem",
@@ -1626,6 +1643,7 @@ function DocumentationForRetrievalCaseStudy({ piece }: { piece: PortfolioPiece }
                     </div>
                   </div>
                 ))}
+                </div>
               </div>
             </CaseStudySection>
 
@@ -1830,8 +1848,13 @@ function GatewayPolicyBuilderCaseStudy({ piece }: { piece: PortfolioPiece }) {
               </div>
             </CaseStudySection>
 
-            <CaseStudySection id="reflection" eyebrow="Reflection" title="Enterprise complexity becomes easier to manage when interfaces reflect user intent">
-              <div className="grid gap-6">
+            <CaseStudySection id="reflection" eyebrow="Transferable principles" title="Enterprise complexity becomes easier to manage when interfaces reflect user intent">
+              <div className="space-y-8">
+                <p>
+                  Here are principles I would carry into any enterprise workflow with conditional logic, advanced settings, and high-stakes configuration:
+                </p>
+
+                <div className="grid gap-6">
                 {[
                   {
                     title: "Enterprise complexity becomes easier to manage when interfaces reflect user intent",
@@ -1856,6 +1879,7 @@ function GatewayPolicyBuilderCaseStudy({ piece }: { piece: PortfolioPiece }) {
                     </div>
                   </div>
                 ))}
+                </div>
               </div>
             </CaseStudySection>
 
