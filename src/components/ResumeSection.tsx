@@ -37,7 +37,7 @@ const ResumeSection = () => {
   const experience: Experience[] = [
     {
       company: "Cloudflare",
-      summary: "UX content strategy for complex B2B, security, and AI-driven product experiences.",
+      summary: "UX, content, and product strategy for complex B2B, security, and AI-driven experiences.",
       icon: Cloud,
       roles: [
         { title: "Lead UX Content Strategist", dates: "Oct 2025 - May 2026" },
