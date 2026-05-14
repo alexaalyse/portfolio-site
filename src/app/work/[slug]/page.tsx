@@ -1177,16 +1177,20 @@ function ClueIndexCaseStudy({ piece }: { piece: PortfolioPiece }) {
               </h1>
               <div className="mt-8 max-w-6xl">
                 <div className="text-xl leading-relaxed text-muted-foreground/90 md:text-2xl">
-                  <div className="mb-6 overflow-hidden border border-primary/20 bg-background lg:float-right lg:mb-6 lg:ml-10 lg:mt-2 lg:w-[48%]">
+                  <div className="mb-6 overflow-hidden border border-primary/20 bg-card/40 shadow-sm lg:float-right lg:mb-6 lg:ml-10 lg:mt-2 lg:w-[48%]">
                     <video
-                      className="aspect-video w-full object-cover"
+                      className="aspect-video w-full bg-background object-contain"
                       controls
                       muted
                       playsInline
+                      poster="/clue-index-full-score.png"
                       preload="metadata"
                     >
                       <source src="/clue-demo.mp4" type="video/mp4" />
                     </video>
+                    <p className="border-t border-primary/10 px-4 py-3 text-sm leading-relaxed text-muted-foreground">
+                      For the clearest view of the CLUE workflow, open the video in full screen.
+                    </p>
                   </div>
                   <p>
                     As Cloudflare's product suite scaled, customer-facing content became increasingly inconsistent across dashboards, APIs, emails, and onboarding flows. UX writing reviews could not keep pace with the speed of product development, and emerging AI-generated content introduced even more variability in tone, terminology, and clarity.
@@ -1195,7 +1199,7 @@ function ClueIndexCaseStudy({ piece }: { piece: PortfolioPiece }) {
                     I saw an opportunity to turn UX writing guidance into something measurable and operationalized: a system that could evaluate content against Cloudflare's voice, tone, terminology, and usability standards in real time.
                   </p>
                   <p className="mt-5">
-                    The result was the PCX CLUE Index. CLUE stood for Content Legibility for User Ease, and I designed and built it to scale UX writing quality across the organization.
+                    The result was the PCX CLUE Index, which stood for Content Legibility for User Ease. I designed the evaluation framework, wrote the regex-based rules that translated UX writing standards into measurable checks, and shaped the workflow teams used to score, revise, and improve content.
                   </p>
                 </div>
                 <div className="clear-both mt-10 flex flex-wrap gap-3">
@@ -1248,29 +1252,107 @@ function ClueIndexCaseStudy({ piece }: { piece: PortfolioPiece }) {
             </CaseStudySection>
 
             <CaseStudySection id="system" eyebrow="The framework" title="A custom AI-assisted evaluation system for Cloudflare UX writing">
-              <div className="grid gap-8 md:grid-cols-[minmax(0,0.8fr)_minmax(18rem,0.45fr)]">
-                <div className="space-y-6">
-                  <p>
-                    I designed and built the PCX CLUE Index as a custom AI-assisted UX writing evaluation system tailored specifically to Cloudflare's products, terminology, and voice guidelines.
-                  </p>
-                  <p>
-                    At the time, AI writing workflows were still in their infancy, and primarily focused on generating copy with ChatGPT or Gemini. I approached the problem differently: how could AI help evaluate and improve content quality instead?
-                  </p>
-                  <p>
-                    The system transformed UX writing principles into programmable scoring logic. I translated subjective writing guidance into measurable evaluation criteria using regex-based language detection, indexed terminology validation, structural writing checks, contextual AI analysis, and content-type-specific scoring models.
-                  </p>
-                  <p>
-                    This meant CLUE could evaluate far more than grammar. The system identified passive voice, missing Oxford commas, unclear action framing, terminology inconsistencies, tone mismatches, and UX writing anti-patterns using custom-built rules and AI interpretation layers.
-                  </p>
-                  <p>
-                    I was able to write the regex expressions and scoring heuristics in a way that effectively turned UX writing standards into mathematical evaluation systems.
-                  </p>
+              <div className="space-y-8">
+                <div className="grid gap-8 md:grid-cols-[minmax(0,0.8fr)_minmax(18rem,0.45fr)]">
+                  <div className="space-y-6">
+                    <p>
+                      I designed and built the PCX CLUE Index as a custom AI-assisted UX writing evaluation system tailored specifically to Cloudflare's products, terminology, and voice guidelines.
+                    </p>
+                    <p>
+                      At the time, AI writing workflows were still in their infancy, and primarily focused on generating copy with ChatGPT or Gemini. I approached the problem differently: how could AI help evaluate and improve content quality instead?
+                    </p>
+                    <p>
+                      The system transformed UX writing principles into programmable scoring logic. I translated subjective writing guidance into measurable evaluation criteria using regex-based language detection, indexed terminology validation, structural writing checks, contextual AI analysis, and content-type-specific scoring models.
+                    </p>
+                    <p>
+                      This meant CLUE could evaluate far more than grammar. The system identified passive voice, missing Oxford commas, unclear action framing, terminology inconsistencies, tone mismatches, and UX writing anti-patterns using custom-built rules and AI interpretation layers.
+                    </p>
+                    <p>
+                      I was able to write the regex expressions and scoring heuristics in a way that effectively turned UX writing standards into mathematical evaluation systems.
+                    </p>
+                  </div>
+                  <div className="grid gap-5">
+                    {[
+                      {
+                        title: "Regex-based language detection",
+                        body: "Found repeatable writing patterns like passive voice, missing Oxford commas, hidden verbs, and overly formal phrasing.",
+                      },
+                      {
+                        title: "Indexed terminology validation",
+                        body: "Checked copy against preferred Cloudflare terms so product language stayed consistent across surfaces.",
+                      },
+                      {
+                        title: "Sentence-level readability checks",
+                        body: "Measured length, density, acronyms, and action framing to identify copy that was accurate but hard to scan.",
+                      },
+                      {
+                        title: "Contextual AI analysis",
+                        body: "Used AI interpretation for judgment-based guidance, including tone, clarity, and whether the recommendation fit the content type.",
+                      },
+                      {
+                        title: "Content-type-specific scoring",
+                        body: "Weighted rules differently for UI copy, docs, emails, changelogs, and other formats based on their user context.",
+                      },
+                    ].map((item) => (
+                      <div key={item.title} className="border-t border-accent/40 pt-4">
+                        <h3 className="text-lg font-semibold leading-snug text-foreground">{item.title}</h3>
+                        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <div className="grid gap-4">
-                  {["Regex-based language detection", "Indexed terminology validation", "Structural writing checks", "Contextual AI analysis", "Content-type-specific scoring"].map((item) => (
-                    <div key={item} className="border-t border-accent/40 pt-4 text-foreground">{item}</div>
-                  ))}
-                </div>
+
+                <figure className="border-t border-primary/20 pt-8">
+                  <div className="mb-8">
+                    <p className="mb-5 text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+                      Regex examples
+                    </p>
+                    <div className="grid gap-4 lg:grid-cols-3">
+                      {[
+                        {
+                          title: "Passive voice",
+                          body: "Flagged passive constructions so teams could rewrite with clearer action and ownership.",
+                          patterns: [
+                            String.raw`\b(?:are|was|were|be|been|have|is|am|had|by|has)\s+[a-zA-Z]+(?:d|ing|en|ne|de)\b`,
+                          ],
+                        },
+                        {
+                          title: "Hidden verbs",
+                          body: "Detected nominalized phrasing that made product copy feel heavier than it needed to be.",
+                          patterns: [
+                            String.raw`\b(?:achieve|effect|give|make|reach|take|have)\w*s(?:an|a|the)\b.*(?:ment|tion|ance|sis)\b`,
+                            String.raw`\b(?:the|a|an)\b\s*(?:\w*[-]?(?:ing|tion|ment|sion))\s*\bof\b`,
+                          ],
+                        },
+                        {
+                          title: "Oxford commas",
+                          body: "Checked list structures against Cloudflare's style expectations for clarity and consistency.",
+                          patterns: [
+                            String.raw`[^,.]+, [^,.]+ \b(and|or)\b [^,]+`,
+                          ],
+                        },
+                      ].map((rule) => (
+                        <div key={rule.title} className="border-t border-primary/20 pt-5">
+                          <h3 className="text-xl font-semibold text-primary">{rule.title}</h3>
+                          <p className="mt-3 text-base leading-relaxed text-muted-foreground">{rule.body}</p>
+                          <pre className="mt-4 whitespace-pre-wrap break-words border border-primary/20 bg-card/40 p-4 text-xs leading-relaxed text-foreground [overflow-wrap:anywhere]">
+                            <code>{rule.patterns.join("\n")}</code>
+                          </pre>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="overflow-hidden border border-primary/20 bg-card/40">
+                    <img
+                      src="/clue-index-score-modal.png"
+                      alt="CLUE Index score details modal showing weighted rule categories and individual writing guidelines"
+                      className="h-auto w-full"
+                    />
+                  </div>
+                  <figcaption className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                    The score explanation showed how each content type was evaluated across weighted rules, including regex checks, indexed terminology checks, and AI-assisted interpretation.
+                  </figcaption>
+                </figure>
               </div>
             </CaseStudySection>
 
@@ -1285,6 +1367,36 @@ function ClueIndexCaseStudy({ piece }: { piece: PortfolioPiece }) {
                 <p>
                   The result was not a generic grammar checker. It was a Cloudflare-specific UX writing system designed to scale clarity, consistency, and usability across a rapidly growing enterprise platform.
                 </p>
+
+                <div className="grid gap-6 border-t border-primary/20 pt-8 lg:grid-cols-2">
+                  {[
+                    {
+                      label: "Scoring workflow",
+                      src: "/clue-index-full-score.png",
+                      alt: "CLUE Index interface with copy input, a 10 out of 10 score, and no recommendations",
+                      caption: "Teams could select a content type, paste draft copy, and generate a score tied to Cloudflare-specific UX writing standards.",
+                    },
+                    {
+                      label: "Recommendation output",
+                      src: "/clue-index-recommendations.png",
+                      alt: "CLUE Index recommendations panel showing conversational tone, sentence length, and active voice feedback",
+                      caption: "When content missed a rule, CLUE returned specific recommendations with examples teams could act on immediately.",
+                    },
+                  ].map((image) => (
+                    <figure key={image.label}>
+                      <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+                        {image.label}
+                      </p>
+                      <div className="overflow-hidden border border-primary/20 bg-card/40">
+                        <img src={image.src} alt={image.alt} className="h-auto w-full" />
+                      </div>
+                      <figcaption className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                        {image.caption}
+                      </figcaption>
+                    </figure>
+                  ))}
+                </div>
+
                 <div className="grid gap-6 md:grid-cols-3">
                   {[
                     {
