@@ -343,7 +343,7 @@ const portfolioPieces = {
       }
     ],
     beforeAfter: undefined,
-    tags: ['AI-assisted UX', 'Content quality', 'UX writing systems', 'Measurement'],
+    tags: ['AI-assisted UX', 'Content quality', 'UX Writing Systems', 'Measurement'],
     nextProject: 'gateway-policy-builder',
     prevProject: 'empty-states'
   },
@@ -1496,20 +1496,12 @@ function DocumentationForRetrievalCaseStudy({ piece }: { piece: PortfolioPiece }
                     body: "The biggest lesson from this work was that retrieval quality depends heavily on structure, not just writing quality. Documentation now has to function both as a human reading experience and as a machine-readable knowledge system.",
                   },
                   {
-                    title: "Chunking changes what good documentation means",
-                    body: "Humans read sequentially. LLMs retrieve fragments. That changes the value of headings, captions, section openers, labels, and scope placement in ways traditional documentation guidance rarely accounted for.",
-                  },
-                  {
                     title: "Retrieval failures are often predictable",
                     body: "Many hallucinations were not random. They consistently mapped back to structural weaknesses like anonymous headings, fragmented tables, missing scope, or disconnected constraints.",
                   },
                   {
                     title: "Small structural changes can dramatically improve AI reliability",
                     body: "Some of the highest-impact fixes were deceptively lightweight: adding product identity to section openers, rewriting generic headings, adding table captions, moving constraints earlier, and using more retrieval-oriented phrasing.",
-                  },
-                  {
-                    title: "Documentation is increasingly infrastructure",
-                    body: "This project changed how I think about content systems entirely. Documentation is no longer just support material. In AI-assisted environments, it becomes part of the reasoning infrastructure itself.",
                   },
                 ].map((principle, index) => (
                   <div key={principle.title} className="grid gap-3 border-t border-primary/20 pt-5 md:grid-cols-[4rem_minmax(0,1fr)]">
@@ -1577,7 +1569,7 @@ function GatewayPolicyBuilderCaseStudy({ piece }: { piece: PortfolioPiece }) {
                 </p>
               </div>
               <h1 className="max-w-6xl text-5xl font-bold leading-[0.98] text-primary md:text-7xl">
-                Building a policy builder for how adminstrators actually think
+                Building a policy builder for how administrators actually think
               </h1>
               <div className="mt-8 max-w-6xl space-y-5 text-xl leading-relaxed text-muted-foreground/90 md:text-2xl">
                 <p>
@@ -1616,7 +1608,7 @@ function GatewayPolicyBuilderCaseStudy({ piece }: { piece: PortfolioPiece }) {
                   As more controls, exceptions, and conditional settings were introduced, the experience gradually evolved into what many internally referred to as a wall of scroll: a vertically stacked workflow with excessive whitespace, limited progressive disclosure, and disconnected relationships between policy conditions and their resulting actions.
                 </p>
                 <p>
-                  Through customer calls, feedbask sessions, and competitive analysis, a recurring pattern emerged. Users generally understood the security outcomes they wanted, but struggled to map those goals to the structure of the interface itself. Administrators were not naturally thinking in terms of traffic categories or sequential configuration flows. They were thinking: If this happens, then do this.
+                  Through customer calls, feedback sessions, and competitive analysis, a recurring pattern emerged. Users generally understood the security outcomes they wanted, but struggled to map those goals to the structure of the interface itself. Administrators were not naturally thinking in terms of traffic categories or sequential configuration flows. They were thinking: If this happens, then do this.
                 </p>
                 <p>
                   Redesigning such a critical enterprise workflow also carried significant organizational friction. Conversations around improving the policy builder had existed for a long time, but the sheer amount of conditionality made it difficult to communicate a radically different approach through static wireframes alone.
@@ -1762,6 +1754,15 @@ function GatewayPolicyBuilderCaseStudy({ piece }: { piece: PortfolioPiece }) {
                     <Button variant="outline" size="lg">
                       <ArrowLeft className="w-4 h-4 mr-2" />
                       Previous case study
+                    </Button>
+                  </Link>
+                )}
+                <div className="flex-1" />
+                {piece.nextProject && (
+                  <Link href={`/work/${piece.nextProject}`}>
+                    <Button size="lg">
+                      Next case study
+                      <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                   </Link>
                 )}

@@ -24,7 +24,7 @@ const WorkSection = () => {
           I developed a comprehensive empty states framework with engaging copy and visual designs that provided contextual guidance and clear next steps.
         </>
       ),
-      tags: ["Content strategy", "A/B testing", "First-Time experience", "UX writing"],
+      tags: ["Content strategy", "A/B testing", "First-Time experience", "UX Writing"],
       slug: "empty-states"
     },
     {
@@ -36,7 +36,7 @@ const WorkSection = () => {
           I built the CLUE Index, which stood for Content Legibility for User Ease. An AI-assisted tool for evaluating content against Cloudflare's voice, tone, terminology, and usability standards.
         </>
       ),
-      tags: ["AI-assisted UX", "Content strategy", "UX writing systems"],
+      tags: ["AI-assisted UX", "Content strategy", "UX Writing Systems"],
       slug: "clue-index"
     },
     {

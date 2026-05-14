@@ -1,4 +1,4 @@
-import { ArrowDown, Cloud, GraduationCap, Mic } from "lucide-react"
+import { ArrowDown, Cloud, ExternalLink, GraduationCap, Mic } from "lucide-react"
 import type { ComponentType } from "react"
 
 type TimelineRole = {
@@ -76,7 +76,15 @@ const ResumeSection = () => {
             Experience and talks
           </h2>
           <p className="mt-5 max-w-5xl text-lg leading-relaxed text-muted-foreground/90 md:text-xl">
-            A lightweight timeline of roles, education, and speaking work. Reach out for a full CV.
+            A lightweight timeline of roles, education, and speaking work.{" "}
+            <a
+              href="/alexa-mavrogianis-resume.pdf"
+              download
+              className="font-semibold text-accent underline underline-offset-4 transition-colors hover:text-primary"
+            >
+              Download full resume
+            </a>
+            .
           </p>
         </div>
 
@@ -138,13 +146,13 @@ const ResumeSection = () => {
               Northwestern University
             </p>
             <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground md:text-base">
-              M.S. Information Design and Strategy, Communicating with Data specialization
+              M.S. Information Design and Strategy - Specialization: Communicating with Data
             </p>
             <p className="mt-5 text-base font-medium leading-relaxed md:text-lg">
               The Ohio State University
             </p>
             <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground md:text-base">
-              B.A. Journalism; minors in Media Production and Analysis, Pop Culture, and Political Science
+              B.A. Journalism - Minors: Media Production and Analysis, Pop Culture, and Political Science
             </p>
           </div>
 
@@ -154,7 +162,15 @@ const ResumeSection = () => {
               <p className="font-semibold text-primary">Speaking</p>
             </div>
             <p className="mt-4 text-base font-medium leading-relaxed md:text-lg">
-              Growing in Content 2026
+              <a
+                href="https://workingincontent.com/growing/program/when-the-right-answer-isnt-more-words"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 font-semibold text-accent underline underline-offset-4 transition-colors hover:text-primary"
+              >
+                <span>Growing in Content 2026</span>
+                <ExternalLink className="h-4 w-4" aria-hidden="true" />
+              </a>
             </p>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-base">
               "When the right answer isn't more words: How content feedback reveals what products really need"

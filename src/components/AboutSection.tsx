@@ -16,24 +16,27 @@ const AboutSection = () => {
 
         <div>
           <h2 className="max-w-6xl text-4xl font-bold leading-tight text-primary md:text-6xl">
-            Listen. Learn. Build better systems.
+            Listen closely. Build intentionally. Design systems that scale.
           </h2>
 
           <div className="mt-10 max-w-6xl space-y-6 text-xl leading-relaxed text-muted-foreground/90 md:text-2xl">
             <p>
-              I believe good UX starts with paying attention.
+              I believe good UX starts with paying attention. Not just to what users say, but to the patterns beneath the friction. What keeps confusing people? What workarounds are becoming normalized? What signals is the product unintentionally sending?
             </p>
             <p>
-              What are users struggling with? What patterns keep showing up? What are people trying to accomplish beneath the feedback they're giving? Sometimes the issue is content. Sometimes it's the workflow. Sometimes the product itself is sending the wrong signals.
+              Sometimes the issue is content. Sometimes it's the workflow. Sometimes the product itself is fighting the user's mental model.
             </p>
             <p>
-              That's the part of UX I enjoy most: digging into the "why" behind friction and turning those insights into better systems, clearer experiences, and more thoughtful product decisions.
+              That's the part of UX I enjoy most: translating ambiguity into clearer systems, better product decisions, and experiences that scale more effectively over time.
+            </p>
+            <p className="border-l-2 border-accent pl-6 text-xl font-semibold leading-tight text-white md:text-3xl">
+              I design operational UX systems for complex products in an AI-driven world.
             </p>
             <p>
-              My work combines data, research, experimentation, and collaboration to improve complex B2B and AI-driven experiences. I'm especially interested in how people and AI navigate products differently - and how better structure, guidance, and context can make both more successful.
+              To me, content is more than decoration layered onto a product experience. It is the infrastructure that shapes how people (and increasingly AI systems) interpret, navigate, and trust a product. Structure, terminology, guidance, and context all influence whether a workflow feels intuitive, discoverable, and actionable.
             </p>
             <p>
-              The faster we learn, the faster we can build better systems.
+              My work combines research, analytics, experimentation, and systems thinking to improve complex B2B and AI-driven experiences. I'm especially motivated by how user insight can influence product strategy, how AI changes the way people navigate software, and how operational UX systems can make complex products easier to understand at scale.
             </p>
           </div>
         </div>
