@@ -662,16 +662,8 @@ const impactHighlights = [
     body: "Established principles for top-level additions, child pages, reusable systems, settings placement, and future feature expansion.",
   },
   {
-    title: "Introduced a decision framework",
-    body: "Created a structured flowchart to help teams decide where future capabilities should live within the IA.",
-  },
-  {
     title: "Made language more literal",
     body: "Reduced reliance on acronyms, internal product names, abstract concepts, and labels that required Cloudflare-specific context.",
-  },
-  {
-    title: "Expanded the UX strategy",
-    body: "Influenced longer-term thinking around contextual navigation, discoverability, search, education, and workflow connectivity.",
   },
 ]
 
@@ -824,42 +816,101 @@ function NavigationOverhaulCaseStudy({ piece }: { piece: PortfolioPiece }) {
             </CaseStudySection>
 
             <CaseStudySection id="system" eyebrow="The solution" title="A layered information architecture model">
-              <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_18rem] lg:items-start">
-                <div className="space-y-6">
-                <p>
-                  I introduced a five-layer IA framework that grouped the dashboard by how users engage with the platform.
-                </p>
-                <div className="grid gap-4">
-                    {iaLayers.map((item) => (
-                      <div key={item.label} className="grid gap-2 border-t border-primary/20 pt-5 md:grid-cols-[9rem_minmax(0,1fr)]">
-                        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent">{item.layer}</p>
-                        <div>
-                          <h3 className="text-xl font-semibold text-primary">{item.label}</h3>
-                          <p className="mt-2">{item.question}</p>
-                          <div className="mt-4 flex flex-wrap gap-2">
-                            {item.items.map((navItem) => (
-                              <span key={navItem} className="border border-primary/20 px-2.5 py-1 text-sm text-muted-foreground">
-                                {navItem}
-                              </span>
-                            ))}
+              <div className="space-y-10">
+                <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_18rem] lg:items-start">
+                  <div className="space-y-6">
+                    <p>
+                      I introduced a five-layer IA framework that grouped the dashboard by how users engage with the platform.
+                    </p>
+                    <div className="grid gap-4">
+                      {iaLayers.map((item) => (
+                        <div key={item.label} className="grid gap-2 border-t border-primary/20 pt-5 md:grid-cols-[9rem_minmax(0,1fr)]">
+                          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent">{item.layer}</p>
+                          <div>
+                            <h3 className="text-xl font-semibold text-primary">{item.label}</h3>
+                            <p className="mt-2">{item.question}</p>
+                            <div className="mt-4 flex flex-wrap gap-2">
+                              {item.items.map((navItem) => (
+                                <span key={navItem} className="border border-primary/20 px-2.5 py-1 text-sm text-muted-foreground">
+                                  {navItem}
+                                </span>
+                              ))}
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    ))}
-                </div>
-                </div>
-                <figure className="mx-auto w-full max-w-[18rem] lg:mx-0">
-                  <div className="overflow-hidden border border-primary/20 bg-card/40 shadow-2xl shadow-background/40">
-                    <img
-                      src="/zero-trust-new-navigation.png"
-                      alt="New Zero Trust navigation structure in the Cloudflare dashboard"
-                      className="h-auto w-full"
-                    />
+                      ))}
+                    </div>
                   </div>
-                  <figcaption className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                    The redesigned navigation grouped top-level areas around user intent and reusable platform concepts.
-                  </figcaption>
-                </figure>
+                  <figure className="mx-auto w-full max-w-[18rem] lg:mx-0">
+                    <div className="overflow-hidden border border-primary/20 bg-card/40 shadow-2xl shadow-background/40">
+                      <img
+                        src="/zero-trust-new-navigation.png"
+                        alt="New Zero Trust navigation structure in the Cloudflare dashboard"
+                        className="h-auto w-full"
+                      />
+                    </div>
+                    <figcaption className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                      The redesigned navigation grouped top-level areas around user intent and reusable platform concepts.
+                    </figcaption>
+                  </figure>
+                </div>
+                <div className="border-t border-primary/20 pt-6">
+                  <h3 className="text-xl font-semibold text-primary">Developed guidance for sustainable navigation growth</h3>
+                  <div className="mt-5 grid gap-8 md:grid-cols-2">
+                    <div>
+                      <h4 className="font-semibold text-accent">Top-level items</h4>
+                      <p className="mt-3">
+                        These were exceptionally rare. The new IA was intended to be collectively exhaustive and scalable enough for future features. A new top-level item could be added if it:
+                      </p>
+                      <ul className="mt-3 list-disc space-y-2 pl-5">
+                        <li>Introduced a net new use case</li>
+                        <li>Established a brand new way of interacting with the Zero Trust dashboard</li>
+                      </ul>
+                      <p className="mt-3">
+                        I treated these as new pillars in the user experience, or as things Zero Trust provides a service for managing. They were areas that could potentially be the main or only thing someone uses in the dashboard.
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-accent">Child-level items</h4>
+                      <p className="mt-3">
+                        A page could become a child item if it met both criteria:
+                      </p>
+                      <ol className="mt-3 list-decimal space-y-3 pl-5">
+                        <li>
+                          <span className="font-semibold text-foreground">It allowed for immediate action or value:</span> new child items needed object creation directly from the empty state or another immediate value pathway.
+                        </li>
+                        <li>
+                          <span className="font-semibold text-foreground">It was mutually exclusive from other nav items:</span> closely related or overlapping content was better suited as a tab or inline view.
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+                <div className="border-t border-primary/20 pt-6">
+                  <h3 className="text-xl font-semibold text-primary">Operationalized the decision path</h3>
+                  <div className="mt-3 grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(18rem,28rem)] lg:items-start">
+                    <div className="space-y-4">
+                      <p>
+                        I turned the placement criteria into a decision flowchart that helped teams reason through the tradeoffs before adding new navigation surface area. The flowchart asked whether a feature introduced a new use case, served an existing workflow, created immediate action or value, overlapped with another page, or belonged better as a tab or inline view.
+                      </p>
+                      <p>
+                        To make that guidance usable beyond a static artifact, I translated the flowchart into an AI-driven skill. Product and design partners could describe a proposed feature, and the skill would return a recommendation for where it should live, such as a new child item, a tab, an inline view, or an existing section, along with the reasoning behind that recommendation.
+                      </p>
+                    </div>
+                    <figure className="w-full">
+                      <div className="overflow-hidden border border-primary/20 bg-card/40">
+                        <img
+                          src="/navigation-decision-flowchart.png"
+                          alt="Flowchart for deciding where a new Zero Trust feature should live in the navigation"
+                          className="h-auto w-full"
+                        />
+                      </div>
+                      <figcaption className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                        The placement flowchart translated navigation principles into repeatable decision logic.
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
               </div>
             </CaseStudySection>
 
