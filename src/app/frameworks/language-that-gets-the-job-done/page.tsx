@@ -132,6 +132,9 @@ export default function LanguageThatGetsTheJobDonePage() {
             <p>
               They log into a dashboard with defined goals. And they are not necessarily approaching those goals with technical models in mind either. In fact, the research found that many users were much less technical than internal teams often assumed. When trying to find where in the dashboard to complete those goals, they were simply scanning for keywords or tools that could help get the job done.
             </p>
+            <p>
+              Or as one user put it:
+            </p>
             <blockquote className="border-l-2 border-accent pl-6 text-xl font-semibold leading-relaxed text-white md:text-2xl">
               "I swear to God, I don't understand anything. I really need a VPN."
             </blockquote>
