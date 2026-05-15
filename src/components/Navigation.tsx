@@ -2,18 +2,12 @@
 
 import * as React from "react"
 import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
+import { headerNavItems } from "@/components/HeaderNavLinks"
 import { Menu, X } from "lucide-react"
+import Link from "next/link"
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
-
-  const navItems = [
-    { name: "Philosophy", href: "#about" },
-    { name: "Work", href: "#work" },
-    { name: "Resume", href: "#resume" },
-    { name: "Contact", href: "#contact" }
-  ]
 
   return (
     <nav className="w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -24,14 +18,14 @@ const Navigation = () => {
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
-          {navItems.map((item) => (
-            <a
+          {headerNavItems.map((item) => (
+            <Link
               key={item.name}
               href={item.href}
               className="text-sm font-medium transition-colors hover:text-accent"
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -50,15 +44,15 @@ const Navigation = () => {
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="w-full px-6 py-4 space-y-2 md:px-10">
-            {navItems.map((item) => (
-              <a
+            {headerNavItems.map((item) => (
+              <Link
                 key={item.name}
                 href={item.href}
                 className="block py-2 text-sm font-medium transition-colors hover:text-primary"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

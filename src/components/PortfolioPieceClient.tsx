@@ -5,6 +5,7 @@ import type { ComponentType } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { HeaderNavLinks } from "@/components/HeaderNavLinks"
 import {
   ArrowLeft,
   ArrowRight,
@@ -90,11 +91,7 @@ export default function PortfolioPieceClient({ piece }: { piece: PortfolioPiece 
               <ArrowLeft className="w-4 h-4 mr-2" />
               <span className="text-xl font-bold">Alexa Mavrogianis</span>
             </Link>
-            <div className="hidden md:flex items-center space-x-6">
-              <Link href="/#about" className="text-sm font-medium transition-colors hover:text-accent">About</Link>
-              <Link href="/#work" className="text-sm font-medium transition-colors hover:text-accent">Work</Link>
-              <Link href="/#contact" className="text-sm font-medium transition-colors hover:text-accent">Contact</Link>
-            </div>
+            <HeaderNavLinks />
           </div>
         </nav>
 

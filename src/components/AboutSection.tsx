@@ -1,4 +1,6 @@
-import { ArrowDown } from "lucide-react"
+import { frameworks } from "@/frameworks/data"
+import { ArrowDown, ArrowUpRight } from "lucide-react"
+import Link from "next/link"
 
 const AboutSection = () => {
   return (
@@ -55,6 +57,74 @@ const AboutSection = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        <div className="mt-20 max-w-6xl" id="frameworks">
+          <div className="mb-8 flex items-end justify-between gap-6">
+            <div>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-accent/80">
+                Frameworks
+              </p>
+              <h3 className="text-2xl font-semibold text-primary md:text-3xl">
+                How I build and think
+              </h3>
+            </div>
+            <Link
+              href="/frameworks/"
+              className="hidden items-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-accent transition-colors hover:text-primary md:flex"
+            >
+              View all
+              <ArrowUpRight className="h-4 w-4" />
+            </Link>
+          </div>
+
+          <div className="grid border-t border-primary/20 md:grid-cols-2">
+            {frameworks.slice(0, 2).map((entry, index) => {
+              const content = (
+                <>
+                  <div className="mb-5 flex items-start justify-between gap-6">
+                    <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent/80">
+                      {String(index + 1).padStart(2, "0")}
+                    </p>
+                    {entry.href && (
+                      <ArrowUpRight className="h-5 w-5 flex-none text-accent transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
+                    )}
+                  </div>
+                  <h4 className="text-2xl font-semibold leading-tight text-primary md:text-3xl">
+                    {entry.title}
+                  </h4>
+                  <p className="mt-5 text-base leading-relaxed text-muted-foreground/90 md:text-lg">
+                    {entry.dek}
+                  </p>
+                </>
+              )
+
+              return entry.href ? (
+                <Link
+                  key={entry.slug}
+                  href={entry.href}
+                  className="group border-b border-primary/20 py-8 pr-6 transition-colors hover:border-accent/70 md:px-8 md:py-10"
+                >
+                  {content}
+                </Link>
+              ) : (
+                <article
+                  key={entry.slug}
+                  className="group border-b border-primary/20 py-8 pr-6 md:px-8 md:py-10"
+                >
+                  {content}
+                </article>
+              )
+            })}
+          </div>
+
+          <Link
+            href="/frameworks/"
+            className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-accent transition-colors hover:text-primary md:hidden"
+          >
+            View all
+            <ArrowUpRight className="h-4 w-4" />
+          </Link>
         </div>
 
         <div className="mt-14 flex items-center gap-3 text-accent">

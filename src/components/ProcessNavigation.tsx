@@ -19,7 +19,10 @@ const ProcessNavigation = () => {
 
   React.useEffect(() => {
     const checkIfPortfolioPage = () => {
-      setIsPortfolioPage(window.location.pathname.startsWith('/work/'))
+      setIsPortfolioPage(
+        window.location.pathname.startsWith('/work/') ||
+        window.location.pathname.startsWith('/frameworks/')
+      )
     }
     
     // Check on mount
