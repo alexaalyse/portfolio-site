@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="733" height="670" viewBox="0 0 733 670" role="img" aria-labelledby="title desc">
+  <title id="title">Cloudflare Network Interconnect documentation example</title>
+  <desc id="desc">A documentation screenshot showing product identity in headings and prose, plus a self-describing table caption and row labels.</desc>
+  <rect width="733" height="670" fill="#171717"/>
+  <style>
+    .h1 { fill: #f8fafc; font: 700 34px Arial, Helvetica, sans-serif; }
+    .h2 { fill: #f8fafc; font: 700 30px Arial, Helvetica, sans-serif; }
+    .body { fill: #e5eef8; font: 16px Arial, Helvetica, sans-serif; }
+    .caption { fill: #cbd5e1; font: 700 15px Arial, Helvetica, sans-serif; }
+    .th { fill: #f8fafc; font: 700 12px Arial, Helvetica, sans-serif; }
+    .td { fill: #f8fafc; font: 14px Arial, Helvetica, sans-serif; }
+    .type { fill: #dbeafe; font: 700 15px Arial, Helvetica, sans-serif; }
+    .line { stroke: #2a2a2a; stroke-width: 1; }
+  </style>
+
+  <text x="11" y="44" class="h1">Cloudflare Network Interconnect (CNI)</text>
+
+  <text x="11" y="87" class="body">Cloudflare Network Interconnect (CNI) allows you to connect your network infrastructure directly to</text>
+  <text x="11" y="115" class="body">Cloudflare through private, dedicated connections that bypass the public Internet. CNI provides</text>
+  <text x="11" y="143" class="body">predictable latency, consistent throughput, and reduced exposure to attacks.</text>
+
+  <text x="11" y="187" class="body">Use CNI when you need to meet security requirements that prohibit public Internet traffic, reduce</text>
+  <text x="11" y="215" class="body">cloud egress costs, or deploy in highly regulated industries (financial services, healthcare).</text>
+
+  <text x="11" y="284" class="h2">CNI connection types</text>
+  <text x="11" y="326" class="body">The following table describes the Cloudflare Network Interconnect (CNI) connection types.</text>
+
+  <text x="11" y="370" class="caption">Table 2: Cloudflare One CNI connection types</text>
+
+  <text x="26" y="420" class="th">Type</text>
+  <text x="156" y="420" class="th">Description</text>
+  <text x="452" y="420" class="th">Ideal for</text>
+  <line x1="11" y1="437" x2="722" y2="437" class="line"/>
+
+  <text x="26" y="464" class="type">Direct</text>
+  <text x="26" y="485" class="type">Interconnect</text>
+  <text x="156" y="464" class="td">Physical fiber cross-connect in a shared</text>
+  <text x="156" y="485" class="td">data center</text>
+  <text x="452" y="464" class="td">Customers colocated with Cloudflare who</text>
+  <text x="452" y="485" class="td">require maximum control and</text>
+  <text x="452" y="506" class="td">performance</text>
+  <line x1="11" y1="521" x2="722" y2="521" class="line"/>
+
+  <text x="26" y="548" class="type">Partner</text>
+  <text x="26" y="569" class="type">Interconnect</text>
+  <text x="156" y="548" class="td">Virtual connection through connectivity</text>
+  <text x="156" y="569" class="td">partners (Megaport, Equinix Fabric,</text>
+  <text x="156" y="590" class="td">PacketFabric)</text>
+  <text x="452" y="548" class="td">Customers not colocated with Cloudflare</text>
+  <text x="452" y="569" class="td">or who prefer managed connectivity</text>
+  <line x1="11" y1="604" x2="722" y2="604" class="line"/>
+
+  <text x="26" y="632" class="type">Cloud</text>
+  <text x="26" y="653" class="type">Interconnect</text>
+  <text x="156" y="632" class="td">Private connection from cloud providers</text>
+  <text x="156" y="653" class="td">(AWS, GCP, Azure)</text>
+  <text x="452" y="632" class="td">Customers with workloads in public</text>
+  <text x="452" y="653" class="td">clouds requiring private connectivity</text>
+</svg>

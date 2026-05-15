@@ -559,7 +559,7 @@ const gatewaySteps = [
   { id: "impact", label: "Impact", iconName: "trending-up" as const, href: "#impact" },
   { id: "problem", label: "Problem", iconName: "target" as const, href: "#problem" },
   { id: "solution", label: "Solution", iconName: "layers" as const, href: "#solution" },
-  { id: "validation", label: "Validation", iconName: "flask" as const, href: "#validation" },
+  { id: "alignment", label: "Alignment", iconName: "flask" as const, href: "#alignment" },
   { id: "reflection", label: "Principles", iconName: "book-open" as const, href: "#reflection" },
 ]
 
@@ -1638,10 +1638,70 @@ function DocumentationForRetrievalCaseStudy({ piece }: { piece: PortfolioPiece }
                   </p>
                 </div>
                 <div className="grid gap-4">
-                  {["Identity persistence", "Heading clarity", "Table survivability", "Scope locality", "Procedural atomicity", "Query-term alignment"].map((item) => (
-                    <div key={item} className="border-t border-accent/40 pt-4 text-foreground">{item}</div>
+                  {[
+                    {
+                      title: "Identity persistence",
+                      body: "Each retrievable section carries enough product, version, or surface context to identify itself in isolation.",
+                    },
+                    {
+                      title: "Heading clarity",
+                      body: "Headings describe the specific product, action, or outcome a user might search for.",
+                    },
+                    {
+                      title: "Table survivability",
+                      body: "Captions and row labels preserve meaning when tables are chunked without headers or surrounding text.",
+                    },
+                    {
+                      title: "Scope locality",
+                      body: "Prerequisites, warnings, and constraints stay near the action or decision they govern.",
+                    },
+                    {
+                      title: "Procedural atomicity",
+                      body: "Each step contains one action and one outcome, with branching logic clearly separated.",
+                    },
+                    {
+                      title: "Query-term alignment",
+                      body: "Documentation uses formal product terms alongside the language users are likely to search with.",
+                    },
+                  ].map((item) => (
+                    <div key={item.title} className="border-t border-accent/40 pt-4">
+                      <h3 className="text-lg font-semibold leading-snug text-foreground">{item.title}</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+                    </div>
                   ))}
                 </div>
+
+                <figure className="border-t border-primary/20 pt-8 md:col-span-2">
+                  <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+                    Example comparison
+                  </p>
+                  <div className="grid gap-6 lg:grid-cols-2">
+                    {[
+                      {
+                        label: "Before",
+                        src: "/chunkability-cni-before.svg",
+                        alt: "Cloudflare Network Interconnect documentation before revision with a generic connection types heading and table without a descriptive caption",
+                      },
+                      {
+                        label: "After",
+                        src: "/chunkability-cni-example.svg",
+                        alt: "Cloudflare Network Interconnect documentation after revision with clear product identity, a specific section heading, and a self-describing connection types table",
+                      },
+                    ].map((image) => (
+                      <div key={image.label}>
+                        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+                          {image.label}
+                        </p>
+                        <div className="overflow-hidden border border-primary/20 bg-card/40">
+                          <img src={image.src} alt={image.alt} className="h-auto w-full" />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <figcaption className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                    The revised version improves identity persistence by repeating the full Cloudflare Network Interconnect (CNI) context in the section heading and table setup. It also improves table survivability with a descriptive caption and row labels that remain meaningful if the table is retrieved without surrounding page context.
+                  </figcaption>
+                </figure>
               </div>
             </CaseStudySection>
 
@@ -1795,7 +1855,7 @@ function GatewayPolicyBuilderCaseStudy({ piece }: { piece: PortfolioPiece }) {
                   Redesigning such a critical enterprise workflow also carried significant organizational friction. Conversations around improving the policy builder had existed for a long time, but the sheer amount of conditionality made it difficult to communicate a radically different approach through static wireframes alone.
                 </p>
                 <p className="text-foreground">
-                  The challenge was not just simplifying the experience. It was creating enough momentum to make a large-scale redesign feel achievable.
+                  The biggest challenge became momentum: making a large-scale redesign concrete enough for teams to understand, evaluate, and believe they could ship.
                 </p>
               </div>
             </CaseStudySection>
@@ -1875,7 +1935,7 @@ function GatewayPolicyBuilderCaseStudy({ piece }: { piece: PortfolioPiece }) {
               </div>
             </CaseStudySection>
 
-            <CaseStudySection id="validation" eyebrow="Validation" title="AI-assisted prototyping turned abstract alignment into tangible momentum">
+            <CaseStudySection id="alignment" eyebrow="Alignment" title="AI-assisted prototyping turned abstract alignment into tangible momentum">
               <div className="grid gap-8 md:grid-cols-[minmax(0,0.8fr)_minmax(18rem,0.45fr)]">
                 <div className="space-y-6">
                   <p>
@@ -1892,8 +1952,28 @@ function GatewayPolicyBuilderCaseStudy({ piece }: { piece: PortfolioPiece }) {
                   </p>
                 </div>
                 <div className="grid gap-4">
-                  {["Interactive workflows over static screens", "AI-assisted settings analysis", "Realistic progressive disclosure", "Faster stakeholder alignment"].map((item) => (
-                    <div key={item} className="border-t border-accent/40 pt-4 text-foreground">{item}</div>
+                  {[
+                    {
+                      title: "Interactive workflows over static screens",
+                      body: "Clickable prototypes helped stakeholders evaluate policy creation through realistic workflow behavior.",
+                    },
+                    {
+                      title: "AI-assisted settings analysis",
+                      body: "AI helped analyze the codebase for all conditional logic that needed representation.",
+                    },
+                    {
+                      title: "Realistic progressive disclosure",
+                      body: "Advanced settings appeared when specific policy choices made them relevant.",
+                    },
+                    {
+                      title: "Faster stakeholder alignment",
+                      body: "Concrete interactions helped teams align earlier across product and engineering conversations.",
+                    },
+                  ].map((item) => (
+                    <div key={item.title} className="border-t border-accent/40 pt-4">
+                      <h3 className="text-lg font-semibold leading-snug text-foreground">{item.title}</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+                    </div>
                   ))}
                 </div>
               </div>
