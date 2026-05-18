@@ -1,4 +1,5 @@
 import { ArrowDown, Cloud, ExternalLink, GraduationCap, Mic } from "lucide-react"
+import BotanicalBackdrop from "@/components/BotanicalBackdrop"
 import type { ComponentType } from "react"
 
 type TimelineRole = {
@@ -61,6 +62,7 @@ const ResumeSection = () => {
   return (
     <section id="resume" className="relative overflow-hidden py-20 md:py-24 lg:pl-28">
       <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[24vw] bg-[linear-gradient(90deg,transparent,rgba(93,28,52,0.08))] lg:block" />
+      <BotanicalBackdrop variant="resume" />
 
       <div className="relative z-10 mx-auto w-full max-w-[1600px] px-6 md:px-10 lg:pr-20">
         <div className="mb-8 flex items-center gap-4">

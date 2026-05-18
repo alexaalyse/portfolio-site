@@ -16,7 +16,7 @@ export const emptyStatesSteps = [
   { id: "reflection", label: "Principles", iconName: "book-open" as const, href: "#reflection" },
 ]
 
-export const clueSteps = [
+export const contentQualitySteps = [
   { id: "hero", label: "Summary", iconName: "book-open" as const, href: "#hero" },
   { id: "impact", label: "Impact", iconName: "trending-up" as const, href: "#impact" },
   { id: "problem", label: "Problem", iconName: "target" as const, href: "#problem" },
@@ -25,7 +25,7 @@ export const clueSteps = [
   { id: "reflection", label: "Principles", iconName: "book-open" as const, href: "#reflection" },
 ]
 
-export const gatewaySteps = [
+export const policyBuilderSteps = [
   { id: "hero", label: "Summary", iconName: "book-open" as const, href: "#hero" },
   { id: "impact", label: "Impact", iconName: "trending-up" as const, href: "#impact" },
   { id: "problem", label: "Problem", iconName: "target" as const, href: "#problem" },
@@ -62,10 +62,10 @@ export const emptyStatesImpact = [
   },
 ]
 
-export const clueImpact = [
+export const contentQualityImpact = [
   {
     title: "Improved dashboard content quality by 34.8%",
-    body: "Initial testing across Zero Trust page descriptions increased the average CLUE score from 7.42 to 10 after revisions generated from the system's recommendations.",
+    body: "Initial testing across enterprise dashboard page descriptions increased the average quality score from 7.42 to 10 after revisions generated from the system's recommendations.",
   },
   {
     title: "Standardized UX writing guidance across multiple content types",
@@ -73,7 +73,7 @@ export const clueImpact = [
   },
   {
     title: "Reduced dependency on manual UX writing reviews",
-    body: "CLUE provided immediate, actionable feedback directly to teams, enabling faster iteration and reducing review bottlenecks for urgent releases.",
+    body: "The system provided immediate, actionable feedback directly to teams, enabling faster iteration and reducing review bottlenecks for urgent releases.",
   },
   {
     title: "Created an operational system for measuring content quality",
@@ -81,7 +81,7 @@ export const clueImpact = [
   },
 ]
 
-export const gatewayImpact = [
+export const policyBuilderImpact = [
   {
     title: "Unified fragmented workflows",
     body: "Consolidated separate DNS, HTTP, and Network policy experiences into a single workflow aligned to how administrators naturally think about policy creation.",
@@ -107,7 +107,7 @@ export const retrievalImpact = [
   },
   {
     title: "Improved complete-answer rates from 0/10 to 7/10",
-    body: "In one Cloudflare One connectivity test set, models that initially failed nearly every retrieval question became consistently reliable after structural documentation updates.",
+    body: "In one enterprise connectivity test set, models that initially failed nearly every retrieval question became consistently reliable after structural documentation updates.",
   },
   {
     title: "Created a reusable framework for AI-readable documentation",
@@ -134,7 +134,7 @@ export const impactHighlights = [
   },
   {
     title: "Made language more literal",
-    body: "Reduced reliance on acronyms, internal product names, abstract concepts, and labels that required Cloudflare-specific context.",
+    body: "Reduced reliance on acronyms, internal product names, abstract concepts, and labels that required company-specific context.",
   },
 ]
 
@@ -155,7 +155,7 @@ export const iaLayers = [
     layer: "Layer 3",
     label: "Use-case management",
     question: "How do I configure security workflows?",
-    items: ["Networks", "Access controls", "Traffic policies", "Cloud & SaaS findings", "Email Security"],
+    items: ["Networks", "Access controls", "Traffic policies", "Cloud and SaaS findings", "Email security"],
   },
   {
     layer: "Layer 4",

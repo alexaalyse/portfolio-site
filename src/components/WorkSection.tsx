@@ -1,10 +1,11 @@
 import { ArrowDown, ArrowUpRight } from "lucide-react"
+import BotanicalBackdrop from "@/components/BotanicalBackdrop"
 import Link from "next/link"
 
 const WorkSection = () => {
   const projects = [
     {
-      title: "Zero Trust navigation overhaul",
+      title: "Enterprise navigation overhaul",
       description: (
         <>
           A user once described the previous navigation as "the house of mirrors at the carnival." We needed a better way to help users quickly find what they needed.
@@ -13,7 +14,7 @@ const WorkSection = () => {
         </>
       ),
       tags: ["UX strategy", "Information architecture", "User research"],
-      slug: "zero-trust-navigation"
+      slug: "enterprise-navigation"
     },
     {
       title: "Empty states strategy",
@@ -28,28 +29,28 @@ const WorkSection = () => {
       slug: "empty-states"
     },
     {
-      title: "The PCX CLUE Index",
+      title: "The Content Quality Index",
       description: (
         <>
           Copy reviews came fast and furious, taking time away from larger, strategic initiatives. We needed a way to democratize UX writing. 
           <br /><br />
-          I built the CLUE Index, which stood for Content Legibility for User Ease. An AI-assisted tool for evaluating content against Cloudflare's voice, tone, terminology, and usability standards.
+          I built an AI-assisted tool for evaluating content against the company's voice, tone, terminology, and usability standards.
         </>
       ),
       tags: ["AI-assisted UX", "Content strategy", "UX writing systems"],
-      slug: "clue-index"
+      slug: "content-quality-index"
     },
     {
-      title: "Gateway firewall policy builder",
+      title: "Firewall policy builder",
       description: (
         <>
-          Gateway administrators were configuring highly conditional DNS, HTTP, and Network policies through fragmented, scroll-heavy workflows.
+          Security administrators were configuring highly conditional DNS, HTTP, and Network policies through fragmented, scroll-heavy workflows.
           <br /><br />
           I led a redesign of the policy builder around a simpler "If / Then" mental model, using AI-assisted prototyping to accelerate alignment and make a complex enterprise workflow feel achievable.
         </>
       ),
       tags: ["Enterprise UX", "AI prototyping", "UX design"],
-      slug: "gateway-policy-builder"
+      slug: "firewall-policy-builder"
     },
     {
       title: "Designing documentation for retrieval",
@@ -68,6 +69,7 @@ const WorkSection = () => {
   return (
     <section id="work" className="relative overflow-hidden py-24 md:py-32 lg:pl-28">
       <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[24vw] bg-[linear-gradient(90deg,transparent,rgba(93,28,52,0.08))] lg:block" />
+      <BotanicalBackdrop variant="work" />
 
       <div className="relative z-10 mx-auto w-full max-w-[1600px] px-6 md:px-10 lg:pr-20">
         <div className="mb-8 flex items-center gap-4">

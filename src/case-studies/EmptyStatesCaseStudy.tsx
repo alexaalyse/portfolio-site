@@ -39,7 +39,7 @@ export function EmptyStatesCaseStudy({ piece }: { piece: PortfolioPiece }) {
               </h1>
               <div className="mt-8 max-w-6xl space-y-5 text-xl leading-relaxed text-muted-foreground/90 md:text-2xl">
                 <p>
-                  When users first entered a product area in the Zero Trust dashboard, they were greeted with an empty state page. Technically, it did its job: it introduced the tool and provided a CTA to begin setup.
+                  When users first entered a product area in the enterprise dashboard, they were greeted with an empty state page. Technically, it did its job: it introduced the tool and provided a CTA to begin setup.
                 </p>
                 <p>
                   But in practice, it created a sharp drop in guidance. Users were expected to move from high-level onboarding directly into complex configuration work with very little context around what the product did, why they should configure it, or what steps they needed to complete first.
@@ -74,7 +74,7 @@ export function EmptyStatesCaseStudy({ piece }: { piece: PortfolioPiece }) {
                   Users landed on highly technical pages and were immediately asked to make configuration decisions without enough context to feel confident doing so. The dashboard explained where to click, but not necessarily how the pieces fit together or why certain steps mattered.
                 </p>
                 <p>
-                  This became especially visible in Access application onboarding. Users configuring self-hosted applications often failed because they did not realize they first needed to complete Zones onboarding. Identity provider configuration lived elsewhere in the dashboard entirely, with little explanation connecting it back to Access setup.
+                  This became especially visible in application onboarding. Users configuring self-hosted applications often failed because they did not realize they first needed to complete prerequisite setup. Identity provider configuration lived elsewhere in the dashboard entirely, with little explanation connecting it back to the application setup flow.
                 </p>
                 <p>
                   SaaS application flows introduced terminology like Entity ID and Assertion Consumer Service URL without helping users map those concepts to the platforms they were configuring.
@@ -95,7 +95,7 @@ export function EmptyStatesCaseStudy({ piece }: { piece: PortfolioPiece }) {
                     I framed the work as a measurable hypothesis. If users were given clearer context, guidance, and motivation at the moment they entered a workflow, they would be more likely to successfully complete setup.
                   </p>
                   <p>
-                    To validate the idea, I partnered with a PM and cross-functional stakeholders to launch an A/B test focused on Access Applications. Together, we defined success metrics, identified onboarding friction points, and connected empty state engagement directly to downstream configuration outcomes.
+                    To validate the idea, I partnered with a PM and cross-functional stakeholders to launch an A/B test focused on application setup. Together, we defined success metrics, identified onboarding friction points, and connected empty state engagement directly to downstream configuration outcomes.
                   </p>
                 </div>
 
@@ -164,7 +164,7 @@ export function EmptyStatesCaseStudy({ piece }: { piece: PortfolioPiece }) {
                   },
                   {
                     title: "Understanding the why increases motivation",
-                    body: "The strongest results came from moments where users understood how a supporting task connected to their larger goal. When users understood why they needed to configure an identity provider or complete Zones onboarding, they were significantly more likely to follow through.",
+                    body: "The strongest results came from moments where users understood how a supporting task connected to their larger goal. When users understood why they needed to configure an identity provider or complete prerequisite setup, they were significantly more likely to follow through.",
                   },
                 ].map((principle, index) => (
                   <div key={principle.title} className="grid gap-3 border-t border-primary/20 pt-5 md:grid-cols-[4rem_minmax(0,1fr)]">

@@ -1,4 +1,5 @@
 import { frameworks } from "@/frameworks/data"
+import BotanicalBackdrop from "@/components/BotanicalBackdrop"
 import { ArrowDown, ArrowUpRight, Bot, Compass, FileText, Network, Users } from "lucide-react"
 import Link from "next/link"
 
@@ -29,7 +30,7 @@ const capabilityGroups = [
   {
     label: "Product strategy",
     Icon: Compass,
-    skills: ["UX strategy", "Product direction", "ROI measurement", "User research"],
+    skills: ["UX strategy", "Product roadmaps", "ROI measurement", "User research"],
   },
   {
     label: "Systems thinking",
@@ -44,12 +45,12 @@ const capabilityGroups = [
   {
     label: "Content systems",
     Icon: FileText,
-    skills: ["Content as a product", "UX writing systems", "Terminology and guidance", "Workflow simplification"],
+    skills: ["Content as a product", "UX writing systems", "Controlled vocabularies", "Workflow simplification"],
   },
   {
     label: "Operational leadership",
     Icon: Users,
-    skills: ["Cross-functional leadership", "Experimentation", "Insight synthesis", "Data analysis"],
+    skills: ["Cross-team collaboration", "Experimentation", "Insight synthesis", "Data analysis"],
   },
 ]
 
@@ -57,6 +58,7 @@ const AboutSection = () => {
   return (
     <section id="about" className="relative overflow-hidden py-24 md:py-32 lg:pl-28">
       <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[24vw] bg-[linear-gradient(90deg,transparent,rgba(137,148,129,0.1))] lg:block" />
+      <BotanicalBackdrop variant="about" />
 
       <div className="relative z-10 mx-auto w-full max-w-[1600px] px-6 md:px-10 lg:pr-20">
         <div className="mb-8 flex items-center gap-4">
@@ -169,11 +171,11 @@ const AboutSection = () => {
                   </span>
                 </div>
 
-                <div className="flex flex-wrap gap-3 md:mt-auto">
+                <div className="grid gap-3 md:mt-auto">
                   {skills.map((skill) => (
                     <span
                       key={skill}
-                      className="border border-primary/15 bg-background/45 px-3 py-2 text-sm font-medium leading-tight text-foreground transition-colors group-hover:border-accent/35 group-hover:bg-card/55 md:text-base"
+                      className="w-fit max-w-full border border-primary/15 bg-background/45 px-3 py-2 text-sm font-medium leading-tight text-foreground transition-colors group-hover:border-accent/35 group-hover:bg-card/55 md:text-base"
                     >
                       {skill}
                     </span>

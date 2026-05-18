@@ -39,7 +39,7 @@ export function NavigationOverhaulCaseStudy({ piece }: { piece: PortfolioPiece }
               </h1>
               <div className="mt-8 max-w-6xl space-y-5 text-xl leading-relaxed text-muted-foreground/90 md:text-2xl">
                 <p>
-                  Cloudflare Zero Trust had grown into a powerful enterprise platform, but users consistently described the navigation as confusing, overlapping, and difficult to learn.
+                  A powerful enterprise platform had grown increasingly complex, and users consistently described the navigation as confusing, overlapping, and difficult to learn.
                 </p>
                 <p>
                   I led a large-scale information architecture initiative to redesign the navigation around mental models, workflows, and task clarity rather than internal product structures.
@@ -65,10 +65,10 @@ export function NavigationOverhaulCaseStudy({ piece }: { piece: PortfolioPiece }
               </div>
             </CaseStudySection>
 
-            <CaseStudySection id="problem" eyebrow="The problem" title="The navigation reflected Cloudflare's org chart, not how users thought about their work">
+            <CaseStudySection id="problem" eyebrow="The problem" title="The navigation reflected the company's org chart, not how users thought about their work">
               <div className="max-w-6xl space-y-6">
                 <p>
-                  As Zero Trust expanded, the dashboard evolved organically around products, feature ownership, and technical terminology. Users repeatedly described the experience as fragmented, overlapping, difficult to scan, and difficult to learn. Or as one so aptly put it: 
+                  As the enterprise platform expanded, the dashboard evolved organically around products, feature ownership, and technical terminology. Users repeatedly described the experience as fragmented, overlapping, difficult to scan, and difficult to learn. Or as one so aptly put it:
                 </p>
 
                 <blockquote className="border-y border-accent/30 py-6 text-2xl font-medium leading-relaxed text-foreground md:text-3xl">
@@ -80,7 +80,7 @@ export function NavigationOverhaulCaseStudy({ piece }: { piece: PortfolioPiece }
                 </p>
 
                 <p>
-                  The deeper issue was not just naming. Research showed that users approached the dashboard through workflows like troubleshooting a tunnel, securing an application, investigating traffic, managing devices, and configuring policies, not through Cloudflare's internal product boundaries.
+                  The deeper issue was not just naming. Research showed that users approached the dashboard through workflows like troubleshooting a tunnel, securing an application, investigating traffic, managing devices, and configuring policies, not through the company's internal product boundaries.
                 </p>
                 <p>
                   The project quickly evolved from a navigation cleanup effort into a broader rethink of how the platform should organize itself around user intent.
@@ -117,8 +117,8 @@ export function NavigationOverhaulCaseStudy({ piece }: { piece: PortfolioPiece }
                   <figure className="mx-auto w-full max-w-[18rem] lg:mx-0">
                     <div className="overflow-hidden border border-primary/20 bg-card/40 shadow-2xl shadow-background/40">
                       <img
-                        src="/zero-trust-new-navigation.png"
-                        alt="New Zero Trust navigation structure in the Cloudflare dashboard"
+                        src="/enterprise-navigation-structure.jpeg"
+                        alt="New enterprise platform navigation structure in the dashboard"
                         className="h-auto w-full"
                       />
                     </div>
@@ -137,10 +137,10 @@ export function NavigationOverhaulCaseStudy({ piece }: { piece: PortfolioPiece }
                       </p>
                       <ul className="mt-3 list-disc space-y-2 pl-5">
                         <li>Introduced a net new use case</li>
-                        <li>Established a brand new way of interacting with the Zero Trust dashboard</li>
+                        <li>Established a brand new way of interacting with the enterprise dashboard</li>
                       </ul>
                       <p className="mt-3">
-                        I treated these as new pillars in the user experience, or as things Zero Trust provides a service for managing. They were areas that could potentially be the main or only thing someone uses in the dashboard.
+                        I treated these as new pillars in the user experience, or as things the enterprise platform provides a service for managing. They were areas that could potentially be the main or only thing someone uses in the dashboard.
                       </p>
                     </div>
                     <div>
@@ -174,7 +174,7 @@ export function NavigationOverhaulCaseStudy({ piece }: { piece: PortfolioPiece }
                       <div className="overflow-hidden border border-primary/20 bg-card/40">
                         <img
                           src="/navigation-decision-flowchart.png"
-                          alt="Flowchart for deciding where a new Zero Trust feature should live in the navigation"
+                          alt="Flowchart for deciding where a new enterprise platform feature should live in the navigation"
                           className="h-auto w-full"
                         />
                       </div>

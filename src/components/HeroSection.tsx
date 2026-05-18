@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button"
+import BotanicalBackdrop from "@/components/BotanicalBackdrop"
 import { ArrowDown } from "lucide-react"
 
 const HeroSection = () => {
   return (
     <section id="hero" className="relative min-h-[calc(100svh-4rem)] overflow-hidden py-16 md:py-20 lg:pl-28">
       <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 hidden w-[32vw] bg-[linear-gradient(90deg,transparent,rgba(137,148,129,0.12))] lg:block" />
+      <BotanicalBackdrop variant="hero" />
 
       <div className="relative z-10 mx-auto grid min-h-[calc(100svh-12rem)] w-full max-w-[1600px] items-center gap-16 px-6 md:px-10 lg:grid-cols-[minmax(0,1fr)_minmax(18rem,26rem)] lg:pr-20">
         <div className="w-full max-w-6xl text-left">

@@ -5,7 +5,7 @@ import Link from "next/link"
 const userEducationInitiatives = [
   {
     title: "Controlled vocabulary",
-    body: "An ongoing effort to standardize terms across Cloudflare One to build cross-product cohesion, decrease cognitive load, and reduce silos. This is especially critical when integrating acquisitions, like Email Security and Magic Cloud Networking, into an existing structure.",
+    body: "An ongoing effort to standardize terms across the enterprise platform to build cross-product cohesion, decrease cognitive load, and reduce silos. This is especially critical when integrating acquisitions, like newly acquired product areas, into an existing structure.",
   },
   {
     title: "Empty states",
@@ -17,7 +17,7 @@ const userEducationInitiatives = [
   },
   {
     title: "Information architecture",
-    body: "A redesign of the navigation offered an enormous opportunity to bring a more use-case-focused experience to users and help them better conceptualize how Cloudflare One products work together.",
+    body: "A redesign of the navigation offered an enormous opportunity to bring a more use-case-focused experience to users and help them better conceptualize how the enterprise platform products work together.",
   },
 ]
 
@@ -34,7 +34,7 @@ const userLearningInputs = [
     title: "Research",
     body: [
       "In addition to the evergreen survey, one-off dashboard surveys and UserTesting sessions helped me learn about specific elements of our users' experiences.",
-      "When we first ran an A/B test on the Access applications empty state, we also included a survey for users to provide feedback. Those responses helped me refine the right content for V2.",
+      "When we first ran an A/B test on an application setup empty state, we also included a survey for users to provide feedback. Those responses helped me refine the right content for V2.",
       "An unmoderated UserTesting study on an onboarding concept gave insight into the motivations of new users and helped me understand how they orient themselves in the dashboard.",
       "Similarly, I ran a large navigation-focused survey. I developed the questions to learn more about current use and behaviors, navigation sentiment, and feature desirability. The results directly impacted my approach to both overview pages and the information architecture effort.",
     ],
@@ -86,7 +86,7 @@ export default function EducationTwoWayStreetPage() {
 
           <div className="mt-16 max-w-4xl space-y-8 text-lg leading-relaxed text-muted-foreground/90 md:text-xl">
             <p>
-              In Cloudflare One, users spanned from home network gurus to large enterprises. They had different resources, levels of technical knowledge, and goals. Amid this diversity, content often becomes the great equalizer. When we provide clear and accurate descriptions, we build trust. When we present instructions in digestible, intuitive formats, we reduce cognitive load. And when we deliver the right information at the right time, we increase our users' productivity. Thoughtfully designed content helps users feel understood, supported, and equipped to achieve their goals.
+              In the enterprise platform, users spanned from home network gurus to large enterprises. They had different resources, levels of technical knowledge, and goals. Amid this diversity, content often becomes the great equalizer. When we provide clear and accurate descriptions, we build trust. When we present instructions in digestible, intuitive formats, we reduce cognitive load. And when we deliver the right information at the right time, we increase our users' productivity. Thoughtfully designed content helps users feel understood, supported, and equipped to achieve their goals.
             </p>
             <p>
               As the product suite continued to grow and allow for more use cases, this shared language became increasingly important. Every time we introduced a new feature, we had to educate our users on what it is, what it does, and how it functions with the rest of the system.
@@ -95,7 +95,7 @@ export default function EducationTwoWayStreetPage() {
               Having a shared language as a through-line builds consistency and makes product complexities feel less intimidating. If a user explores a new feature and thinks, "Oh, this operates just like Feature X, I get it," or, "Ah, I understand the differences between this and Feature Y," then I did my job right.
             </p>
             <p>
-              But I am not always going to get it right. <strong className="font-semibold text-foreground">Like everything else in software development, UX is iterative.</strong> We build, we test, we measure, and we adapt. Our users educated me just as much as I educated them. This reciprocal process of education is a core tenet of the way I approached Cloudflare One's content strategy.
+              But I am not always going to get it right. <strong className="font-semibold text-foreground">Like everything else in software development, UX is iterative.</strong> We build, we test, we measure, and we adapt. Our users educated me just as much as I educated them. This reciprocal process of education is a core tenet of the way I approached the enterprise platform's content strategy.
             </p>
           </div>
 
@@ -137,7 +137,7 @@ export default function EducationTwoWayStreetPage() {
             </div>
 
             <p className="mt-10 border-l-2 border-accent pl-6 text-lg font-semibold leading-relaxed text-foreground md:text-xl">
-              Bonus: It was just as important to educate internal users. At the end of January 2025, I launched the application version of the PCX CLUE Index so that teams at Cloudflare felt empowered to write within our style guide.
+              Bonus: It was just as important to educate internal users. At the end of January 2025, I launched the application version of the Content Quality Index so that teams at a large infrastructure company felt empowered to write within our style guide.
             </p>
           </section>
 

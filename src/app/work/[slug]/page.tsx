@@ -1,18 +1,18 @@
 import { notFound } from 'next/navigation'
 import PortfolioPieceClient from '@/components/PortfolioPieceClient'
-import { ClueIndexCaseStudy } from '@/case-studies/ClueIndexCaseStudy'
+import { ContentQualityIndexCaseStudy } from '@/case-studies/ContentQualityIndexCaseStudy'
 import { DocumentationForRetrievalCaseStudy } from '@/case-studies/DocumentationForRetrievalCaseStudy'
 import { EmptyStatesCaseStudy } from '@/case-studies/EmptyStatesCaseStudy'
-import { GatewayPolicyBuilderCaseStudy } from '@/case-studies/GatewayPolicyBuilderCaseStudy'
+import { FirewallPolicyBuilderCaseStudy } from '@/case-studies/FirewallPolicyBuilderCaseStudy'
 import { NavigationOverhaulCaseStudy } from '@/case-studies/NavigationOverhaulCaseStudy'
 import { portfolioPieces, type PortfolioSlug } from '@/case-studies/data'
 import type { PortfolioPiece } from '@/case-studies/types'
 
 const caseStudyComponents: Partial<Record<PortfolioSlug, (props: { piece: PortfolioPiece }) => JSX.Element>> = {
-  'zero-trust-navigation': NavigationOverhaulCaseStudy,
+  'enterprise-navigation': NavigationOverhaulCaseStudy,
   'empty-states': EmptyStatesCaseStudy,
-  'clue-index': ClueIndexCaseStudy,
-  'gateway-policy-builder': GatewayPolicyBuilderCaseStudy,
+  'content-quality-index': ContentQualityIndexCaseStudy,
+  'firewall-policy-builder': FirewallPolicyBuilderCaseStudy,
   'documentation-for-retrieval': DocumentationForRetrievalCaseStudy,
 }
 

@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, Linkedin, ArrowUpRight } from "lucide-react"
+import BotanicalBackdrop from "@/components/BotanicalBackdrop"
 
 const ContactSection = () => {
   const contactItems = [
@@ -30,6 +31,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="relative overflow-hidden py-24 md:py-32 lg:pl-28">
       <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[26vw] bg-[linear-gradient(90deg,transparent,rgba(137,148,129,0.11))] lg:block" />
+      <BotanicalBackdrop variant="contact" />
 
       <div className="relative z-10 mx-auto w-full max-w-[1600px] px-6 md:px-10 lg:pr-20">
         <div className="mb-8 flex items-center gap-4">

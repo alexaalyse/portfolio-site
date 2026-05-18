@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="650" viewBox="0 0 1049 650" role="img" aria-labelledby="title desc">
-  <title id="title">Cloudflare Network Interconnect documentation before chunkability revision</title>
+  <title id="title">Private Network Interconnect documentation before chunkability revision</title>
   <desc id="desc">A documentation example with a generic connection types heading, an unlabeled table, and notes below the table.</desc>
   <rect width="1049" height="650" fill="#0d1117"/>
   <style>
@@ -16,13 +16,13 @@
     .row { fill: #161b22; }
   </style>
 
-  <text x="19" y="29" class="h1">Cloudflare Network Interconnect (CNI)</text>
+  <text x="19" y="29" class="h1">Private Network Interconnect</text>
   <line x1="19" y1="41" x2="1031" y2="41" class="line"/>
 
-  <text x="19" y="76" class="body">Cloudflare Network Interconnect (CNI) allows you to connect your network infrastructure directly to Cloudflare through private, dedicated</text>
-  <text x="19" y="100" class="body">connections that bypass the public Internet. CNI provides predictable latency, consistent throughput, and reduced exposure to attacks.</text>
+  <text x="19" y="76" class="body">Private Network Interconnect allows you to connect your network infrastructure directly to the provider network through private, dedicated</text>
+  <text x="19" y="100" class="body">connections that bypass the public Internet. PNI provides predictable latency, consistent throughput, and reduced exposure to attacks.</text>
 
-  <text x="19" y="140" class="body">Use CNI when you need to meet security requirements that prohibit public Internet traffic, reduce cloud egress costs, or deploy in highly</text>
+  <text x="19" y="140" class="body">Use PNI when you need to meet security requirements that prohibit public Internet traffic, reduce cloud egress costs, or deploy in highly</text>
   <text x="19" y="164" class="body">regulated industries (financial services, healthcare).</text>
 
   <text x="19" y="215" class="h2">Connection types</text>
@@ -42,14 +42,14 @@
   <text x="33" y="297" class="type">Direct</text>
   <text x="33" y="320" class="type">Interconnect</text>
   <text x="186" y="309" class="td">Physical fiber cross-connect in a shared data center</text>
-  <text x="623" y="297" class="td">Customers colocated with Cloudflare who require</text>
+  <text x="623" y="297" class="td">Customers colocated with the provider who require</text>
   <text x="623" y="320" class="td">maximum control and performance</text>
 
   <text x="33" y="357" class="type">Partner</text>
   <text x="33" y="380" class="type">Interconnect</text>
   <text x="186" y="357" class="td">Virtual connection through connectivity partners</text>
   <text x="186" y="380" class="td">(Megaport, Equinix Fabric, PacketFabric)</text>
-  <text x="623" y="357" class="td">Customers not colocated with Cloudflare or who prefer</text>
+  <text x="623" y="357" class="td">Customers not colocated with the provider or who prefer</text>
   <text x="623" y="380" class="td">managed connectivity</text>
 
   <text x="33" y="418" class="type">Cloud</text>
@@ -59,13 +59,13 @@
   <text x="623" y="418" class="td">Customers with workloads in public clouds requiring</text>
   <text x="623" y="441" class="td">private connectivity</text>
 
-  <text x="19" y="490" class="body">:::note[Key consideration] CNI requires an Enterprise plan and is available only in locations where Cloudflare has interconnect facilities. :::</text>
-  <text x="19" y="530" class="body">:::caution[Using CNI with Cloudflare Tunnel] </text>
+  <text x="19" y="490" class="body">:::note[Key consideration] PNI requires an Enterprise plan and is available only in locations where the provider has interconnect facilities. :::</text>
+  <text x="19" y="530" class="body">:::caution[Using PNI with secure connector] </text>
   <rect x="362" y="515" width="91" height="22" rx="4" fill="#1f2937"/>
   <text x="372" y="531" class="code">cloudflared</text>
-  <text x="459" y="530" class="body"> establishes connections to multiple Cloudflare regions for redundancy. If your CNI</text>
-  <text x="19" y="554" class="body">connection only advertises routes to one Cloudflare region, Cloudflare Tunnel may operate in a degraded state with reduced redundancy.</text>
-  <text x="19" y="594" class="body">Evaluate whether Cloudflare Tunnel is necessary if CNI already provides private connectivity to your infrastructure. :::</text>
+  <text x="459" y="530" class="body"> establishes connections to multiple provider regions for redundancy. If your PNI</text>
+  <text x="19" y="554" class="body">connection only advertises routes to one provider region, secure connector may operate in a degraded state with reduced redundancy.</text>
+  <text x="19" y="594" class="body">Evaluate whether secure connector is necessary if PNI already provides private connectivity to your infrastructure. :::</text>
   <text x="19" y="633" class="body">For detailed configuration, refer to the </text>
-  <text x="293" y="633" class="link">Cloudflare Network Interconnect documentation.</text>
+  <text x="293" y="633" class="link">private network interconnect documentation.</text>
 </svg>

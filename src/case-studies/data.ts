@@ -1,8 +1,8 @@
 export const portfolioPieces = {
-  'zero-trust-navigation': {
-    title: 'Zero Trust Navigation Overhaul',
+  'enterprise-navigation': {
+    title: 'Enterprise Navigation Overhaul',
     subtitle: 'Enterprise navigation system redesign',
-    problem: 'A powerful product was becoming structurally overwhelming. As our Zero Trust suite expanded, navigation grew organically. Labels reflected our org chart instead of user intent. Research signals were clear: <br /><br /><ul><li> Users struggled to predict where to find key workflows </li><li> Cross-product features lacked cohesion </li><li> Expansion without strategy risked long-term fragmentation </li></ul>',
+    problem: 'A powerful product was becoming structurally overwhelming. As our enterprise product suite expanded, navigation grew organically. Labels reflected our org chart instead of user intent. Research signals were clear: <br /><br /><ul><li> Users struggled to predict where to find key workflows </li><li> Cross-product features lacked cohesion </li><li> Expansion without strategy risked long-term fragmentation </li></ul>',
     impact: [
       {
         header: 'Statistically validated structure',
@@ -56,7 +56,7 @@ export const portfolioPieces = {
         phase: 'Operationalize & Scale',
         description: 'Made it buildable — and sustainable.',
         slides: [
-          { title: 'Implementation Strategy', content: 'Created phased rollout plan across all Zero Trust products.' },
+          { title: 'Implementation Strategy', content: 'Created phased rollout plan across all enterprise products.' },
           { title: 'Governance Model', content: 'Established AI-based helper for evaluating new navigation proposals.' }
         ],
         images: ['/api/placeholder/800/600', '/api/placeholder/800/600']
@@ -67,10 +67,10 @@ export const portfolioPieces = {
     nextProject: 'empty-states',
     prevProject: null
   },
-  'zero-trust-onboarding': {
-    title: 'Zero Trust Onboarding',
-    subtitle: 'Comprehensive onboarding strategy for Zero Trust security platform',
-    problem: "The Zero Trust security platform had a steep learning curve, resulting in poor user adoption and high churn rates. New users were overwhelmed by complex security concepts and couldn't understand the value proposition. The onboarding process did not have personalization and failed to address different user personas's needs.",
+  'enterprise-onboarding': {
+    title: 'Enterprise Platform Onboarding',
+    subtitle: 'Comprehensive onboarding strategy for enterprise security platform',
+    problem: "The enterprise security platform had a steep learning curve, resulting in poor user adoption and high churn rates. New users were overwhelmed by complex security concepts and couldn't understand the value proposition. The onboarding process did not have personalization and failed to address different user personas's needs.",
     impact: [
       {
         header: 'Improved user adoption rates by 75% within 6 months',
@@ -78,7 +78,7 @@ export const portfolioPieces = {
       },
       {
         header: 'Reduced onboarding time from 45 minutes to 15 minutes',
-        description: 'Dramatic time savings for new users getting started with the Zero Trust platform.'
+        description: 'Dramatic time savings for new users getting started with the enterprise platform.'
       },
       {
         header: 'Decreased support tickets by 40%',
@@ -134,7 +134,7 @@ export const portfolioPieces = {
     beforeAfter: undefined,
     tags: ['Onboarding', 'User Journey', 'Security', 'Research'],
     nextProject: 'overview-pages',
-    prevProject: 'zero-trust-navigation'
+    prevProject: 'enterprise-navigation'
   },
   'overview-pages': {
     title: 'Overview Pages',
@@ -205,12 +205,12 @@ export const portfolioPieces = {
     beforeAfter: undefined,
     tags: ['Dashboard', 'Information Architecture', 'Data Visualization', 'UX Strategy'],
     nextProject: 'empty-states',
-    prevProject: 'zero-trust-onboarding'
+    prevProject: 'enterprise-onboarding'
   },
   'empty-states': {
     title: 'Empty States Strategy',
-    subtitle: "Educational empty state framework for Cloudflare's Zero Trust dashboard",
-    problem: 'When users landed on tool-level pages within Cloudflare Zero Trust dashboard for the first time, they encountered generic empty states that provided only brief tool overviews. The dashboard failed to provide users with a full scope of what individual tools do, why they should configure them, or how to get started, leading to poor user engagement and adoption.',
+    subtitle: "Educational empty state framework for the company's enterprise dashboard",
+    problem: 'When users landed on tool-level pages within the company enterprise dashboard for the first time, they encountered generic empty states that provided only brief tool overviews. The dashboard failed to provide users with a full scope of what individual tools do, why they should configure them, or how to get started, leading to poor user engagement and adoption.',
     impact: [
       {
         header: 'Increased user success rates by 10.5% after onboarding',
@@ -236,9 +236,9 @@ export const portfolioPieces = {
     process: [
       {
         phase: 'Phase 1: A/B Testing',
-        description: 'Selected Access applications tool for controlled A/B test.',
+        description: 'Selected an application setup surface for a controlled A/B test.',
         slides: [
-          { title: 'Test Design', content: 'Selected Access applications tool for controlled A/B test comparing traditional vs educational empty states.' },
+          { title: 'Test Design', content: 'Selected an application setup surface for a controlled A/B test comparing traditional vs educational empty states.' },
           { title: 'Enhancements', content: 'Added value proposition, summary, educational resources, prerequisites, and recommended actions.' },
           { title: 'Setup', content: 'Configured test to measure success rates and user engagement metrics.' }
         ],
@@ -276,17 +276,17 @@ export const portfolioPieces = {
       }
     ],
     tags: ['Content Strategy', 'User Engagement', 'First-Time Experience', 'UX writing', 'A/B Testing'],
-    nextProject: 'clue-index',
-    prevProject: 'zero-trust-navigation'
+    nextProject: 'content-quality-index',
+    prevProject: 'enterprise-navigation'
   },
-  'clue-index': {
-    title: 'The PCX CLUE Index',
+  'content-quality-index': {
+    title: 'The Content Quality Index',
     subtitle: 'AI-assisted infrastructure for scalable UX writing quality',
-    problem: "As Cloudflare's product suite scaled, customer-facing content became increasingly inconsistent across dashboards, APIs, emails, and onboarding flows. UX writing reviews could not keep pace with the speed of product development, and emerging AI-generated content introduced even more variability in tone, terminology, and clarity.",
+    problem: "As the company's product suite scaled, customer-facing content became increasingly inconsistent across dashboards, APIs, emails, and onboarding flows. UX writing reviews could not keep pace with the speed of product development, and emerging AI-generated content introduced even more variability in tone, terminology, and clarity.",
     impact: [
       {
         header: 'Improved dashboard content quality by 34.8%',
-        description: 'Initial testing across Zero Trust page descriptions increased the average CLUE score from 7.42 to 10 after revisions generated from the system recommendations.'
+        description: 'Initial testing across enterprise dashboard page descriptions increased the average quality score from 7.42 to 10 after revisions generated from the system recommendations.'
       },
       {
         header: 'Standardized UX writing guidance across multiple content types',
@@ -314,7 +314,7 @@ export const portfolioPieces = {
       },
       {
         phase: 'Tool Development',
-        description: 'Built tools and dashboards for tracking CLUE Index metrics.',
+        description: 'Built tools and dashboards for tracking Content Quality Index metrics.',
         slides: [
           { title: 'Metric Definition', content: 'Defined clear, actionable metrics for each lifecycle stage.' },
           { title: 'Dashboard Design', content: 'Created intuitive dashboards for teams to track their metrics.' },
@@ -324,7 +324,7 @@ export const portfolioPieces = {
       },
       {
         phase: 'Training & Adoption',
-        description: 'Trained product teams on using CLUE Index for decision making.',
+        description: 'Trained product teams on using Content Quality Index for decision making.',
         slides: [
           { title: 'Workshops', content: 'Conducted workshops across product teams on framework usage.' },
           { title: 'Documentation', content: 'Created comprehensive documentation and playbooks.' },
@@ -335,13 +335,13 @@ export const portfolioPieces = {
     ],
     beforeAfter: undefined,
     tags: ['AI-assisted UX', 'Content quality', 'UX writing systems', 'Measurement'],
-    nextProject: 'gateway-policy-builder',
+    nextProject: 'firewall-policy-builder',
     prevProject: 'empty-states'
   },
-  'gateway-policy-builder': {
-    title: 'Gateway Firewall Policy Builder',
+  'firewall-policy-builder': {
+    title: 'Firewall Policy Builder',
     subtitle: 'Building a policy builder for how administrators actually think',
-    problem: 'The Gateway firewall policy builder was a heavily used Zero Trust surface, but administrators had to configure conditional DNS, HTTP, and Network policies through fragmented, scroll-heavy workflows shaped around implementation details instead of user intent.',
+    problem: 'The firewall policy builder was a heavily used enterprise dashboard surface, but administrators had to configure conditional DNS, HTTP, and Network policies through fragmented, scroll-heavy workflows shaped around implementation details instead of user intent.',
     impact: [
       {
         header: 'Unified fragmented workflows',
@@ -362,14 +362,14 @@ export const portfolioPieces = {
     ],
     process: [],
     beforeAfter: undefined,
-    tags: ['Enterprise UX', 'Workflow Design', 'AI Prototyping', 'Zero Trust'],
+    tags: ['Enterprise UX', 'Workflow Design', 'AI Prototyping', 'Complex systems'],
     nextProject: 'documentation-for-retrieval',
-    prevProject: 'clue-index'
+    prevProject: 'content-quality-index'
   },
   'documentation-for-retrieval': {
     title: 'Designing Documentation for Retrieval',
     subtitle: 'Designing documentation for retrieval, not just reading',
-    problem: 'As Cloudflare expanded AI-assisted support and retrieval workflows, documentation quality became increasingly difficult to evaluate. Pages that worked well for human readers often produced incomplete or misleading AI responses once ingested into retrieval systems.',
+    problem: 'As the company expanded AI-assisted support and retrieval workflows, documentation quality became increasingly difficult to evaluate. Pages that worked well for human readers often produced incomplete or misleading AI responses once ingested into retrieval systems.',
     impact: [
       {
         header: 'Reduced major AI inaccuracies by up to 83%',
@@ -377,7 +377,7 @@ export const portfolioPieces = {
       },
       {
         header: 'Improved complete-answer rates from 0/10 to 7/10',
-        description: 'In one Cloudflare One connectivity test set, models that initially failed nearly every retrieval question became consistently reliable after structural documentation updates.'
+        description: 'In one enterprise connectivity test set, models that initially failed nearly every retrieval question became consistently reliable after structural documentation updates.'
       },
       {
         header: 'Created a reusable framework for AI-readable documentation',
@@ -392,7 +392,7 @@ export const portfolioPieces = {
     beforeAfter: undefined,
     tags: ['AI Content Strategy', 'Documentation IA', 'RAG', 'Information Architecture'],
     nextProject: null,
-    prevProject: 'gateway-policy-builder'
+    prevProject: 'firewall-policy-builder'
   },
   'cloudy-ai': {
     title: 'Cloudy AI',
@@ -451,7 +451,7 @@ export const portfolioPieces = {
     beforeAfter: undefined,
     tags: ['AI/UX', 'Complex Systems', 'User Research', 'Interface Design'],
     nextProject: null,
-    prevProject: 'gateway-policy-builder'
+    prevProject: 'firewall-policy-builder'
   }
 }
 

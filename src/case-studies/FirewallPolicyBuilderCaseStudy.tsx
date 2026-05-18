@@ -5,12 +5,12 @@ import PortfolioProcessNavigation from '@/components/PortfolioProcessNavigation'
 import { HeaderNavLinks } from '@/components/HeaderNavLinks'
 import type { PortfolioPiece } from './types'
 import { CaseStudySection } from './CaseStudySection'
-import { gatewayImpact, gatewaySteps } from './case-study-data'
+import { policyBuilderImpact, policyBuilderSteps } from './case-study-data'
 
-export function GatewayPolicyBuilderCaseStudy({ piece }: { piece: PortfolioPiece }) {
+export function FirewallPolicyBuilderCaseStudy({ piece }: { piece: PortfolioPiece }) {
   return (
     <>
-      <PortfolioProcessNavigation steps={gatewaySteps} />
+      <PortfolioProcessNavigation steps={policyBuilderSteps} />
       <main className="min-h-screen bg-background">
         <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
           <div className="flex h-16 w-full items-center justify-between px-6 md:px-8">
@@ -39,7 +39,7 @@ export function GatewayPolicyBuilderCaseStudy({ piece }: { piece: PortfolioPiece
               </h1>
               <div className="mt-8 max-w-6xl space-y-5 text-xl leading-relaxed text-muted-foreground/90 md:text-2xl">
                 <p>
-                  The Gateway firewall policy builder was a fragmented, scroll-heavy configuration experience. I led a redesign to turn it into a unified visual workflow built around real user mental models.
+                  The firewall policy builder was a fragmented, scroll-heavy configuration experience. I led a redesign to turn it into a unified visual workflow built around real user mental models.
                 </p>
                 <p>
                   This work reframed policy creation around a persistent If / Then structure while using AI-assisted prototyping to rapidly accelerate alignment, iteration, and organizational momentum.
@@ -56,7 +56,7 @@ export function GatewayPolicyBuilderCaseStudy({ piece }: { piece: PortfolioPiece
 
             <CaseStudySection id="impact" eyebrow="Impact" title="My impact">
               <div className="grid gap-6 md:grid-cols-2">
-                {gatewayImpact.map((item) => (
+                {policyBuilderImpact.map((item) => (
                   <div key={item.title} className="border-t border-primary/20 pt-5">
                     <h3 className="text-xl font-semibold text-primary">{item.title}</h3>
                     <p className="mt-3">{item.body}</p>
@@ -68,7 +68,7 @@ export function GatewayPolicyBuilderCaseStudy({ piece }: { piece: PortfolioPiece
             <CaseStudySection id="problem" eyebrow="The problem" title="A critical enterprise workflow had become a wall of scroll">
               <div className="max-w-6xl space-y-6">
                 <p>
-                  The Gateway firewall policy builder was one of the most heavily used surfaces in the Zero Trust dashboard, but over time the experience became increasingly difficult to scale. Administrators needed to configure highly conditional policies across DNS, HTTP, and Network traffic, yet the UI separated those workflows into distinct policy types despite sharing the same underlying logic.
+                  The firewall policy builder was one of the most heavily used surfaces in the enterprise dashboard, but over time the experience became increasingly difficult to scale. Administrators needed to configure highly conditional policies across DNS, HTTP, and Network traffic, yet the UI separated those workflows into distinct policy types despite sharing the same underlying logic.
                 </p>
                 <p>
                   As more controls, exceptions, and conditional settings were introduced, the experience gradually evolved into what many internally referred to as a wall of scroll: a vertically stacked workflow with excessive whitespace, limited progressive disclosure, and disconnected relationships between policy conditions and their resulting actions.
@@ -132,14 +132,14 @@ export function GatewayPolicyBuilderCaseStudy({ piece }: { piece: PortfolioPiece
                     {[
                       {
                         label: "Before",
-                        src: "/gateway-policy-builder-before.png",
-                        alt: "Original Gateway policy builder with a long vertical configuration flow",
+                        src: "/policy-builder-before.png",
+                        alt: "Original policy builder with a long vertical configuration flow",
                         caption: "The original builder spread related policy decisions across a long sequential form.",
                       },
                       {
                         label: "After",
-                        src: "/gateway-policy-builder-solution.jpeg",
-                        alt: "Redesigned Gateway firewall policy builder with If and Then columns and a visual policy preview",
+                        src: "/policy-builder-solution.jpeg",
+                        alt: "Redesigned firewall policy builder with If and Then columns and a visual policy preview",
                         caption: "The redesigned builder kept conditions, actions, and preview behavior visible together.",
                       },
                     ].map((image) => (
@@ -170,7 +170,7 @@ export function GatewayPolicyBuilderCaseStudy({ piece }: { piece: PortfolioPiece
                     Instead of relying solely on static wireframes, I used Figma Make alongside natural-language prompting and reference materials to rapidly generate interactive workflow concepts that stakeholders could immediately engage with. This moved conversations beyond abstract discussions and into tangible experiences much earlier in the process.
                   </p>
                   <p>
-                    I also used AI-assisted analysis of internal documentation to quickly extract and categorize the large number of conditional settings and behaviors supported by Gateway policies. This made it possible to simulate realistic progressive disclosure behaviors within the prototype itself.
+                    I also used AI-assisted analysis of internal documentation to quickly extract and categorize the large number of conditional settings and behaviors supported by network policies. This made it possible to simulate realistic progressive disclosure behaviors within the prototype itself.
                   </p>
                   <p>
                     Although the redesigned policy builder is still early in its lifecycle, the prototype created a shared visual language for alignment discussions and compressed the path from concept to design refinement and engineering handoff.

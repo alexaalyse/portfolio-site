@@ -68,7 +68,7 @@ export function DocumentationForRetrievalCaseStudy({ piece }: { piece: Portfolio
             <CaseStudySection id="problem" eyebrow="The problem" title="Documentation that worked for humans was failing under fragmented retrieval">
               <div className="max-w-6xl space-y-6">
                 <p>
-                  As Cloudflare expanded AI-assisted support and retrieval workflows, documentation quality became increasingly difficult to evaluate. Pages that worked well for human readers often produced incomplete or misleading AI responses once ingested into retrieval systems.
+                  As the company expanded AI-assisted support and retrieval workflows, documentation quality became increasingly difficult to evaluate. Pages that worked well for human readers often produced incomplete or misleading AI responses once ingested into retrieval systems.
                 </p>
                 <p>
                   Large comparison tables lost context when chunked. Generic headings like Selectors or Allow became meaningless in isolation. Important constraints were frequently separated from the actions they governed. Even when the correct information existed, models struggled to consistently retrieve and reconstruct it.
@@ -137,13 +137,13 @@ export function DocumentationForRetrievalCaseStudy({ piece }: { piece: Portfolio
                     {[
                       {
                         label: "Before",
-                        src: "/chunkability-cni-before.svg",
-                        alt: "Cloudflare Network Interconnect documentation before revision with a generic connection types heading and table without a descriptive caption",
+                        src: "/chunkability-pni-before.svg",
+                        alt: "Private network interconnect documentation before revision with a generic connection types heading and table without a descriptive caption",
                       },
                       {
                         label: "After",
-                        src: "/chunkability-cni-example.svg",
-                        alt: "Cloudflare Network Interconnect documentation after revision with clear product identity, a specific section heading, and a self-describing connection types table",
+                        src: "/chunkability-pni-example.svg",
+                        alt: "Private network interconnect documentation after revision with clear product identity, a specific section heading, and a self-describing connection types table",
                       },
                     ].map((image) => (
                       <div key={image.label}>
@@ -157,7 +157,7 @@ export function DocumentationForRetrievalCaseStudy({ piece }: { piece: Portfolio
                     ))}
                   </div>
                   <figcaption className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                    The revised version improves identity persistence by repeating the full Cloudflare Network Interconnect (CNI) context in the section heading and table setup. It also improves table survivability with a descriptive caption and row labels that remain meaningful if the table is retrieved without surrounding page context.
+                    The revised version improves identity persistence by repeating the full Private Network Interconnect context in the section heading and table setup. It also improves table survivability with a descriptive caption and row labels that remain meaningful if the table is retrieved without surrounding page context.
                   </figcaption>
                 </figure>
               </div>
@@ -170,7 +170,7 @@ export function DocumentationForRetrievalCaseStudy({ piece }: { piece: Portfolio
                     The work showed that AI answer quality could improve dramatically without rewriting the underlying technical content. In several test sets, restructuring documentation around chunkability reduced major inaccuracies from 6/10 responses to as low as 0-1/10 across multiple LLMs.
                   </p>
                   <p>
-                    In one Cloudflare One connectivity test set, complete-answer rates improved from 0/10 to 7/10 after structural documentation updates. The improvements came from making product identity, scope, constraints, and relationships more resilient when retrieved as fragments.
+                    In one enterprise connectivity test set, complete-answer rates improved from 0/10 to 7/10 after structural documentation updates. The improvements came from making product identity, scope, constraints, and relationships more resilient when retrieved as fragments.
                   </p>
                 </div>
                 <div className="grid gap-4">
