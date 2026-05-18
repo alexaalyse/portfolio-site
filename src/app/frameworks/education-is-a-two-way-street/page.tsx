@@ -65,7 +65,7 @@ export default function EducationTwoWayStreetPage() {
 
       <article className="relative overflow-hidden py-24 md:py-32 lg:pl-28">
         <div aria-hidden="true" className="pointer-events-none absolute -right-24 top-24 hidden h-64 w-64 rotate-12 border border-accent/15 lg:block" />
-        <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[24vw] bg-[linear-gradient(90deg,transparent,rgba(168,85,247,0.045))] lg:block" />
+        <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[24vw] bg-[linear-gradient(90deg,transparent,rgba(93,28,52,0.08))] lg:block" />
 
         <div className="relative z-10 w-full max-w-[1440px] px-6 md:px-10 lg:pr-20">
           <div className="mb-8 flex items-center gap-4">
@@ -95,7 +95,7 @@ export default function EducationTwoWayStreetPage() {
               Having a shared language as a through-line builds consistency and makes product complexities feel less intimidating. If a user explores a new feature and thinks, "Oh, this operates just like Feature X, I get it," or, "Ah, I understand the differences between this and Feature Y," then I did my job right.
             </p>
             <p>
-              But I am not always going to get it right. <strong className="font-semibold text-white">Like everything else in software development, UX is iterative.</strong> We build, we test, we measure, and we adapt. Our users educated me just as much as I educated them. This reciprocal process of education is a core tenet of the way I approached Cloudflare One's content strategy.
+              But I am not always going to get it right. <strong className="font-semibold text-foreground">Like everything else in software development, UX is iterative.</strong> We build, we test, we measure, and we adapt. Our users educated me just as much as I educated them. This reciprocal process of education is a core tenet of the way I approached Cloudflare One's content strategy.
             </p>
           </div>
 
@@ -114,7 +114,7 @@ export default function EducationTwoWayStreetPage() {
                   ["Empower", "Increase confidence and make complex or technical tasks feel approachable."],
                 ].map(([title, body]) => (
                   <div key={title} className="border-b border-accent/30 py-6 pr-6 md:px-6">
-                    <h3 className="text-xl font-semibold text-white">{title}</h3>
+                    <h3 className="text-xl font-semibold text-foreground">{title}</h3>
                     <p className="mt-3 text-base leading-relaxed text-muted-foreground/90">{body}</p>
                   </div>
                 ))}
@@ -128,7 +128,7 @@ export default function EducationTwoWayStreetPage() {
             <div className="mt-6 grid md:grid-cols-2">
               {userEducationInitiatives.map((item) => (
                 <section key={item.title} className="border-b border-accent/30 py-8 pr-6 md:px-8">
-                  <h3 className="text-2xl font-semibold text-white">{item.title}</h3>
+                  <h3 className="text-2xl font-semibold text-foreground">{item.title}</h3>
                   <p className="mt-4 text-base leading-relaxed text-muted-foreground/90 md:text-lg">
                     {item.body}
                   </p>
@@ -136,7 +136,7 @@ export default function EducationTwoWayStreetPage() {
               ))}
             </div>
 
-            <p className="mt-10 border-l-2 border-accent pl-6 text-lg font-semibold leading-relaxed text-white md:text-xl">
+            <p className="mt-10 border-l-2 border-accent pl-6 text-lg font-semibold leading-relaxed text-foreground md:text-xl">
               Bonus: It was just as important to educate internal users. At the end of January 2025, I launched the application version of the PCX CLUE Index so that teams at Cloudflare felt empowered to write within our style guide.
             </p>
           </section>
@@ -152,7 +152,7 @@ export default function EducationTwoWayStreetPage() {
             <div className="mt-12 grid border-t border-accent/30">
               {userLearningInputs.map((item) => (
                 <section key={item.title} className="border-b border-accent/30 py-8 pr-6 md:px-8">
-                  <h3 className="text-2xl font-semibold text-white">{item.title}</h3>
+                  <h3 className="text-2xl font-semibold text-foreground">{item.title}</h3>
                   <div className="mt-4 space-y-5 text-base leading-relaxed text-muted-foreground/90 md:text-lg">
                     {item.body.map((paragraph) => (
                       <p key={paragraph}>{paragraph}</p>

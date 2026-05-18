@@ -4,48 +4,48 @@
 
 @layer base {
   :root {
-    --background: 219 42% 11%; /* #111729 - Dark blue background */
-    --foreground: 0 0% 100%; /* White for paragraph text */
-    --card: 219 42% 15%; /* Slightly lighter than background */
-    --card-foreground: 0 0% 100%;
-    --popover: 219 42% 15%;
-    --popover-foreground: 0 0% 100%;
-    --primary: 278 97% 66%; /* #a855f7 - Purple for primary elements */
-    --primary-foreground: 219 42% 11%;
-    --secondary: 219 42% 20%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 219 42% 25%;
-    --muted-foreground: 0 0% 80%;
-    --accent: 174 82% 53%; /* #2dd4bf - Teal for accents and details */
-    --accent-foreground: 219 42% 11%;
+    --background: 35 30% 91%;
+    --foreground: 30 6% 6%;
+    --card: 31 26% 82%;
+    --card-foreground: 30 6% 6%;
+    --popover: 35 30% 91%;
+    --popover-foreground: 30 6% 6%;
+    --primary: 338 54% 24%;
+    --primary-foreground: 35 30% 91%;
+    --secondary: 35 32% 46%;
+    --secondary-foreground: 35 30% 91%;
+    --muted: 31 24% 78%;
+    --muted-foreground: 30 11% 30%;
+    --accent: 91 9% 36%;
+    --accent-foreground: 35 30% 91%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 219 42% 25%;
-    --input: 219 42% 25%;
-    --ring: 174 82% 53%; /* #2dd4bf - Teal for focus rings */
+    --border: 31 20% 65%;
+    --input: 31 20% 65%;
+    --ring: 338 54% 24%;
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 219 42% 11%; /* #111729 - Dark blue background */
-    --foreground: 0 0% 100%; /* White for paragraph text */
-    --card: 219 42% 15%; /* Slightly lighter than background */
-    --card-foreground: 0 0% 100%;
-    --popover: 219 42% 15%;
-    --popover-foreground: 0 0% 100%;
-    --primary: 278 97% 66%; /* #a855f7 - Purple for primary elements */
-    --primary-foreground: 219 42% 11%;
-    --secondary: 219 42% 20%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 219 42% 25%;
-    --muted-foreground: 0 0% 80%;
-    --accent: 174 82% 53%; /* #2dd4bf - Teal for accents and details */
-    --accent-foreground: 219 42% 11%;
+    --background: 35 30% 91%;
+    --foreground: 30 6% 6%;
+    --card: 31 26% 82%;
+    --card-foreground: 30 6% 6%;
+    --popover: 35 30% 91%;
+    --popover-foreground: 30 6% 6%;
+    --primary: 338 54% 24%;
+    --primary-foreground: 35 30% 91%;
+    --secondary: 35 32% 46%;
+    --secondary-foreground: 35 30% 91%;
+    --muted: 31 24% 78%;
+    --muted-foreground: 30 11% 30%;
+    --accent: 91 9% 36%;
+    --accent-foreground: 35 30% 91%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 219 42% 25%;
-    --input: 219 42% 25%;
-    --ring: 174 82% 53%; /* #2dd4bf - Teal for focus rings */
+    --border: 31 20% 65%;
+    --input: 31 20% 65%;
+    --ring: 338 54% 24%;
   }
 }
 
@@ -55,5 +55,23 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-image:
+      radial-gradient(circle at 12% 8%, rgba(205, 188, 171, 0.45), transparent 28rem),
+      radial-gradient(circle at 88% 4%, rgba(137, 148, 129, 0.18), transparent 24rem),
+      linear-gradient(180deg, rgba(255, 252, 246, 0.38), rgba(205, 188, 171, 0.16) 46%, rgba(239, 233, 225, 0));
+    background-attachment: fixed;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background-image:
+      linear-gradient(rgba(17, 16, 15, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(17, 16, 15, 0.018) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.32), transparent 48rem);
   }
 }

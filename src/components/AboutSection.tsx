@@ -2,11 +2,33 @@ import { frameworks } from "@/frameworks/data"
 import { ArrowDown, ArrowUpRight } from "lucide-react"
 import Link from "next/link"
 
+const learningLoop = [
+  {
+    step: "01",
+    title: "Listen",
+    detail: "Find the friction in user behavior, support signals, and product data.",
+  },
+  {
+    step: "02",
+    title: "Frame",
+    detail: "Turn ambiguity into a clear product direction and testable point of view.",
+  },
+  {
+    step: "03",
+    title: "Shape",
+    detail: "Prototype the workflow, language, and system behavior together.",
+  },
+  {
+    step: "04",
+    title: "Learn",
+    detail: "Measure what changed, sharpen the pattern, and iterate again.",
+  },
+]
+
 const AboutSection = () => {
   return (
-    <section id="about" className="relative overflow-hidden bg-background py-24 md:py-32 lg:pl-28">
-      <div aria-hidden="true" className="pointer-events-none absolute -right-20 bottom-24 hidden h-56 w-56 -rotate-12 border border-primary/15 lg:block" />
-      <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[24vw] bg-[linear-gradient(90deg,transparent,rgba(45,212,191,0.04))] lg:block" />
+    <section id="about" className="relative overflow-hidden py-24 md:py-32 lg:pl-28">
+      <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[24vw] bg-[linear-gradient(90deg,transparent,rgba(137,148,129,0.1))] lg:block" />
 
       <div className="relative z-10 w-full max-w-[1440px] px-6 md:px-10 lg:pr-20">
         <div className="mb-8 flex items-center gap-4">
@@ -18,28 +40,82 @@ const AboutSection = () => {
 
         <div>
           <h2 className="max-w-6xl text-4xl font-bold leading-tight text-primary md:text-6xl">
-            Listen closely. Build intentionally. Design systems that scale.
+            Listen closely. Build intentionally. Design experiences that scale.
           </h2>
 
-          <div className="mt-10 max-w-6xl space-y-6 text-xl leading-relaxed text-muted-foreground/90 md:text-2xl">
-            <p>
-              I believe good UX starts with paying attention. Not just to what users say, but to the patterns beneath the friction. What keeps confusing people? What workarounds are becoming normalized? What signals is the product unintentionally sending?
-            </p>
-            <p>
-              Sometimes the issue is content. Sometimes it's the workflow. Sometimes the product itself is fighting the user's mental model.
-            </p>
-            <p>
-              That's the part of UX I enjoy most: translating ambiguity into clearer systems, better product decisions, and experiences that scale more effectively over time.
-            </p>
-            <p className="border-l-2 border-accent pl-6 text-xl font-semibold leading-tight text-white md:text-3xl">
-              I design operational UX systems for complex products in an AI-driven world.
-            </p>
-            <p>
-              To me, content is more than decoration layered onto a product experience. It is the infrastructure that shapes how people (and increasingly AI systems) interpret, navigate, and trust a product. Structure, terminology, guidance, and context all influence whether a workflow feels intuitive, discoverable, and actionable.
-            </p>
-            <p>
-              My work combines research, analytics, experimentation, and systems thinking to improve complex B2B and AI-driven experiences. I'm especially motivated by how user insight can influence product strategy, how AI changes the way people navigate software, and how operational UX systems can make complex products easier to understand at scale.
-            </p>
+          <div className="mt-10 max-w-6xl text-xl leading-relaxed text-muted-foreground/90 md:text-2xl">
+            <aside aria-label="Fast learning loop diagram" className="relative float-right mb-6 ml-6 w-[min(24rem,48%)] border border-primary/20 bg-card/40 p-6 max-[520px]:float-none max-[520px]:mb-8 max-[520px]:ml-0 max-[520px]:w-full md:ml-10 md:p-8">
+              <div aria-hidden="true" className="absolute -right-4 -top-4 h-20 w-20 border border-accent/40" />
+              <div aria-hidden="true" className="absolute -bottom-4 -left-4 h-16 w-16 border border-primary/30" />
+
+              <div className="relative">
+                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent/80">
+                  Working rhythm
+                </p>
+                <p className="mt-5 text-4xl font-black leading-none text-primary md:text-5xl">
+                  Learn fast.
+                </p>
+                <p className="mt-2 text-4xl font-black leading-none text-foreground md:text-5xl">
+                  Iterate faster.
+                </p>
+
+                <div className="my-8 h-px bg-gradient-to-r from-accent via-primary to-transparent" />
+
+                <div className="space-y-3">
+                  {learningLoop.map((item, index) => (
+                    <div key={item.title} className="relative grid grid-cols-[auto_1fr] gap-4 border border-primary/15 bg-background/60 p-4">
+                      <div className="flex flex-col items-center">
+                        <span className="flex h-9 w-9 items-center justify-center border border-accent/60 text-sm font-bold text-accent">
+                          {item.step}
+                        </span>
+                        {index < learningLoop.length - 1 && (
+                          <span aria-hidden="true" className="mt-3 h-full min-h-8 w-px bg-accent/35" />
+                        )}
+                      </div>
+                      <div>
+                        <p className="text-lg font-semibold leading-none text-foreground">
+                          {item.title}
+                        </p>
+                        <p className="mt-2 text-base leading-snug text-muted-foreground">
+                          {item.detail}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <p className="mt-6 border-l-2 border-accent pl-4 text-base font-semibold leading-snug text-foreground">
+                  Work fast enough to learn, and learn clearly enough to build with intent.
+                </p>
+              </div>
+            </aside>
+
+            <div className="space-y-6">
+              <p>
+                I believe good UX starts with paying attention. Not just to what users say, but to the patterns beneath the friction. What keeps confusing people? What workarounds are becoming normalized? What signals is the product unintentionally sending?
+              </p>
+              <p>
+                Sometimes the issue is content. Sometimes it's the workflow. Sometimes the product itself is fighting the user's mental model.
+              </p>
+              <p>
+                That's the part of UX I enjoy most: Translating ambiguity into clearer experiences, stronger product decisions, and systems that become more intuitive over time.
+              </p>
+              <p>
+                My work combines research, analytics, experimentation, and systems thinking to help make complex products easier to understand.
+              </p>
+              <p>
+                Because of that, I think deeply about the role content plays within a product experience. Information architecture, terminology, guidance, and context all shape how people interpret, navigate, and trust a product. They influence whether something feels intuitive, discoverable, and actionable.
+              </p>
+              <p>
+                We're also at a fascinating crossroads with software. Experiences are becoming increasingly AI-driven, and some of our users even <em className="text-primary">are</em> AI. As we design for this new world, one thing remains true regardless of who &mdash; or what &mdash; is interacting with a product: <span className="font-semibold text-primary">Clarity creates reliability.</span>
+              </p>
+              <p>
+                When workflows are straightforward, systems behave more predictably. When concepts are unified, decisions become easier to make. When the product carries its weight, content doesn't have to compensate.
+              </p>
+              <p>
+                Those are the kinds of experiences I'm driven to build. Experiences where complexity feels manageable, decisions feel intentional, and users can move forward with confidence.
+              </p>
+            </div>
           </div>
         </div>
 

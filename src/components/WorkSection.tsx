@@ -66,9 +66,8 @@ const WorkSection = () => {
   ]
 
   return (
-    <section id="work" className="relative overflow-hidden bg-background py-24 md:py-32 lg:pl-28">
-      <div aria-hidden="true" className="pointer-events-none absolute -right-24 top-24 hidden h-64 w-64 rotate-12 border border-accent/15 lg:block" />
-      <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[24vw] bg-[linear-gradient(90deg,transparent,rgba(168,85,247,0.045))] lg:block" />
+    <section id="work" className="relative overflow-hidden py-24 md:py-32 lg:pl-28">
+      <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[24vw] bg-[linear-gradient(90deg,transparent,rgba(93,28,52,0.08))] lg:block" />
 
       <div className="relative z-10 w-full max-w-[1440px] px-6 md:px-10 lg:pr-20">
         <div className="mb-8 flex items-center gap-4">

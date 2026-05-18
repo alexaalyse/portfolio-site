@@ -3,10 +3,8 @@ import { ArrowDown } from "lucide-react"
 
 const HeroSection = () => {
   return (
-    <section id="hero" className="relative min-h-[calc(100svh-4rem)] overflow-hidden bg-background py-16 md:py-20 lg:pl-28">
-      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 hidden w-[32vw] bg-[linear-gradient(90deg,transparent,rgba(45,212,191,0.06))] lg:block" />
-      <div aria-hidden="true" className="pointer-events-none absolute -right-20 top-24 hidden h-72 w-72 rotate-12 border border-primary/20 lg:block" />
-      <div aria-hidden="true" className="pointer-events-none absolute -right-6 bottom-20 hidden h-40 w-40 -rotate-6 border border-accent/20 lg:block" />
+    <section id="hero" className="relative min-h-[calc(100svh-4rem)] overflow-hidden py-16 md:py-20 lg:pl-28">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 hidden w-[32vw] bg-[linear-gradient(90deg,transparent,rgba(137,148,129,0.12))] lg:block" />
 
       <div className="relative z-10 flex min-h-[calc(100svh-12rem)] w-full max-w-[1440px] items-center px-6 md:px-10 lg:pr-20">
         <div className="w-full max-w-6xl text-left">
@@ -23,15 +21,18 @@ const HeroSection = () => {
 
           <div className="mt-8 max-w-6xl space-y-4 text-xl leading-relaxed text-muted-foreground/90 md:text-2xl lg:text-3xl">
             <p>
-              I'm a UX, content, and product strategist who helps make complex systems feel intuitive and actionable.
+              I translate user confusion into product direction.
             </p>
             <p>
-              My sweet spot sits at the intersection of data, storytelling, and product strategy. I'm motivated by tough problems and thrive on turning user insights into scalable systems and experiences that boost clarity and adoption.
+              My sweet spot sits at the intersection of data, storytelling, and product strategy. Lately, I've been focused on how user behavior, AI systems, and product architecture shape the way people experience complex software.
+            </p>
+            <p>
+              The work I enjoy most is finding the patterns beneath friction and turning them into experiences that feel more intentional, scalable, and human.
             </p>
           </div>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <Button asChild size="lg" className="text-lg px-8 py-6 md:px-10 md:py-7 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary">
+            <Button asChild size="lg" className="text-lg px-8 py-6 md:px-10 md:py-7 bg-primary hover:bg-primary/90">
               <a href="#work">View my work</a>
             </Button>
             <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 md:px-10 md:py-7 border-primary text-primary hover:bg-accent hover:text-accent-foreground">

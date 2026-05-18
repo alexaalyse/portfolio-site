@@ -65,15 +65,14 @@ const TestimonialsSection = () => {
     }
 
     container.scrollBy({
-      left: direction === "next" ? container.clientWidth * 0.85 : -container.clientWidth * 0.85,
+      left: direction === "next" ? container.clientWidth : -container.clientWidth,
       behavior: "smooth",
     })
   }
 
   return (
-    <section id="testimonials" className="relative overflow-hidden bg-background py-20 md:py-24 lg:pl-28">
-      <div aria-hidden="true" className="pointer-events-none absolute -right-24 top-28 hidden h-64 w-64 rotate-12 border border-primary/15 lg:block" />
-      <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[24vw] bg-[linear-gradient(90deg,transparent,rgba(45,212,191,0.04))] lg:block" />
+    <section id="testimonials" className="relative overflow-hidden py-20 md:py-24 lg:pl-28">
+      <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[24vw] bg-[linear-gradient(90deg,transparent,rgba(137,148,129,0.1))] lg:block" />
 
       <div className="relative z-10 w-full max-w-[1440px] px-6 md:px-10 lg:pr-20">
         <div className="mb-8 flex items-center gap-4">
@@ -92,11 +91,11 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        <div className="relative mt-12">
+        <div className="relative mt-12 max-w-6xl min-[560px]:px-12">
           <button
             type="button"
             onClick={() => scrollTestimonials("previous")}
-            className="absolute -left-3 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 items-center justify-center border border-primary/20 bg-background/90 text-accent shadow-lg shadow-background/40 backdrop-blur transition-colors hover:border-accent hover:text-primary md:flex"
+            className="absolute left-0 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center border border-primary/20 bg-background/80 text-accent shadow-sm transition-colors hover:border-accent hover:text-primary min-[560px]:flex md:h-11 md:w-11"
             aria-label="Previous testimonial"
           >
             <ChevronLeft className="h-5 w-5" aria-hidden="true" />
@@ -104,20 +103,21 @@ const TestimonialsSection = () => {
           <button
             type="button"
             onClick={() => scrollTestimonials("next")}
-            className="absolute -right-3 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 items-center justify-center border border-primary/20 bg-background/90 text-accent shadow-lg shadow-background/40 backdrop-blur transition-colors hover:border-accent hover:text-primary md:flex"
+            className="absolute right-0 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center border border-primary/20 bg-background/80 text-accent shadow-sm transition-colors hover:border-accent hover:text-primary min-[560px]:flex md:h-11 md:w-11"
             aria-label="Next testimonial"
           >
             <ChevronRight className="h-5 w-5" aria-hidden="true" />
           </button>
+
           <div
             ref={scrollRef}
-            className="-mx-6 overflow-x-auto px-6 pb-1 [-ms-overflow-style:none] [scrollbar-width:none] md:-mx-10 md:px-10 [&::-webkit-scrollbar]:hidden"
+            className="overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
-            <div className="flex w-max gap-5">
+            <div className="flex gap-5">
               {testimonials.map((testimonial) => (
                 <article
                   key={testimonial.relationship}
-                  className="w-[min(82vw,42rem)] flex-none border border-primary/20 bg-background/70 p-6 md:p-8"
+                  className="w-[82vw] flex-none border border-primary/20 bg-background/70 p-6 min-[560px]:w-[calc((100%-1.25rem)/2)] md:p-8"
                 >
                   <div className="mb-6 flex items-center justify-between gap-6 border-b border-primary/20 pb-5">
                     <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">

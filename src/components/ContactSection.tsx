@@ -28,9 +28,8 @@ const ContactSection = () => {
   ]
 
   return (
-    <section id="contact" className="relative overflow-hidden bg-background py-24 md:py-32 lg:pl-28">
-      <div aria-hidden="true" className="pointer-events-none absolute -right-24 top-20 hidden h-64 w-64 -rotate-12 border border-primary/15 lg:block" />
-      <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[26vw] bg-[linear-gradient(90deg,transparent,rgba(45,212,191,0.045))] lg:block" />
+    <section id="contact" className="relative overflow-hidden py-24 md:py-32 lg:pl-28">
+      <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[26vw] bg-[linear-gradient(90deg,transparent,rgba(137,148,129,0.11))] lg:block" />
 
       <div className="relative z-10 w-full max-w-[1440px] px-6 md:px-10 lg:pr-20">
         <div className="mb-8 flex items-center gap-4">

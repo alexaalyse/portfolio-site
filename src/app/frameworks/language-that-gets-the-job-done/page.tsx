@@ -103,7 +103,7 @@ export default function LanguageThatGetsTheJobDonePage() {
 
       <article className="relative overflow-hidden py-24 md:py-32 lg:pl-28">
         <div aria-hidden="true" className="pointer-events-none absolute -right-24 top-24 hidden h-64 w-64 rotate-12 border border-accent/15 lg:block" />
-        <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[24vw] bg-[linear-gradient(90deg,transparent,rgba(168,85,247,0.045))] lg:block" />
+        <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[24vw] bg-[linear-gradient(90deg,transparent,rgba(93,28,52,0.08))] lg:block" />
 
         <div className="relative z-10 w-full max-w-[1440px] px-6 md:px-10 lg:pr-20">
           <div className="mb-8 flex items-center gap-4">
@@ -126,7 +126,7 @@ export default function LanguageThatGetsTheJobDonePage() {
             <p>
               When I led a large-scale navigation overhaul, the changes were not made lightly. It was critical that we conducted statistically significant user research to feel confident in our decisions. And when I was analyzing the results and reading hundreds of pieces of open-ended feedback, one thing became very clear:
             </p>
-            <p className="border-l-2 border-accent pl-6 text-xl font-semibold leading-tight text-white md:text-3xl">
+            <p className="border-l-2 border-accent pl-6 text-xl font-semibold leading-tight text-foreground md:text-3xl">
               Users think about their tasks, not how the system works.
             </p>
             <p>
@@ -135,7 +135,7 @@ export default function LanguageThatGetsTheJobDonePage() {
             <p>
               Or as one user put it:
             </p>
-            <blockquote className="border-l-2 border-accent pl-6 text-xl font-semibold leading-relaxed text-white md:text-2xl">
+            <blockquote className="border-l-2 border-accent pl-6 text-xl font-semibold leading-relaxed text-foreground md:text-2xl">
               "I swear to God, I don't understand anything. I really need a VPN."
             </blockquote>
             <p>
@@ -170,13 +170,13 @@ export default function LanguageThatGetsTheJobDonePage() {
 
             <div className="mt-12 grid border-t border-accent/30 md:grid-cols-2">
               <div className="border-b border-accent/30 py-6 pr-6 md:px-6">
-                <h3 className="text-2xl font-semibold text-white">Labels are for outcomes</h3>
+                <h3 className="text-2xl font-semibold text-foreground">Labels are for outcomes</h3>
                 <p className="mt-3 text-base leading-relaxed text-muted-foreground/90 md:text-lg">
                   They should be scannable and self-explanatory.
                 </p>
               </div>
               <div className="border-b border-accent/30 py-6 pr-6 md:px-6">
-                <h3 className="text-2xl font-semibold text-white">Descriptions are for details</h3>
+                <h3 className="text-2xl font-semibold text-foreground">Descriptions are for details</h3>
                 <p className="mt-3 text-base leading-relaxed text-muted-foreground/90 md:text-lg">
                   This is where we can give additional context on the how for users who want to learn more.
                 </p>
@@ -198,14 +198,14 @@ export default function LanguageThatGetsTheJobDonePage() {
               </p>
             </div>
 
-            <p className="mt-10 text-lg font-semibold leading-relaxed text-white md:text-xl">
+            <p className="mt-10 text-lg font-semibold leading-relaxed text-foreground md:text-xl">
               Outcome-based language:
             </p>
 
             <div className="mt-6 grid md:grid-cols-2">
               {outcomeLanguageBenefits.map((benefit) => (
                 <div key={benefit} className="border-b border-accent/30 py-6 pr-6 md:px-6">
-                  <p className="text-base font-semibold leading-relaxed text-white md:text-lg">
+                  <p className="text-base font-semibold leading-relaxed text-foreground md:text-lg">
                     {benefit}
                   </p>
                 </div>
@@ -228,7 +228,7 @@ export default function LanguageThatGetsTheJobDonePage() {
             <div className="mt-10 grid border-t border-accent/30">
               {writingQuestions.map((item) => (
                 <section key={item.title} className="border-b border-accent/30 py-8 pr-6 md:px-8">
-                  <h3 className="text-2xl font-semibold text-white">{item.title}</h3>
+                  <h3 className="text-2xl font-semibold text-foreground">{item.title}</h3>
                   <p className="mt-4 text-base leading-relaxed text-muted-foreground/90 md:text-lg">
                     {item.body}
                   </p>
@@ -246,7 +246,7 @@ export default function LanguageThatGetsTheJobDonePage() {
           </section>
 
           <section className="mt-24 max-w-4xl">
-            <p className="border-l-2 border-accent pl-6 text-xl font-semibold leading-relaxed text-white md:text-3xl">
+            <p className="border-l-2 border-accent pl-6 text-xl font-semibold leading-relaxed text-foreground md:text-3xl">
               Behind every feature is great technical work. But while the tech makes it possible, it is the language that makes it usable.
             </p>
           </section>

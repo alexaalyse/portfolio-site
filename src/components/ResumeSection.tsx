@@ -59,9 +59,8 @@ const ResumeSection = () => {
   ]
 
   return (
-    <section id="resume" className="relative overflow-hidden bg-background py-20 md:py-24 lg:pl-28">
-      <div aria-hidden="true" className="pointer-events-none absolute -right-20 top-24 hidden h-56 w-56 rotate-12 border border-accent/15 lg:block" />
-      <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[24vw] bg-[linear-gradient(90deg,transparent,rgba(168,85,247,0.04))] lg:block" />
+    <section id="resume" className="relative overflow-hidden py-20 md:py-24 lg:pl-28">
+      <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[24vw] bg-[linear-gradient(90deg,transparent,rgba(93,28,52,0.08))] lg:block" />
 
       <div className="relative z-10 w-full max-w-[1440px] px-6 md:px-10 lg:pr-20">
         <div className="mb-8 flex items-center gap-4">
@@ -116,7 +115,7 @@ const ResumeSection = () => {
                       {index < company.roles.length - 1 && (
                         <div className="absolute top-5 h-[calc(100%+1.25rem)] w-px bg-accent/25" />
                       )}
-                      <div className="relative mt-1 h-2.5 w-2.5 rounded-full bg-accent shadow-[0_0_0_5px_rgba(45,212,191,0.12)]" />
+                      <div className="relative mt-1 h-2.5 w-2.5 rounded-full bg-accent shadow-[0_0_0_5px_rgba(137,148,129,0.16)]" />
                     </div>
                     <div>
                       <p className="text-lg font-medium leading-snug md:text-xl">
