@@ -26,7 +26,7 @@ export function ClueIndexCaseStudy({ piece }: { piece: PortfolioPiece }) {
           <div aria-hidden="true" className="pointer-events-none absolute -right-24 top-32 hidden h-72 w-72 rotate-12 border border-accent/15 lg:block" />
           <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[24vw] bg-[linear-gradient(90deg,transparent,rgba(137,148,129,0.1))] lg:block" />
 
-          <div className="relative z-10 w-full max-w-[1440px] px-6 py-20 md:px-10 md:py-24 lg:pr-20">
+          <div className="relative z-10 mx-auto w-full max-w-[1600px] px-6 py-20 md:px-10 md:py-24 lg:pr-20">
             <section id="hero" className="pb-16 md:pb-20">
               <div className="mb-8 flex items-center gap-4">
                 <div className="h-px w-14 bg-accent" />

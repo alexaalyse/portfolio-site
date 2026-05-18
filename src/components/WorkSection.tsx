@@ -69,7 +69,7 @@ const WorkSection = () => {
     <section id="work" className="relative overflow-hidden py-24 md:py-32 lg:pl-28">
       <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[24vw] bg-[linear-gradient(90deg,transparent,rgba(93,28,52,0.08))] lg:block" />
 
-      <div className="relative z-10 w-full max-w-[1440px] px-6 md:px-10 lg:pr-20">
+      <div className="relative z-10 mx-auto w-full max-w-[1600px] px-6 md:px-10 lg:pr-20">
         <div className="mb-8 flex items-center gap-4">
           <div className="h-px w-14 bg-accent" />
           <p className="text-sm font-semibold uppercase tracking-[0.28em] text-accent">
@@ -91,7 +91,7 @@ const WorkSection = () => {
             <Link
               key={project.slug}
               href={`/work/${project.slug}`}
-              className="group flex min-h-[22rem] flex-col border-b border-primary/20 py-8 pr-6 transition-colors hover:border-accent/70 md:py-10 lg:px-8"
+              className="group flex min-h-[22rem] flex-col border-b border-primary/20 py-8 pr-6 transition-colors hover:border-accent/70 md:py-10 lg:pr-8 lg:[&:nth-child(even)]:pl-8"
             >
               <div className="mb-8 flex items-start justify-between gap-6">
                 <div>

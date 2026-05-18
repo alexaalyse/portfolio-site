@@ -2,8 +2,8 @@ import Link from "next/link"
 
 export const headerNavItems = [
   { name: "Philosophy", href: "/#about" },
-  { name: "Work", href: "/#work" },
-  { name: "Frameworks", href: "/frameworks/" },
+  { name: "Frameworks", href: "/#frameworks" },
+  { name: "Case studies", href: "/#work" },
   { name: "Resume", href: "/#resume" },
   { name: "Contact", href: "/#contact" },
 ]
@@ -23,4 +23,3 @@ export function HeaderNavLinks() {
     </div>
   )
 }
-

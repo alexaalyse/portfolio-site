@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { cn } from "@/lib/utils"
-import { ChevronRight, User, Briefcase, Brain, Mail, FileText, MessageCircle } from "lucide-react"
+import { User, Briefcase, Brain, Mail, FileText, MessageCircle } from "lucide-react"
 
 const ProcessNavigation = () => {
   const [activeSection, setActiveSection] = React.useState("hero")
@@ -11,7 +11,7 @@ const ProcessNavigation = () => {
   const processSteps = [
     { id: "hero", label: "Hello", icon: User, href: "#hero" },
     { id: "about", label: "Philosophy", icon: Brain, href: "#about" },
-    { id: "work", label: "Work", icon: Briefcase, href: "#work" },
+    { id: "work", label: "Case studies", icon: Briefcase, href: "#work" },
     { id: "resume", label: "Resume", icon: FileText, href: "#resume" },
     { id: "testimonials", label: "References", icon: MessageCircle, href: "#testimonials" },
     { id: "contact", label: "Connect", icon: Mail, href: "#contact" }

@@ -30,7 +30,7 @@ const AboutSection = () => {
     <section id="about" className="relative overflow-hidden py-24 md:py-32 lg:pl-28">
       <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[24vw] bg-[linear-gradient(90deg,transparent,rgba(137,148,129,0.1))] lg:block" />
 
-      <div className="relative z-10 w-full max-w-[1440px] px-6 md:px-10 lg:pr-20">
+      <div className="relative z-10 mx-auto w-full max-w-[1600px] px-6 md:px-10 lg:pr-20">
         <div className="mb-8 flex items-center gap-4">
           <div className="h-px w-14 bg-accent" />
           <p className="text-sm font-semibold uppercase tracking-[0.28em] text-accent">
@@ -39,12 +39,12 @@ const AboutSection = () => {
         </div>
 
         <div>
-          <h2 className="max-w-6xl text-4xl font-bold leading-tight text-primary md:text-6xl">
+          <h2 className="max-w-[1400px] text-4xl font-bold leading-tight text-primary md:text-6xl">
             Listen closely. Build intentionally. Design experiences that scale.
           </h2>
 
-          <div className="mt-10 max-w-6xl text-xl leading-relaxed text-muted-foreground/90 md:text-2xl">
-            <aside aria-label="Fast learning loop diagram" className="relative float-right mb-6 ml-6 w-[min(24rem,48%)] border border-primary/20 bg-card/40 p-6 max-[520px]:float-none max-[520px]:mb-8 max-[520px]:ml-0 max-[520px]:w-full md:ml-10 md:p-8">
+          <div className="mt-10 max-w-[1400px] text-xl leading-relaxed text-muted-foreground/90 md:text-2xl">
+            <aside aria-label="Fast learning loop diagram" className="relative float-right mb-6 ml-6 w-[min(28rem,42%)] border border-primary/20 bg-card/40 p-6 max-[520px]:float-none max-[520px]:mb-8 max-[520px]:ml-0 max-[520px]:w-full md:ml-10 md:p-8">
               <div aria-hidden="true" className="absolute -right-4 -top-4 h-20 w-20 border border-accent/40" />
               <div aria-hidden="true" className="absolute -bottom-4 -left-4 h-16 w-16 border border-primary/30" />
 
@@ -119,7 +119,7 @@ const AboutSection = () => {
           </div>
         </div>
 
-        <div className="mt-20 max-w-6xl">
+        <div className="mt-20 max-w-[1400px]">
           <h3 className="text-2xl font-semibold text-primary md:text-3xl">Where I thrive</h3>
           <div className="mt-8 grid border-t border-primary/20 md:grid-cols-2 lg:grid-cols-4">
             {[
@@ -127,7 +127,7 @@ const AboutSection = () => {
               "Information architecture", "Data analysis", "AI workflows", "Content as a product",
               "ROI Measurement", "Conversational AI", "Context engineering", "User research", "Cross-functional leadership",
             ].map((skill) => (
-              <div key={skill} className="group border-b border-primary/20 py-5 pr-6 transition-colors hover:border-accent/60 md:pl-5">
+              <div key={skill} className="group border-b border-primary/20 py-5 pr-6 transition-colors hover:border-accent/60">
                 <div className="mb-4 h-px w-8 bg-accent/50 transition-all group-hover:w-14 group-hover:bg-accent" />
                 <p className="font-medium leading-snug">{skill}</p>
               </div>
@@ -135,7 +135,7 @@ const AboutSection = () => {
           </div>
         </div>
 
-        <div className="mt-20 max-w-6xl" id="frameworks">
+        <div className="mt-20 max-w-[1400px]" id="frameworks">
           <div className="mb-8 flex items-end justify-between gap-6">
             <div>
               <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-accent/80">
@@ -179,14 +179,14 @@ const AboutSection = () => {
                 <Link
                   key={entry.slug}
                   href={entry.href}
-                  className="group border-b border-primary/20 py-8 pr-6 transition-colors hover:border-accent/70 md:px-8 md:py-10"
+                  className="group border-b border-primary/20 py-8 pr-6 transition-colors hover:border-accent/70 md:py-10 md:pr-8 md:[&:nth-child(even)]:pl-8"
                 >
                   {content}
                 </Link>
               ) : (
                 <article
                   key={entry.slug}
-                  className="group border-b border-primary/20 py-8 pr-6 md:px-8 md:py-10"
+                  className="group border-b border-primary/20 py-8 pr-6 md:py-10 md:pr-8 md:[&:nth-child(even)]:pl-8"
                 >
                   {content}
                 </article>

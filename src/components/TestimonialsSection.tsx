@@ -1,7 +1,7 @@
 "use client"
 
-import { useRef } from "react"
-import { ArrowDown, ChevronLeft, ChevronRight, Quote } from "lucide-react"
+import { useEffect, useState } from "react"
+import { ArrowDown, ArrowUpRight, Quote, X } from "lucide-react"
 
 const testimonials = [
   {
@@ -55,26 +55,36 @@ const testimonials = [
 ]
 
 const TestimonialsSection = () => {
-  const scrollRef = useRef<HTMLDivElement>(null)
+  const [selectedTestimonial, setSelectedTestimonial] = useState<number | null>(null)
 
-  const scrollTestimonials = (direction: "previous" | "next") => {
-    const container = scrollRef.current
-
-    if (!container) {
+  useEffect(() => {
+    if (selectedTestimonial === null) {
       return
     }
 
-    container.scrollBy({
-      left: direction === "next" ? container.clientWidth : -container.clientWidth,
-      behavior: "smooth",
-    })
-  }
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setSelectedTestimonial(null)
+      }
+    }
+
+    document.body.style.overflow = "hidden"
+    window.addEventListener("keydown", handleKeyDown)
+
+    return () => {
+      document.body.style.overflow = ""
+      window.removeEventListener("keydown", handleKeyDown)
+    }
+  }, [selectedTestimonial])
+
+  const activeTestimonial =
+    selectedTestimonial === null ? null : testimonials[selectedTestimonial]
 
   return (
     <section id="testimonials" className="relative overflow-hidden py-20 md:py-24 lg:pl-28">
       <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[24vw] bg-[linear-gradient(90deg,transparent,rgba(137,148,129,0.1))] lg:block" />
 
-      <div className="relative z-10 w-full max-w-[1440px] px-6 md:px-10 lg:pr-20">
+      <div className="relative z-10 mx-auto w-full max-w-[1600px] px-6 md:px-10 lg:pr-20">
         <div className="mb-8 flex items-center gap-4">
           <div className="h-px w-14 bg-accent" />
           <p className="text-sm font-semibold uppercase tracking-[0.28em] text-accent">
@@ -82,7 +92,7 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        <div className="max-w-6xl">
+        <div className="max-w-[1400px]">
           <h2 className="text-4xl font-bold leading-tight text-primary md:text-5xl">
             What partners say
           </h2>
@@ -91,49 +101,38 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        <div className="relative mt-12 max-w-6xl min-[560px]:px-12">
-          <button
-            type="button"
-            onClick={() => scrollTestimonials("previous")}
-            className="absolute left-0 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center border border-primary/20 bg-background/80 text-accent shadow-sm transition-colors hover:border-accent hover:text-primary min-[560px]:flex md:h-11 md:w-11"
-            aria-label="Previous testimonial"
-          >
-            <ChevronLeft className="h-5 w-5" aria-hidden="true" />
-          </button>
-          <button
-            type="button"
-            onClick={() => scrollTestimonials("next")}
-            className="absolute right-0 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center border border-primary/20 bg-background/80 text-accent shadow-sm transition-colors hover:border-accent hover:text-primary min-[560px]:flex md:h-11 md:w-11"
-            aria-label="Next testimonial"
-          >
-            <ChevronRight className="h-5 w-5" aria-hidden="true" />
-          </button>
+        <div className="mt-12 grid max-w-[1400px] border-t border-primary/20 md:grid-cols-2 md:gap-x-8 xl:grid-cols-3">
+          {testimonials.map((testimonial, index) => (
+            <article
+              key={`${testimonial.relationship}-${index}`}
+              className="group flex min-h-[21rem] flex-col border-b border-primary/20 py-8 pr-6 transition-colors hover:border-accent/70 md:pr-0"
+            >
+              <div className="mb-6 flex items-start justify-between gap-6">
+                <div>
+                  <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-accent/80">
+                    {String(index + 1).padStart(2, "0")}
+                  </p>
+                  <h3 className="text-2xl font-semibold leading-tight text-primary">
+                    {testimonial.relationship}
+                  </h3>
+                </div>
+                <Quote className="mt-1 h-5 w-5 flex-none text-accent" aria-hidden="true" />
+              </div>
 
-          <div
-            ref={scrollRef}
-            className="overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-          >
-            <div className="flex gap-5">
-              {testimonials.map((testimonial) => (
-                <article
-                  key={testimonial.relationship}
-                  className="w-[82vw] flex-none border border-primary/20 bg-background/70 p-6 min-[560px]:w-[calc((100%-1.25rem)/2)] md:p-8"
-                >
-                  <div className="mb-6 flex items-center justify-between gap-6 border-b border-primary/20 pb-5">
-                    <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">
-                      {testimonial.relationship}
-                    </p>
-                    <Quote className="h-5 w-5 flex-none text-accent" aria-hidden="true" />
-                  </div>
-                  <div className="space-y-5 text-base leading-relaxed text-muted-foreground/90 md:text-lg">
-                    {testimonial.quote.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
+              <p className="line-clamp-6 text-base leading-relaxed text-muted-foreground/90 md:text-lg">
+                {testimonial.quote[0]}
+              </p>
+
+              <button
+                type="button"
+                onClick={() => setSelectedTestimonial(index)}
+                className="mt-auto inline-flex items-center gap-2 pt-8 text-sm font-semibold uppercase tracking-[0.18em] text-accent transition-colors hover:text-primary"
+              >
+                Read full reference
+                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
+              </button>
+            </article>
+          ))}
         </div>
 
         <div className="mt-10 flex items-center gap-3 text-accent">
@@ -143,6 +142,46 @@ const TestimonialsSection = () => {
           </span>
         </div>
       </div>
+
+      {activeTestimonial && (
+        <div
+          className="fixed inset-0 z-[100] flex items-end bg-foreground/35 p-0 backdrop-blur-sm md:items-center md:justify-center md:p-8"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="reference-dialog-title"
+          onClick={() => setSelectedTestimonial(null)}
+        >
+          <div
+            className="max-h-[88svh] w-full overflow-y-auto border border-primary/20 bg-background p-6 shadow-2xl md:max-w-4xl md:p-10"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="mb-8 flex items-start justify-between gap-6 border-b border-primary/20 pb-6">
+              <div>
+                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-accent">
+                  Full reference
+                </p>
+                <h3 id="reference-dialog-title" className="text-3xl font-bold leading-tight text-primary md:text-4xl">
+                  {activeTestimonial.relationship}
+                </h3>
+              </div>
+              <button
+                type="button"
+                onClick={() => setSelectedTestimonial(null)}
+                className="flex h-10 w-10 flex-none items-center justify-center border border-primary/20 text-accent transition-colors hover:border-accent hover:text-primary"
+                aria-label="Close reference"
+              >
+                <X className="h-5 w-5" aria-hidden="true" />
+              </button>
+            </div>
+
+            <div className="space-y-6 text-lg leading-relaxed text-muted-foreground/90 md:text-xl">
+              {activeTestimonial.quote.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }

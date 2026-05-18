@@ -48,7 +48,7 @@ const ResumeSection = () => {
     },
     {
       company: "DICK'S Sporting Goods",
-      summary: "Content strategy, customer journeys, and analytics-informed copy.",
+      summary: "Content strategy, B2C customer journeys, and analytics-informed copy.",
       icon: BasketballIcon,
       roles: [
         { title: "Creative Copywriter", dates: "Nov 2021 - Jul 2022" },
@@ -62,7 +62,7 @@ const ResumeSection = () => {
     <section id="resume" className="relative overflow-hidden py-20 md:py-24 lg:pl-28">
       <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[24vw] bg-[linear-gradient(90deg,transparent,rgba(93,28,52,0.08))] lg:block" />
 
-      <div className="relative z-10 w-full max-w-[1440px] px-6 md:px-10 lg:pr-20">
+      <div className="relative z-10 mx-auto w-full max-w-[1600px] px-6 md:px-10 lg:pr-20">
         <div className="mb-8 flex items-center gap-4">
           <div className="h-px w-14 bg-accent" />
           <p className="text-sm font-semibold uppercase tracking-[0.28em] text-accent">
@@ -70,7 +70,7 @@ const ResumeSection = () => {
           </p>
         </div>
 
-        <div className="max-w-6xl">
+        <div className="max-w-[1400px]">
           <h2 className="text-4xl font-bold leading-tight text-primary md:text-5xl">
             Experience and talks
           </h2>
@@ -87,7 +87,7 @@ const ResumeSection = () => {
           </p>
         </div>
 
-        <div className="mt-12 max-w-6xl space-y-10">
+        <div className="mt-12 max-w-[1400px] space-y-10">
           {experience.map((company) => {
             const CompanyIcon = company.icon
 
@@ -135,8 +135,8 @@ const ResumeSection = () => {
           })}
         </div>
 
-        <div className="mt-10 grid max-w-6xl border-t border-primary/20 lg:grid-cols-2">
-          <div className="py-6 pr-6 md:py-8">
+        <div className="mt-10 grid max-w-[1400px] border-t border-primary/20 lg:grid-cols-2">
+          <div className="py-6 pr-6 md:py-8 md:pr-8">
             <div className="flex items-center gap-4">
               <GraduationCap className="h-5 w-5 text-accent" />
               <p className="font-semibold text-primary">Education</p>
@@ -155,25 +155,26 @@ const ResumeSection = () => {
             </p>
           </div>
 
-          <div className="py-6 pr-6 md:py-8">
+          <div className="py-6 pr-6 md:py-8 md:pr-8 lg:pl-8">
             <div className="flex items-center gap-4">
               <Mic className="h-5 w-5 text-accent" />
               <p className="font-semibold text-primary">Speaking</p>
             </div>
             <p className="mt-4 text-base font-medium leading-relaxed md:text-lg">
-              <a
-                href="https://workingincontent.com/growing/program/when-the-right-answer-isnt-more-words"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1.5 font-semibold text-accent underline underline-offset-4 transition-colors hover:text-primary"
-              >
-                <span>Growing in Content 2026</span>
-                <ExternalLink className="h-4 w-4" aria-hidden="true" />
-              </a>
+              Growing in Content 2026
             </p>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-base">
-              "When the right answer isn't more words: How content feedback reveals what products really need"
+              Talk: "When the right answer isn't more words: How content feedback reveals what products really need"
             </p>
+            <a
+              href="https://workingincontent.com/growing-2026/watch/when-the-right-answer-isnt-more-words"
+              target="_blank"
+              rel="noreferrer"
+              className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold uppercase tracking-[0.18em] text-accent transition-colors hover:text-primary"
+            >
+              <span>Watch talk</span>
+              <ExternalLink className="h-4 w-4" aria-hidden="true" />
+            </a>
           </div>
         </div>
 
