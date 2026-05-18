@@ -1,5 +1,4 @@
 import { ArrowDown, ArrowUpRight } from "lucide-react"
-import BotanicalBackdrop from "@/components/BotanicalBackdrop"
 import Link from "next/link"
 
 const WorkSection = () => {
@@ -29,7 +28,7 @@ const WorkSection = () => {
       slug: "empty-states"
     },
     {
-      title: "The Content Quality Index",
+      title: "AI-assisted content quality scoring and generation",
       description: (
         <>
           Copy reviews came fast and furious, taking time away from larger, strategic initiatives. We needed a way to democratize UX writing. 
@@ -69,7 +68,6 @@ const WorkSection = () => {
   return (
     <section id="work" className="relative overflow-hidden py-24 md:py-32 lg:pl-28">
       <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[24vw] bg-[linear-gradient(90deg,transparent,rgba(93,28,52,0.08))] lg:block" />
-      <BotanicalBackdrop variant="work" />
 
       <div className="relative z-10 mx-auto w-full max-w-[1600px] px-6 md:px-10 lg:pr-20">
         <div className="mb-8 flex items-center gap-4">
@@ -95,7 +93,7 @@ const WorkSection = () => {
               href={`/work/${project.slug}`}
               className="group relative flex min-h-[24rem] flex-col border border-primary/20 bg-card/35 p-6 transition-colors hover:border-accent/70 hover:bg-card/55 md:p-8 lg:min-h-[26rem]"
             >
-              <div className="mb-8 flex items-start justify-between gap-6">
+              <div className="relative mb-8 flex items-start justify-between gap-6">
                 <div>
                   <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-accent/80">
                     {String(index + 1).padStart(2, "0")}
@@ -104,20 +102,20 @@ const WorkSection = () => {
                     {project.title}
                   </h3>
                 </div>
-                <span className="mt-1 flex h-11 w-11 flex-none items-center justify-center border border-accent/35 bg-background/35 text-accent transition-colors group-hover:border-accent/70 group-hover:bg-accent/10">
+                <span className="mt-1 flex h-11 w-11 flex-none items-center justify-center border border-accent/35 bg-[#EDE3D8] text-accent transition-colors group-hover:border-accent/70 group-hover:bg-[#EDE3D8]/80">
                   <ArrowUpRight className="h-5 w-5 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
                 </span>
               </div>
 
-              <p className="text-base leading-relaxed text-muted-foreground/90 md:text-lg">
+              <p className="relative text-base leading-relaxed text-muted-foreground/90 md:text-lg">
                 {project.description}
               </p>
 
-              <div className="mt-auto flex flex-wrap gap-3 pt-8">
+              <div className="relative mt-auto flex flex-wrap gap-3 pt-8">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="border border-primary/15 bg-background/35 px-3 py-2 text-sm font-medium leading-tight text-muted-foreground transition-colors group-hover:border-accent/35 group-hover:bg-background/55 group-hover:text-foreground"
+                    className="border border-primary/15 bg-[#EDE3D8] px-3 py-2 text-sm font-medium leading-tight text-muted-foreground transition-colors group-hover:border-accent/35 group-hover:text-foreground"
                   >
                     {tag}
                   </span>

@@ -19,10 +19,10 @@ export function CaseStudySection({
           {eyebrow}
         </p>
       </div>
-      <h2 className="max-w-5xl text-3xl font-bold leading-tight text-primary md:text-5xl">
+      <h2 className="max-w-[1400px] text-3xl font-bold leading-tight text-primary md:text-5xl">
         {title}
       </h2>
-      <div className="mt-8 max-w-6xl text-lg leading-relaxed text-muted-foreground/90 md:text-xl">
+      <div className="mt-8 max-w-[1400px] text-lg leading-relaxed text-muted-foreground/90 md:text-xl">
         {children}
       </div>
     </section>

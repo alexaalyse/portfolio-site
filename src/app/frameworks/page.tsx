@@ -51,7 +51,7 @@ export default function FrameworksPage() {
                       </h2>
                     </div>
                     {entry.href && (
-                      <span className="mt-1 flex h-11 w-11 flex-none items-center justify-center border border-accent/35 bg-background/35 text-accent transition-colors group-hover:border-accent/70 group-hover:bg-accent/10">
+                      <span className="mt-1 flex h-11 w-11 flex-none items-center justify-center border border-accent/35 bg-[#EDE3D8] text-accent transition-colors group-hover:border-accent/70 group-hover:bg-[#EDE3D8]/80">
                         <ArrowUpRight className="h-5 w-5 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
                       </span>
                     )}

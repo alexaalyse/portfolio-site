@@ -1,12 +1,10 @@
 import { Button } from "@/components/ui/button"
-import BotanicalBackdrop from "@/components/BotanicalBackdrop"
 import { ArrowDown } from "lucide-react"
 
 const HeroSection = () => {
   return (
     <section id="hero" className="relative min-h-[calc(100svh-4rem)] overflow-hidden py-16 md:py-20 lg:pl-28">
       <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 hidden w-[32vw] bg-[linear-gradient(90deg,transparent,rgba(137,148,129,0.12))] lg:block" />
-      <BotanicalBackdrop variant="hero" />
 
       <div className="relative z-10 mx-auto grid min-h-[calc(100svh-12rem)] w-full max-w-[1600px] items-center gap-16 px-6 md:px-10 lg:grid-cols-[minmax(0,1fr)_minmax(18rem,26rem)] lg:pr-20">
         <div className="w-full max-w-6xl text-left">
@@ -37,7 +35,7 @@ const HeroSection = () => {
             <Button asChild size="lg" className="text-lg px-8 py-6 md:px-10 md:py-7 bg-primary hover:bg-primary/90">
               <a href="#work">View case studies</a>
             </Button>
-            <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 md:px-10 md:py-7 border-primary text-primary hover:bg-accent hover:text-accent-foreground">
+            <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 md:px-10 md:py-7 border-primary/25 bg-[#EDE3D8] text-primary hover:border-accent/45 hover:bg-[#EDE3D8]/80">
               <a href="#contact">Get in touch</a>
             </Button>
           </div>
@@ -50,7 +48,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <aside className="hidden border-l border-primary/20 pl-8 lg:block">
+        <aside className="relative hidden border-l border-primary/20 pl-8 lg:block">
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-accent">
             Focus areas
           </p>

@@ -280,8 +280,8 @@ export const portfolioPieces = {
     prevProject: 'enterprise-navigation'
   },
   'content-quality-index': {
-    title: 'The Content Quality Index',
-    subtitle: 'AI-assisted infrastructure for scalable UX writing quality',
+    title: 'AI-assisted content quality scoring and generation',
+    subtitle: 'AI-assisted scoring and generation for scalable UX writing quality',
     problem: "As the company's product suite scaled, customer-facing content became increasingly inconsistent across dashboards, APIs, emails, and onboarding flows. UX writing reviews could not keep pace with the speed of product development, and emerging AI-generated content introduced even more variability in tone, terminology, and clarity.",
     impact: [
       {
@@ -314,7 +314,7 @@ export const portfolioPieces = {
       },
       {
         phase: 'Tool Development',
-        description: 'Built tools and dashboards for tracking Content Quality Index metrics.',
+        description: 'Built tools and dashboards for tracking AI-assisted content quality metrics.',
         slides: [
           { title: 'Metric Definition', content: 'Defined clear, actionable metrics for each lifecycle stage.' },
           { title: 'Dashboard Design', content: 'Created intuitive dashboards for teams to track their metrics.' },
@@ -324,7 +324,7 @@ export const portfolioPieces = {
       },
       {
         phase: 'Training & Adoption',
-        description: 'Trained product teams on using Content Quality Index for decision making.',
+        description: 'Trained product teams on using AI-assisted content quality scoring for decision making.',
         slides: [
           { title: 'Workshops', content: 'Conducted workshops across product teams on framework usage.' },
           { title: 'Documentation', content: 'Created comprehensive documentation and playbooks.' },

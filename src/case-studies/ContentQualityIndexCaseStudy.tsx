@@ -23,10 +23,9 @@ export function ContentQualityIndexCaseStudy({ piece }: { piece: PortfolioPiece 
         </nav>
 
         <div className="relative overflow-hidden lg:pl-28">
-          <div aria-hidden="true" className="pointer-events-none absolute -right-24 top-32 hidden h-72 w-72 rotate-12 border border-accent/15 lg:block" />
           <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[24vw] bg-[linear-gradient(90deg,transparent,rgba(137,148,129,0.1))] lg:block" />
 
-          <div className="relative z-10 mx-auto w-full max-w-[1600px] px-6 py-20 md:px-10 md:py-24 lg:pr-20">
+          <div className="relative z-10 mx-auto w-full max-w-[1600px] px-6 py-20 md:px-10 md:py-24 lg:pl-44 lg:pr-20 xl:pl-48">
             <section id="hero" className="pb-16 md:pb-20">
               <div className="mb-8 flex items-center gap-4">
                 <div className="h-px w-14 bg-accent" />
@@ -34,10 +33,10 @@ export function ContentQualityIndexCaseStudy({ piece }: { piece: PortfolioPiece 
                   Case study
                 </p>
               </div>
-              <h1 className="max-w-6xl text-5xl font-bold leading-[0.98] text-primary md:text-7xl">
-                AI-assisted infrastructure for scalable UX writing quality
+              <h1 className="max-w-[1400px] text-5xl font-bold leading-[0.98] text-primary md:text-7xl">
+                AI-assisted content quality scoring and generation
               </h1>
-              <div className="mt-8 max-w-6xl">
+              <div className="mt-8 max-w-[1400px]">
                 <div className="text-xl leading-relaxed text-muted-foreground/90 md:text-2xl">
                   <div className="mb-6 overflow-hidden border border-primary/20 bg-card/40 shadow-sm lg:float-right lg:mb-6 lg:ml-10 lg:mt-2 lg:w-[48%]">
                     <video
@@ -61,12 +60,12 @@ export function ContentQualityIndexCaseStudy({ piece }: { piece: PortfolioPiece 
                     I saw an opportunity to turn UX writing guidance into something measurable and operationalized: a system that could evaluate content against the company's voice, tone, terminology, and usability standards in real time.
                   </p>
                   <p className="mt-5">
-                    The result was the Content Quality Index. I designed the evaluation framework, wrote the regex-based rules that translated UX writing standards into measurable checks, and shaped the workflow teams used to score, revise, and improve content.
+                    I designed an AI-assisted content quality scoring and generation workflow. I created the evaluation framework, wrote the regex-based rules that translated UX writing standards into measurable checks, and shaped the workflow teams used to score, revise, and improve content.
                   </p>
                 </div>
                 <div className="clear-both mt-10 flex flex-wrap gap-3">
                   {piece.tags.map((tag) => (
-                    <span key={tag} className="border border-primary/20 px-3 py-1 text-sm font-medium text-muted-foreground">
+                    <span key={tag} className="border border-primary/15 bg-[#EDE3D8] px-3 py-2 text-sm font-medium leading-tight text-muted-foreground">
                       {tag}
                     </span>
                   ))}
@@ -74,7 +73,7 @@ export function ContentQualityIndexCaseStudy({ piece }: { piece: PortfolioPiece 
               </div>
             </section>
 
-            <CaseStudySection id="impact" eyebrow="Impact" title="My impact">
+            <CaseStudySection id="impact" eyebrow="Impact" title="Made UX writing quality measurable and scalable">
               <div className="grid gap-6 md:grid-cols-2">
                 {contentQualityImpact.map((item) => (
                   <div key={item.title} className="border-t border-primary/20 pt-5">
@@ -86,7 +85,7 @@ export function ContentQualityIndexCaseStudy({ piece }: { piece: PortfolioPiece 
             </CaseStudySection>
 
             <CaseStudySection id="problem" eyebrow="The problem" title="UX writing standards were treated like reference material, not operational infrastructure">
-              <div className="max-w-6xl space-y-6">
+              <div className="max-w-[1400px] space-y-6">
                 <p>
                   Most organizations treat UX writing standards as reference material. The assumption is that if teams have access to a glossary or style guide, consistency will naturally follow.
                 </p>
@@ -118,7 +117,7 @@ export function ContentQualityIndexCaseStudy({ piece }: { piece: PortfolioPiece 
                 <div className="grid gap-8 md:grid-cols-[minmax(0,0.8fr)_minmax(18rem,0.45fr)]">
                   <div className="space-y-6">
                     <p>
-                      I designed and built the Content Quality Index as a custom AI-assisted UX writing evaluation system tailored specifically to the company's products, terminology, and voice guidelines.
+                      I designed and built a custom AI-assisted UX writing evaluation system tailored specifically to the company's products, terminology, and voice guidelines.
                     </p>
                     <p>
                       At the time, AI writing workflows were still in their infancy, and primarily focused on generating copy with ChatGPT or Gemini. I approached the problem differently: how could AI help evaluate and improve content quality instead?
@@ -207,7 +206,7 @@ export function ContentQualityIndexCaseStudy({ piece }: { piece: PortfolioPiece 
                   <div className="overflow-hidden border border-primary/20 bg-card/40">
                     <img
                       src="/content-quality-score-modal.png"
-                      alt="Content Quality Index score details modal showing weighted rule categories and individual writing guidelines"
+                      alt="AI-assisted content quality score details modal showing weighted rule categories and individual writing guidelines"
                       className="h-auto w-full"
                     />
                   </div>
@@ -235,13 +234,13 @@ export function ContentQualityIndexCaseStudy({ piece }: { piece: PortfolioPiece 
                     {
                       label: "Scoring workflow",
                       src: "/content-quality-full-score.png",
-                      alt: "Content Quality Index interface with copy input, a 10 out of 10 score, and no recommendations",
+                      alt: "AI-assisted content quality scoring interface with copy input, a 10 out of 10 score, and no recommendations",
                       caption: "Teams could select a content type, paste draft copy, and generate a score tied to company-specific UX writing standards.",
                     },
                     {
                       label: "Recommendation output",
                       src: "/content-quality-recommendations.png",
-                      alt: "Content Quality Index recommendations panel showing conversational tone, sentence length, and active voice feedback",
+                      alt: "AI-assisted content generation recommendations panel showing conversational tone, sentence length, and active voice feedback",
                       caption: "When content missed a rule, the system returned specific recommendations with examples teams could act on immediately.",
                     },
                   ].map((image) => (
@@ -286,7 +285,7 @@ export function ContentQualityIndexCaseStudy({ piece }: { piece: PortfolioPiece 
               </div>
             </CaseStudySection>
 
-            <CaseStudySection id="reflection" eyebrow="Transferable principles" title="Scalable UX systems matter more than isolated copy improvements">
+            <CaseStudySection id="reflection" eyebrow="Reflection" title="Scalable UX systems matter more than isolated copy improvements">
               <div className="space-y-8">
                 <p>
                   Here are principles I would carry into any organization trying to make UX quality measurable and repeatable:

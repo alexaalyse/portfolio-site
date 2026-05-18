@@ -4,7 +4,7 @@ export const navigationSteps = [
   { id: "problem", label: "Problem", iconName: "target" as const, href: "#problem" },
   { id: "system", label: "Solution", iconName: "layers" as const, href: "#system" },
   { id: "validated", label: "Validation", iconName: "flask" as const, href: "#validated" },
-  { id: "reflection", label: "Principles", iconName: "book-open" as const, href: "#reflection" },
+  { id: "reflection", label: "Reflection", iconName: "book-open" as const, href: "#reflection" },
 ]
 
 export const emptyStatesSteps = [
@@ -13,7 +13,7 @@ export const emptyStatesSteps = [
   { id: "problem", label: "Problem", iconName: "target" as const, href: "#problem" },
   { id: "solution", label: "Solution", iconName: "layers" as const, href: "#solution" },
   { id: "validation", label: "Metrics", iconName: "flask" as const, href: "#validation" },
-  { id: "reflection", label: "Principles", iconName: "book-open" as const, href: "#reflection" },
+  { id: "reflection", label: "Reflection", iconName: "book-open" as const, href: "#reflection" },
 ]
 
 export const contentQualitySteps = [
@@ -22,7 +22,7 @@ export const contentQualitySteps = [
   { id: "problem", label: "Problem", iconName: "target" as const, href: "#problem" },
   { id: "system", label: "Framework", iconName: "layers" as const, href: "#system" },
   { id: "usage", label: "Use", iconName: "flask" as const, href: "#usage" },
-  { id: "reflection", label: "Principles", iconName: "book-open" as const, href: "#reflection" },
+  { id: "reflection", label: "Reflection", iconName: "book-open" as const, href: "#reflection" },
 ]
 
 export const policyBuilderSteps = [
@@ -31,7 +31,7 @@ export const policyBuilderSteps = [
   { id: "problem", label: "Problem", iconName: "target" as const, href: "#problem" },
   { id: "solution", label: "Solution", iconName: "layers" as const, href: "#solution" },
   { id: "alignment", label: "Alignment", iconName: "flask" as const, href: "#alignment" },
-  { id: "reflection", label: "Principles", iconName: "book-open" as const, href: "#reflection" },
+  { id: "reflection", label: "Reflection", iconName: "book-open" as const, href: "#reflection" },
 ]
 
 export const retrievalSteps = [
@@ -40,7 +40,7 @@ export const retrievalSteps = [
   { id: "problem", label: "Problem", iconName: "target" as const, href: "#problem" },
   { id: "solution", label: "Solution", iconName: "layers" as const, href: "#solution" },
   { id: "metrics", label: "Metrics", iconName: "flask" as const, href: "#metrics" },
-  { id: "reflection", label: "Principles", iconName: "book-open" as const, href: "#reflection" },
+  { id: "reflection", label: "Reflection", iconName: "book-open" as const, href: "#reflection" },
 ]
 
 export const emptyStatesImpact = [

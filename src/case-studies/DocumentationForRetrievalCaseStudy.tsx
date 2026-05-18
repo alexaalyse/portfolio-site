@@ -23,10 +23,9 @@ export function DocumentationForRetrievalCaseStudy({ piece }: { piece: Portfolio
         </nav>
 
         <div className="relative overflow-hidden lg:pl-28">
-          <div aria-hidden="true" className="pointer-events-none absolute -right-24 top-32 hidden h-72 w-72 rotate-12 border border-accent/15 lg:block" />
           <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[24vw] bg-[linear-gradient(90deg,transparent,rgba(137,148,129,0.1))] lg:block" />
 
-          <div className="relative z-10 mx-auto w-full max-w-[1600px] px-6 py-20 md:px-10 md:py-24 lg:pr-20">
+          <div className="relative z-10 mx-auto w-full max-w-[1600px] px-6 py-20 md:px-10 md:py-24 lg:pl-44 lg:pr-20 xl:pl-48">
             <section id="hero" className="pb-16 md:pb-20">
               <div className="mb-8 flex items-center gap-4">
                 <div className="h-px w-14 bg-accent" />
@@ -34,10 +33,10 @@ export function DocumentationForRetrievalCaseStudy({ piece }: { piece: Portfolio
                   Case study
                 </p>
               </div>
-              <h1 className="max-w-6xl text-5xl font-bold leading-[0.98] text-primary md:text-7xl">
+              <h1 className="max-w-[1400px] text-5xl font-bold leading-[0.98] text-primary md:text-7xl">
                 Designing documentation for retrieval, not just reading
               </h1>
-              <div className="mt-8 max-w-6xl space-y-5 text-xl leading-relaxed text-muted-foreground/90 md:text-2xl">
+              <div className="mt-8 max-w-[1400px] space-y-5 text-xl leading-relaxed text-muted-foreground/90 md:text-2xl">
                 <p>
                   As LLMs became increasingly integrated into support and product workflows, I noticed a recurring pattern: technically correct documentation was still producing unreliable AI answers.
                 </p>
@@ -47,14 +46,14 @@ export function DocumentationForRetrievalCaseStudy({ piece }: { piece: Portfolio
               </div>
               <div className="mt-10 flex flex-wrap gap-3">
                 {piece.tags.map((tag) => (
-                  <span key={tag} className="border border-primary/20 px-3 py-1 text-sm font-medium text-muted-foreground">
+                  <span key={tag} className="border border-primary/15 bg-[#EDE3D8] px-3 py-2 text-sm font-medium leading-tight text-muted-foreground">
                     {tag}
                   </span>
                 ))}
               </div>
             </section>
 
-            <CaseStudySection id="impact" eyebrow="Impact" title="My impact">
+            <CaseStudySection id="impact" eyebrow="Impact" title="Made documentation survive fragmented retrieval">
               <div className="grid gap-6 md:grid-cols-2">
                 {retrievalImpact.map((item) => (
                   <div key={item.title} className="border-t border-primary/20 pt-5">
@@ -66,7 +65,7 @@ export function DocumentationForRetrievalCaseStudy({ piece }: { piece: Portfolio
             </CaseStudySection>
 
             <CaseStudySection id="problem" eyebrow="The problem" title="Documentation that worked for humans was failing under fragmented retrieval">
-              <div className="max-w-6xl space-y-6">
+              <div className="max-w-[1400px] space-y-6">
                 <p>
                   As the company expanded AI-assisted support and retrieval workflows, documentation quality became increasingly difficult to evaluate. Pages that worked well for human readers often produced incomplete or misleading AI responses once ingested into retrieval systems.
                 </p>
@@ -181,7 +180,7 @@ export function DocumentationForRetrievalCaseStudy({ piece }: { piece: Portfolio
               </div>
             </CaseStudySection>
 
-            <CaseStudySection id="reflection" eyebrow="Transferable principles" title="AI-ready documentation is fundamentally an information architecture problem">
+            <CaseStudySection id="reflection" eyebrow="Reflection" title="AI-ready documentation is fundamentally an information architecture problem">
               <div className="space-y-8">
                 <p>
                   Here are principles I would carry into any content system that needs to remain accurate when retrieved, fragmented, or read out of order:

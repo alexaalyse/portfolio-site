@@ -57,6 +57,12 @@ interface PortfolioPiece {
   prevProject: string | null
 }
 
+const impactTitleByProject: Record<string, string> = {
+  "Enterprise Platform Onboarding": "Reduced the distance between setup and value",
+  "Overview Pages": "Gave users a clearer front door into the product",
+  "Cloudy AI": "Made AI recommendations easier to trust and act on",
+}
+
 export default function PortfolioPieceClient({ piece }: { piece: PortfolioPiece }) {
   const [selectedPhase, setSelectedPhase] = useState<number>(0)
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -96,13 +102,13 @@ export default function PortfolioPieceClient({ piece }: { piece: PortfolioPiece 
         </nav>
 
         <section id="hero" className="py-20 bg-background">
-          <div className="container px-4">
-            <div className="max-w-4xl mx-auto text-left">
+          <div className="mx-auto w-full max-w-[1600px] px-6 md:px-10 lg:pl-44 lg:pr-20 xl:pl-48">
+            <div className="max-w-[1400px] text-left">
               <h1 className="text-4xl md:text-5xl font-bold mb-4 text-primary">{piece.title}</h1>
               <p className="text-xl text-muted-foreground mb-8">{piece.subtitle}</p>
               <div className="flex flex-wrap gap-2 justify-start">
                 {piece.tags.map((tag) => (
-                  <span key={tag} className="px-3 py-1 bg-secondary text-secondary-foreground rounded-full text-sm font-medium">
+                  <span key={tag} className="border border-primary/15 bg-[#EDE3D8] px-3 py-2 text-sm font-medium leading-tight text-muted-foreground">
                     {tag}
                   </span>
                 ))}
@@ -112,8 +118,8 @@ export default function PortfolioPieceClient({ piece }: { piece: PortfolioPiece 
         </section>
 
         <section id="problem" className="py-20 bg-background">
-          <div className="container px-4">
-            <div className="max-w-4xl mx-auto text-left">
+          <div className="mx-auto w-full max-w-[1600px] px-6 md:px-10 lg:pl-44 lg:pr-20 xl:pl-48">
+            <div className="max-w-[1400px] text-left">
               <h2 className="text-3xl font-bold mb-8 text-left text-primary">The problem</h2>
               <Card>
                 <CardContent className="p-8">
@@ -128,9 +134,11 @@ export default function PortfolioPieceClient({ piece }: { piece: PortfolioPiece 
         </section>
 
         <section id="impact" className="py-20 bg-background">
-          <div className="container px-4">
-            <div className="max-w-4xl mx-auto text-left">
-              <h2 className="text-3xl font-bold mb-8 text-left text-primary">My impact</h2>
+          <div className="mx-auto w-full max-w-[1600px] px-6 md:px-10 lg:pl-44 lg:pr-20 xl:pl-48">
+            <div className="max-w-[1400px] text-left">
+              <h2 className="text-3xl font-bold mb-8 text-left text-primary">
+                {impactTitleByProject[piece.title] ?? "What changed through the work"}
+              </h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {piece.impact.map((impact, index) => (
                   <Card key={index} className="border-l-4 border-l-primary">
@@ -147,8 +155,8 @@ export default function PortfolioPieceClient({ piece }: { piece: PortfolioPiece 
 
         {piece.beforeAfter && (
           <section id="before-after" className="py-20 bg-background">
-            <div className="container px-4">
-              <div className="max-w-4xl mx-auto text-left">
+            <div className="mx-auto w-full max-w-[1600px] px-6 md:px-10 lg:pl-44 lg:pr-20 xl:pl-48">
+              <div className="max-w-[1400px] text-left">
                 <h2 className="text-3xl font-bold mb-8 text-left text-primary">Before & After</h2>
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
@@ -170,8 +178,8 @@ export default function PortfolioPieceClient({ piece }: { piece: PortfolioPiece 
         )}
 
         <section id="process" className="py-20 bg-background">
-          <div className="container px-4">
-            <div className="max-w-4xl mx-auto text-left">
+          <div className="mx-auto w-full max-w-[1600px] px-6 md:px-10 lg:pl-44 lg:pr-20 xl:pl-48">
+            <div className="max-w-[1400px] text-left">
               <h2 className="text-3xl font-bold mb-12 text-left text-primary">My process</h2>
               <Card className="overflow-hidden">
                 <div className="flex justify-between items-center p-6 border-b border-border bg-muted/30">
@@ -274,8 +282,8 @@ export default function PortfolioPieceClient({ piece }: { piece: PortfolioPiece 
         </section>
 
         <section className="py-20 bg-background">
-          <div className="container px-4">
-            <div className="max-w-4xl mx-auto">
+          <div className="mx-auto w-full max-w-[1600px] px-6 md:px-10 lg:pl-44 lg:pr-20 xl:pl-48">
+            <div className="max-w-[1400px]">
               <div className="flex justify-between items-center">
                 {piece.prevProject && (
                   <Link href={`/work/${piece.prevProject}`}>

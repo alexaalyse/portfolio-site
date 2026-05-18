@@ -121,13 +121,16 @@ const PortfolioProcessNavigation = ({ steps = defaultProcessSteps }: { steps?: P
               </a>
               
               {/* Label */}
-              <div className="absolute left-16 top-1/2 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
-                <div className="bg-card px-3 py-1 rounded-lg shadow-lg border border-accent/10">
+              <div className="absolute left-16 top-1/2 transform -translate-y-1/2 opacity-100 transition-opacity duration-200 pointer-events-none">
+                <div className={cn(
+                  "px-2 py-1",
+                  status === "active" && "border-l border-accent/40 bg-background/40"
+                )}>
                   <span className={cn(
-                    "text-sm font-medium whitespace-nowrap",
+                    "text-xs font-medium uppercase tracking-[0.14em] whitespace-nowrap",
                     status === "active" && "text-accent",
-                    status === "completed" && "text-accent/80",
-                    status === "upcoming" && "text-muted-foreground"
+                    status === "completed" && "text-accent/60",
+                    status === "upcoming" && "text-muted-foreground/70"
                   )}>
                     {step.label}
                   </span>

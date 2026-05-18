@@ -23,10 +23,9 @@ export function FirewallPolicyBuilderCaseStudy({ piece }: { piece: PortfolioPiec
         </nav>
 
         <div className="relative overflow-hidden lg:pl-28">
-          <div aria-hidden="true" className="pointer-events-none absolute -right-24 top-32 hidden h-72 w-72 rotate-12 border border-accent/15 lg:block" />
           <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[24vw] bg-[linear-gradient(90deg,transparent,rgba(93,28,52,0.08))] lg:block" />
 
-          <div className="relative z-10 mx-auto w-full max-w-[1600px] px-6 py-20 md:px-10 md:py-24 lg:pr-20">
+          <div className="relative z-10 mx-auto w-full max-w-[1600px] px-6 py-20 md:px-10 md:py-24 lg:pl-44 lg:pr-20 xl:pl-48">
             <section id="hero" className="pb-16 md:pb-20">
               <div className="mb-8 flex items-center gap-4">
                 <div className="h-px w-14 bg-accent" />
@@ -34,10 +33,10 @@ export function FirewallPolicyBuilderCaseStudy({ piece }: { piece: PortfolioPiec
                   Case study
                 </p>
               </div>
-              <h1 className="max-w-6xl text-5xl font-bold leading-[0.98] text-primary md:text-7xl">
+              <h1 className="max-w-[1400px] text-5xl font-bold leading-[0.98] text-primary md:text-7xl">
                 Building a policy builder for how administrators actually think
               </h1>
-              <div className="mt-8 max-w-6xl space-y-5 text-xl leading-relaxed text-muted-foreground/90 md:text-2xl">
+              <div className="mt-8 max-w-[1400px] space-y-5 text-xl leading-relaxed text-muted-foreground/90 md:text-2xl">
                 <p>
                   The firewall policy builder was a fragmented, scroll-heavy configuration experience. I led a redesign to turn it into a unified visual workflow built around real user mental models.
                 </p>
@@ -47,14 +46,14 @@ export function FirewallPolicyBuilderCaseStudy({ piece }: { piece: PortfolioPiec
               </div>
               <div className="mt-10 flex flex-wrap gap-3">
                 {piece.tags.map((tag) => (
-                  <span key={tag} className="border border-primary/20 px-3 py-1 text-sm font-medium text-muted-foreground">
+                  <span key={tag} className="border border-primary/15 bg-[#EDE3D8] px-3 py-2 text-sm font-medium leading-tight text-muted-foreground">
                     {tag}
                   </span>
                 ))}
               </div>
             </section>
 
-            <CaseStudySection id="impact" eyebrow="Impact" title="My impact">
+            <CaseStudySection id="impact" eyebrow="Impact" title="Reframed policy creation around administrator intent">
               <div className="grid gap-6 md:grid-cols-2">
                 {policyBuilderImpact.map((item) => (
                   <div key={item.title} className="border-t border-primary/20 pt-5">
@@ -66,7 +65,7 @@ export function FirewallPolicyBuilderCaseStudy({ piece }: { piece: PortfolioPiec
             </CaseStudySection>
 
             <CaseStudySection id="problem" eyebrow="The problem" title="A critical enterprise workflow had become a wall of scroll">
-              <div className="max-w-6xl space-y-6">
+              <div className="max-w-[1400px] space-y-6">
                 <p>
                   The firewall policy builder was one of the most heavily used surfaces in the enterprise dashboard, but over time the experience became increasingly difficult to scale. Administrators needed to configure highly conditional policies across DNS, HTTP, and Network traffic, yet the UI separated those workflows into distinct policy types despite sharing the same underlying logic.
                 </p>
@@ -87,7 +86,7 @@ export function FirewallPolicyBuilderCaseStudy({ piece }: { piece: PortfolioPiec
 
             <CaseStudySection id="solution" eyebrow="The solution" title="A unified If / Then workflow that preserved technical flexibility">
               <div className="space-y-8">
-                <div className="max-w-6xl space-y-6">
+                <div className="max-w-[1400px] space-y-6">
                   <p>
                     I began by reframing the builder around a much simpler mental model: outcomes instead of implementation details. Rather than separating policies into distinct DNS, HTTP, and Network builders, traffic type became another component of policy scope itself.
                   </p>
@@ -204,7 +203,7 @@ export function FirewallPolicyBuilderCaseStudy({ piece }: { piece: PortfolioPiec
               </div>
             </CaseStudySection>
 
-            <CaseStudySection id="reflection" eyebrow="Transferable principles" title="Enterprise complexity becomes easier to manage when interfaces reflect user intent">
+            <CaseStudySection id="reflection" eyebrow="Reflection" title="Enterprise complexity becomes easier to manage when interfaces reflect user intent">
               <div className="space-y-8">
                 <p>
                   Here are principles I would carry into any enterprise workflow with conditional logic, advanced settings, and high-stakes configuration:

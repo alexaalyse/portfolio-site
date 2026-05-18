@@ -1,5 +1,4 @@
 import { frameworks } from "@/frameworks/data"
-import BotanicalBackdrop from "@/components/BotanicalBackdrop"
 import { ArrowDown, ArrowUpRight, Bot, Compass, FileText, Network, Users } from "lucide-react"
 import Link from "next/link"
 
@@ -58,7 +57,6 @@ const AboutSection = () => {
   return (
     <section id="about" className="relative overflow-hidden py-24 md:py-32 lg:pl-28">
       <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[24vw] bg-[linear-gradient(90deg,transparent,rgba(137,148,129,0.1))] lg:block" />
-      <BotanicalBackdrop variant="about" />
 
       <div className="relative z-10 mx-auto w-full max-w-[1600px] px-6 md:px-10 lg:pr-20">
         <div className="mb-8 flex items-center gap-4">
@@ -75,10 +73,7 @@ const AboutSection = () => {
 
           <div className="mt-10 max-w-[1400px] text-xl leading-relaxed text-muted-foreground/90 md:text-2xl">
             <aside aria-label="Fast learning loop diagram" className="relative float-right mb-6 ml-6 w-[min(28rem,42%)] border border-primary/20 bg-card/40 p-6 max-[520px]:float-none max-[520px]:mb-8 max-[520px]:ml-0 max-[520px]:w-full md:ml-10 md:p-8">
-              <div aria-hidden="true" className="absolute -right-4 -top-4 h-20 w-20 border border-accent/40" />
-              <div aria-hidden="true" className="absolute -bottom-4 -left-4 h-16 w-16 border border-primary/30" />
-
-              <div className="relative">
+              <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent/80">
                   Working rhythm
                 </p>
@@ -149,13 +144,13 @@ const AboutSection = () => {
           </div>
         </div>
 
-        <div className="mt-20 max-w-[1400px]">
-          <h3 className="text-2xl font-semibold text-primary md:text-3xl">Where I thrive</h3>
+        <div className="relative mt-20 max-w-[1400px]">
+          <h3 className="text-2xl font-semibold text-primary md:text-3xl">Core strengths</h3>
           <div className="mt-8 grid border-t border-primary/20 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
             {capabilityGroups.map(({ label, Icon, skills }, index) => (
               <article
                 key={label}
-                className="group relative flex flex-col border-b border-primary/20 py-8 pr-6 transition-colors hover:border-accent/70 md:min-h-[17rem] md:pr-8 md:[&:nth-child(even)]:pl-8 xl:min-h-[21rem] xl:px-6 2xl:border-r 2xl:last:border-r-0"
+                className="relative flex flex-col border-b border-primary/20 py-8 pr-6 md:min-h-[17rem] md:pr-8 md:[&:nth-child(even)]:pl-8 xl:min-h-[21rem] xl:px-6 2xl:border-r 2xl:last:border-r-0"
               >
                 <div className="mb-8 flex items-start justify-between gap-6 md:mb-10">
                   <div>
@@ -166,7 +161,7 @@ const AboutSection = () => {
                       {label}
                     </h4>
                   </div>
-                  <span className="flex h-11 w-11 flex-none items-center justify-center border border-accent/35 bg-card/35 text-accent transition-colors group-hover:border-accent/70 group-hover:bg-accent/10">
+                  <span className="flex h-11 w-11 flex-none items-center justify-center border border-accent/35 bg-card/35 text-accent">
                     <Icon className="h-5 w-5" aria-hidden="true" />
                   </span>
                 </div>
@@ -175,7 +170,7 @@ const AboutSection = () => {
                   {skills.map((skill) => (
                     <span
                       key={skill}
-                      className="w-fit max-w-full border border-primary/15 bg-background/45 px-3 py-2 text-sm font-medium leading-tight text-foreground transition-colors group-hover:border-accent/35 group-hover:bg-card/55 md:text-base"
+                      className="w-fit max-w-full border border-primary/15 bg-background/45 px-3 py-2 text-sm font-medium leading-tight text-foreground md:text-base"
                     >
                       {skill}
                     </span>
@@ -219,7 +214,7 @@ const AboutSection = () => {
                       </h4>
                     </div>
                     {entry.href && (
-                      <span className="flex h-11 w-11 flex-none items-center justify-center border border-accent/35 bg-background/35 text-accent transition-colors group-hover:border-accent/70 group-hover:bg-accent/10">
+                      <span className="flex h-11 w-11 flex-none items-center justify-center border border-accent/35 bg-[#EDE3D8] text-accent transition-colors group-hover:border-accent/70 group-hover:bg-[#EDE3D8]/80">
                         <ArrowUpRight className="h-5 w-5 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
                       </span>
                     )}
@@ -234,14 +229,14 @@ const AboutSection = () => {
                 <Link
                   key={entry.slug}
                   href={entry.href}
-                  className="group flex min-h-[14rem] flex-col border border-primary/20 bg-card/35 p-6 transition-colors hover:border-accent/70 hover:bg-card/55 md:min-h-[15rem] md:p-7"
+                  className="group relative flex min-h-[14rem] flex-col border border-primary/20 bg-card/35 p-6 transition-colors hover:border-accent/70 hover:bg-card/55 md:min-h-[15rem] md:p-7"
                 >
                   {content}
                 </Link>
               ) : (
                 <article
                   key={entry.slug}
-                  className="group flex min-h-[14rem] flex-col border border-primary/20 bg-card/35 p-6 md:min-h-[15rem] md:p-7"
+                  className="group relative flex min-h-[14rem] flex-col border border-primary/20 bg-card/35 p-6 md:min-h-[15rem] md:p-7"
                 >
                   {content}
                 </article>

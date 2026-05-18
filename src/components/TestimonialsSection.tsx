@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react"
 import { ArrowDown, Quote, X } from "lucide-react"
-import BotanicalBackdrop from "@/components/BotanicalBackdrop"
 
 const testimonials = [
   {
@@ -84,7 +83,6 @@ const TestimonialsSection = () => {
   return (
     <section id="testimonials" className="relative overflow-hidden py-20 md:py-24 lg:pl-28">
       <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 hidden h-full w-[24vw] bg-[linear-gradient(90deg,transparent,rgba(137,148,129,0.1))] lg:block" />
-      <BotanicalBackdrop variant="references" />
 
       <div className="relative z-10 mx-auto w-full max-w-[1600px] px-6 md:px-10 lg:pr-20">
         <div className="mb-8 flex items-center gap-4">
@@ -109,7 +107,7 @@ const TestimonialsSection = () => {
               key={`${testimonial.relationship}-${index}`}
               className="group relative flex min-h-[22rem] flex-col border border-primary/20 bg-card/35 p-6 transition-colors hover:border-accent/70 hover:bg-card/55 md:p-8"
             >
-              <div className="mb-6 flex items-start justify-between gap-6">
+              <div className="relative mb-6 flex items-start justify-between gap-6">
                 <div>
                   <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-accent/80">
                     {String(index + 1).padStart(2, "0")}
@@ -118,19 +116,19 @@ const TestimonialsSection = () => {
                     {testimonial.relationship}
                   </h3>
                 </div>
-                <span className="mt-1 flex h-11 w-11 flex-none items-center justify-center border border-accent/35 bg-background/35 text-accent transition-colors group-hover:border-accent/70 group-hover:bg-accent/10">
+                <span className="mt-1 flex h-11 w-11 flex-none items-center justify-center border border-accent/35 bg-[#EDE3D8] text-accent transition-colors group-hover:border-accent/70 group-hover:bg-[#EDE3D8]/80">
                   <Quote className="h-5 w-5" aria-hidden="true" />
                 </span>
               </div>
 
-              <p className="line-clamp-6 text-base leading-relaxed text-muted-foreground/90 md:text-lg">
+              <p className="relative line-clamp-6 text-base leading-relaxed text-muted-foreground/90 md:text-lg">
                 {testimonial.quote[0]}
               </p>
 
               <button
                 type="button"
                 onClick={() => setSelectedTestimonial(index)}
-                className="mt-auto inline-flex w-fit items-center gap-2 border border-primary/15 bg-background/35 px-3 py-2 text-sm font-semibold uppercase tracking-[0.18em] text-accent transition-colors hover:border-accent/50 hover:bg-background/55 hover:text-primary md:mt-12"
+                className="relative mt-auto inline-flex w-fit items-center gap-2 border border-primary/15 bg-[#EDE3D8] px-3 py-2 text-sm font-semibold uppercase tracking-[0.18em] text-accent transition-colors hover:border-accent/50 hover:bg-[#EDE3D8]/80 hover:text-primary md:mt-12"
               >
                 Read more
               </button>

@@ -137,7 +137,7 @@ export default function EducationTwoWayStreetPage() {
             </div>
 
             <p className="mt-10 border-l-2 border-accent pl-6 text-lg font-semibold leading-relaxed text-foreground md:text-xl">
-              Bonus: It was just as important to educate internal users. At the end of January 2025, I launched the application version of the Content Quality Index so that teams at a large infrastructure company felt empowered to write within our style guide.
+              Bonus: It was just as important to educate internal users. At the end of January 2025, I launched an AI-assisted content quality scoring and generation workflow so that teams at a large infrastructure company felt empowered to write within our style guide.
             </p>
           </section>
 
