@@ -275,7 +275,7 @@ export const portfolioPieces = {
         images: ['book-open', 'checklist']
       }
     ],
-    tags: ['Content Strategy', 'User Engagement', 'First-Time Experience', 'UX Writing', 'A/B Testing'],
+    tags: ['Content Strategy', 'User Engagement', 'First-Time Experience', 'UX writing', 'A/B Testing'],
     nextProject: 'clue-index',
     prevProject: 'zero-trust-navigation'
   },
@@ -334,7 +334,7 @@ export const portfolioPieces = {
       }
     ],
     beforeAfter: undefined,
-    tags: ['AI-assisted UX', 'Content quality', 'UX Writing Systems', 'Measurement'],
+    tags: ['AI-assisted UX', 'Content quality', 'UX writing systems', 'Measurement'],
     nextProject: 'gateway-policy-builder',
     prevProject: 'empty-states'
   },

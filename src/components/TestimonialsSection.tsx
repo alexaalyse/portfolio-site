@@ -7,21 +7,21 @@ const testimonials = [
   {
     relationship: "Product Manager",
     quote: [
-      "Alexa is full-stop one of the brightest and most capable people I've ever worked with. Her capability and her pragmatism, curiosity, ability to digest information, and general attitude and aptitude are unmatched.",
+      "Alexa is full-stop one of the brightest and most capable people I've ever worked with. Her capability and her pragmatism, curiosity, ability to digest information, and general attitude and aptitude are unmatched...",
       "We worked on 25+ projects together over 18 months, shipping tons of changes that affected the core interactions of the application our users interacted with. She is incredibly data-driven, savvy, quick-thinking, and is full of good ideas in any situation that are always creative, unique, and applicable.",
       "She literally touched every single thing about the Cloudflare One product suite during her time, and stretched far beyond the written bounds of her role. The entire product surface area, the documentation, down to the logical design of our interactions and API surface, and so so many other things. She makes everything she touches better. Every corner of the product is demonstrably better because of a suggestion or decision that she personally made.",
       "Alexa was a very early adopter at using AI at work and has an extreme proficiency for accelerating her own capability with agentic work. She is a true 10x employee in any capacity. She would be a star player for absolutely any team in any position.",
     ],
   },
   {
-    relationship: "Engineering manager",
+    relationship: "Engineering Manager",
     quote: [
       "Alexa has been a pivotal force within the Zero Trust organization as a UX Content Strategist. Her leadership on multiple initiatives has significantly enhanced our users' experience through her close collaboration with the Zero Trust design and Dashboard teams. Alexa has spearheaded research initiatives and tracking efforts that have been crucial in understanding our users' habits and needs. This insight has allowed our product teams to make informed decisions, effectively filling the gap left by the absence of a Product Manager for the Dashboard team.",
       "Beyond her technical skills, Alexa is a pleasure to work with - she's professional, easy to collaborate with, and highly valued by my team. Engineers have frequently praised her work, noting how impressive and impactful her contributions have been. Alexa's leadership in driving user experience and content strategy within our organization is unmatched, and she has been a key advocate for prioritizing design teams within Zero Trust. Her willingness to tackle challenging problems and her dedication to sharing knowledge with Engineering and Product teams have been instrumental in fostering cross-team alignment and understanding.",
     ],
   },
   {
-    relationship: "Technical writing manager",
+    relationship: "Technical Writing Manager",
     quote: [
       "I partnered with Alexa on projects at Cloudflare, and she knew the Zero Trust products better than some of the product managers and engineers building them. That's not an exaggeration. She was constantly in the product, on customer calls, pulling data, investigating how people actually used features and where they were getting stuck. And then she did something about it.",
       "For example, the Zero Trust dashboard navigation needed a lot of work. Customers couldn't figure out where to go to complete basic tasks. Alexa dug into the data, built a case for restructuring the information architecture around use cases instead of product silos, and got buy-in from the product management team. Anyone who's worked in a big company knows that last part alone is a project. After the revamp, customers had a noticeably easier time navigating the dashboard to configure policies and troubleshoot issues.",
@@ -30,7 +30,7 @@ const testimonials = [
     ],
   },
   {
-    relationship: "Product manager",
+    relationship: "Product Manager",
     quote: [
       "Alexa has revolutionized how we leverage usage data in the Zero Trust product. She has driven the creation of metrics and changes in the product that have directly driven increased usage and revenue. Alexa worked across product, engineering, BI and more to develop a clear and accurate picture of how Zero Trust users interact with the platform and then executed against a clear set of improvements she identified from those metrics.",
       "Alexa was such a great hire. She has elevated the quality of our in-product content with very little external support. She goes and gets things done without much hand holding or explanation. When I assign a task to Alexa, I know it will get done and it will be done with quality.",
@@ -38,7 +38,7 @@ const testimonials = [
     ],
   },
   {
-    relationship: "Design manager",
+    relationship: "Design Manager",
     quote: [
       "Alexa has truly elevated our strategic content experience. Her deep knowledge of the Cloudflare One product, combined with her sharp understanding of user needs, makes her an invaluable asset to our team and a cornerstone for enhancing the user experience. Alexa's reliability is unmatched; she consistently attends meetings and contributes meaningfully to workshops and brainstorming sessions.",
       "Her role in the CF1 Observatory has been pivotal in maintaining consistency and ensuring the user's voice is front and center, particularly during the rollout of new products, features, and company acquisitions.",
@@ -47,7 +47,7 @@ const testimonials = [
     ],
   },
   {
-    relationship: "Product director",
+    relationship: "Product Director",
     quote: [
       "Alexa is a superstar. Every opportunity I've had to work with her has been an absolute pleasure - she's organized, thoughtful, detail oriented, thorough, customer-focused, empathetic, and clear; she skillfully balances delivering short term wins with advocating for longer term/bigger picture change; she tells the important story quickly while providing the details for people who want to dig deeper. We all have things to learn from Alexa.",
     ],
@@ -128,7 +128,7 @@ const TestimonialsSection = () => {
                 onClick={() => setSelectedTestimonial(index)}
                 className="mt-auto inline-flex items-center gap-2 pt-8 text-sm font-semibold uppercase tracking-[0.18em] text-accent transition-colors hover:text-primary"
               >
-                Read full reference
+                Read more
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
               </button>
             </article>
