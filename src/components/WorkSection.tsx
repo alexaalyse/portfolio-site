@@ -86,12 +86,12 @@ const WorkSection = () => {
           </p>
         </div>
 
-        <div className="grid border-t border-primary/20 lg:grid-cols-2">
+        <div className="grid gap-6 md:gap-8 lg:grid-cols-2">
           {projects.map((project, index) => (
             <Link
               key={project.slug}
               href={`/work/${project.slug}`}
-              className="group flex min-h-[22rem] flex-col border-b border-primary/20 py-8 pr-6 transition-colors hover:border-accent/70 md:py-10 lg:pr-8 lg:[&:nth-child(even)]:pl-8"
+              className="group relative flex min-h-[24rem] flex-col border border-primary/20 bg-card/35 p-6 transition-colors hover:border-accent/70 hover:bg-card/55 md:p-8 lg:min-h-[26rem]"
             >
               <div className="mb-8 flex items-start justify-between gap-6">
                 <div>
@@ -102,18 +102,20 @@ const WorkSection = () => {
                     {project.title}
                   </h3>
                 </div>
-                <ArrowUpRight className="mt-1 h-6 w-6 flex-none text-accent transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
+                <span className="mt-1 flex h-11 w-11 flex-none items-center justify-center border border-accent/35 bg-background/35 text-accent transition-colors group-hover:border-accent/70 group-hover:bg-accent/10">
+                  <ArrowUpRight className="h-5 w-5 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
+                </span>
               </div>
 
               <p className="text-base leading-relaxed text-muted-foreground/90 md:text-lg">
                 {project.description}
               </p>
 
-              <div className="mt-auto flex flex-wrap gap-x-4 gap-y-3 pt-8">
+              <div className="mt-auto flex flex-wrap gap-3 pt-8">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-sm font-medium text-muted-foreground transition-colors group-hover:text-foreground"
+                    className="border border-primary/15 bg-background/35 px-3 py-2 text-sm font-medium leading-tight text-muted-foreground transition-colors group-hover:border-accent/35 group-hover:bg-background/55 group-hover:text-foreground"
                   >
                     {tag}
                   </span>

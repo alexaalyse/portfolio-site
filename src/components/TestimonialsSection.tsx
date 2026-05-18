@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { ArrowDown, ArrowUpRight, Quote, X } from "lucide-react"
+import { ArrowDown, Quote, X } from "lucide-react"
 
 const testimonials = [
   {
@@ -101,11 +101,11 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        <div className="mt-12 grid max-w-[1400px] border-t border-primary/20 md:grid-cols-2 md:gap-x-8 xl:grid-cols-3">
+        <div className="mt-12 grid max-w-[1400px] gap-6 md:grid-cols-2 md:gap-8 xl:grid-cols-3">
           {testimonials.map((testimonial, index) => (
             <article
               key={`${testimonial.relationship}-${index}`}
-              className="group flex min-h-[21rem] flex-col border-b border-primary/20 py-8 pr-6 transition-colors hover:border-accent/70 md:pr-0"
+              className="group relative flex min-h-[22rem] flex-col border border-primary/20 bg-card/35 p-6 transition-colors hover:border-accent/70 hover:bg-card/55 md:p-8"
             >
               <div className="mb-6 flex items-start justify-between gap-6">
                 <div>
@@ -116,7 +116,9 @@ const TestimonialsSection = () => {
                     {testimonial.relationship}
                   </h3>
                 </div>
-                <Quote className="mt-1 h-5 w-5 flex-none text-accent" aria-hidden="true" />
+                <span className="mt-1 flex h-11 w-11 flex-none items-center justify-center border border-accent/35 bg-background/35 text-accent transition-colors group-hover:border-accent/70 group-hover:bg-accent/10">
+                  <Quote className="h-5 w-5" aria-hidden="true" />
+                </span>
               </div>
 
               <p className="line-clamp-6 text-base leading-relaxed text-muted-foreground/90 md:text-lg">
@@ -126,10 +128,9 @@ const TestimonialsSection = () => {
               <button
                 type="button"
                 onClick={() => setSelectedTestimonial(index)}
-                className="mt-auto inline-flex items-center gap-2 pt-8 text-sm font-semibold uppercase tracking-[0.18em] text-accent transition-colors hover:text-primary"
+                className="mt-auto inline-flex w-fit items-center gap-2 border border-primary/15 bg-background/35 px-3 py-2 text-sm font-semibold uppercase tracking-[0.18em] text-accent transition-colors hover:border-accent/50 hover:bg-background/55 hover:text-primary md:mt-12"
               >
                 Read more
-                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
               </button>
             </article>
           ))}

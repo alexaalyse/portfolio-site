@@ -37,11 +37,11 @@ export default function FrameworksPage() {
             </p>
           </div>
 
-          <div className="grid border-t border-primary/20 lg:grid-cols-2">
+          <div className="grid gap-6 md:gap-8 lg:grid-cols-2">
             {frameworks.map((entry, index) => {
               const content = (
                 <>
-                  <div className="mb-8 flex items-start justify-between gap-6">
+                  <div className="mb-6 flex items-start justify-between gap-6">
                     <div>
                       <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-accent/80">
                         {String(index + 1).padStart(2, "0")}
@@ -51,7 +51,9 @@ export default function FrameworksPage() {
                       </h2>
                     </div>
                     {entry.href && (
-                      <ArrowUpRight className="mt-1 h-6 w-6 flex-none text-accent transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
+                      <span className="mt-1 flex h-11 w-11 flex-none items-center justify-center border border-accent/35 bg-background/35 text-accent transition-colors group-hover:border-accent/70 group-hover:bg-accent/10">
+                        <ArrowUpRight className="h-5 w-5 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
+                      </span>
                     )}
                   </div>
 
@@ -65,14 +67,14 @@ export default function FrameworksPage() {
                 <Link
                   key={entry.slug}
                   href={entry.href}
-                  className="group flex min-h-[18rem] flex-col border-b border-primary/20 py-8 pr-6 transition-colors hover:border-accent/70 md:py-10 lg:px-8"
+                  className="group flex min-h-[15rem] flex-col border border-primary/20 bg-card/35 p-6 transition-colors hover:border-accent/70 hover:bg-card/55 md:min-h-[16rem] md:p-7"
                 >
                   {content}
                 </Link>
               ) : (
                 <article
                   key={entry.slug}
-                  className="group flex min-h-[18rem] flex-col border-b border-primary/20 py-8 pr-6 md:py-10 lg:px-8"
+                  className="group flex min-h-[15rem] flex-col border border-primary/20 bg-card/35 p-6 md:min-h-[16rem] md:p-7"
                 >
                   {content}
                 </article>

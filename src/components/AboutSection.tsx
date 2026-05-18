@@ -1,5 +1,5 @@
 import { frameworks } from "@/frameworks/data"
-import { ArrowDown, ArrowUpRight } from "lucide-react"
+import { ArrowDown, ArrowUpRight, Bot, Compass, FileText, Network, Users } from "lucide-react"
 import Link from "next/link"
 
 const learningLoop = [
@@ -22,6 +22,34 @@ const learningLoop = [
     step: "04",
     title: "Learn",
     detail: "Measure what changed, sharpen the pattern, and iterate again.",
+  },
+]
+
+const capabilityGroups = [
+  {
+    label: "Product strategy",
+    Icon: Compass,
+    skills: ["UX strategy", "Product direction", "ROI measurement", "User research"],
+  },
+  {
+    label: "Systems thinking",
+    Icon: Network,
+    skills: ["Systems design", "Information architecture", "API design as UX design", "Connected experiences"],
+  },
+  {
+    label: "AI and interaction",
+    Icon: Bot,
+    skills: ["AI workflows", "Conversational AI", "Context engineering", "AI-ready experiences"],
+  },
+  {
+    label: "Content systems",
+    Icon: FileText,
+    skills: ["Content as a product", "UX writing systems", "Terminology and guidance", "Workflow simplification"],
+  },
+  {
+    label: "Operational leadership",
+    Icon: Users,
+    skills: ["Cross-functional leadership", "Experimentation", "Insight synthesis", "Data analysis"],
   },
 ]
 
@@ -121,16 +149,37 @@ const AboutSection = () => {
 
         <div className="mt-20 max-w-[1400px]">
           <h3 className="text-2xl font-semibold text-primary md:text-3xl">Where I thrive</h3>
-          <div className="mt-8 grid border-t border-primary/20 md:grid-cols-2 lg:grid-cols-4">
-            {[
-              "UX and product strategy", "Systems thinking", "API design as UX design",
-              "Information architecture", "Data analysis", "AI workflows", "Content as a product",
-              "ROI Measurement", "Conversational AI", "Context engineering", "User research", "Cross-functional leadership",
-            ].map((skill) => (
-              <div key={skill} className="group border-b border-primary/20 py-5 pr-6 transition-colors hover:border-accent/60">
-                <div className="mb-4 h-px w-8 bg-accent/50 transition-all group-hover:w-14 group-hover:bg-accent" />
-                <p className="font-medium leading-snug">{skill}</p>
-              </div>
+          <div className="mt-8 grid border-t border-primary/20 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+            {capabilityGroups.map(({ label, Icon, skills }, index) => (
+              <article
+                key={label}
+                className="group relative flex flex-col border-b border-primary/20 py-8 pr-6 transition-colors hover:border-accent/70 md:min-h-[17rem] md:pr-8 md:[&:nth-child(even)]:pl-8 xl:min-h-[21rem] xl:px-6 2xl:border-r 2xl:last:border-r-0"
+              >
+                <div className="mb-8 flex items-start justify-between gap-6 md:mb-10">
+                  <div>
+                    <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-accent/80">
+                      {String(index + 1).padStart(2, "0")}
+                    </p>
+                    <h4 className="text-xl font-semibold leading-tight text-primary md:text-2xl">
+                      {label}
+                    </h4>
+                  </div>
+                  <span className="flex h-11 w-11 flex-none items-center justify-center border border-accent/35 bg-card/35 text-accent transition-colors group-hover:border-accent/70 group-hover:bg-accent/10">
+                    <Icon className="h-5 w-5" aria-hidden="true" />
+                  </span>
+                </div>
+
+                <div className="flex flex-wrap gap-3 md:mt-auto">
+                  {skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="border border-primary/15 bg-background/45 px-3 py-2 text-sm font-medium leading-tight text-foreground transition-colors group-hover:border-accent/35 group-hover:bg-card/55 md:text-base"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </article>
             ))}
           </div>
         </div>
@@ -142,7 +191,7 @@ const AboutSection = () => {
                 Frameworks
               </p>
               <h3 className="text-2xl font-semibold text-primary md:text-3xl">
-                How I build and think
+                Mental models for making complexity usable
               </h3>
             </div>
             <Link
@@ -154,22 +203,26 @@ const AboutSection = () => {
             </Link>
           </div>
 
-          <div className="grid border-t border-primary/20 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2 md:gap-8">
             {frameworks.slice(0, 2).map((entry, index) => {
               const content = (
                 <>
-                  <div className="mb-5 flex items-start justify-between gap-6">
-                    <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent/80">
-                      {String(index + 1).padStart(2, "0")}
-                    </p>
+                  <div className="mb-4 flex items-start justify-between gap-6">
+                    <div>
+                      <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-accent/80">
+                        {String(index + 1).padStart(2, "0")}
+                      </p>
+                      <h4 className="text-2xl font-semibold leading-tight text-primary md:text-3xl">
+                        {entry.title}
+                      </h4>
+                    </div>
                     {entry.href && (
-                      <ArrowUpRight className="h-5 w-5 flex-none text-accent transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
+                      <span className="flex h-11 w-11 flex-none items-center justify-center border border-accent/35 bg-background/35 text-accent transition-colors group-hover:border-accent/70 group-hover:bg-accent/10">
+                        <ArrowUpRight className="h-5 w-5 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
+                      </span>
                     )}
                   </div>
-                  <h4 className="text-2xl font-semibold leading-tight text-primary md:text-3xl">
-                    {entry.title}
-                  </h4>
-                  <p className="mt-5 text-base leading-relaxed text-muted-foreground/90 md:text-lg">
+                  <p className="mt-4 text-base leading-relaxed text-muted-foreground/90 md:text-lg">
                     {entry.dek}
                   </p>
                 </>
@@ -179,14 +232,14 @@ const AboutSection = () => {
                 <Link
                   key={entry.slug}
                   href={entry.href}
-                  className="group border-b border-primary/20 py-8 pr-6 transition-colors hover:border-accent/70 md:py-10 md:pr-8 md:[&:nth-child(even)]:pl-8"
+                  className="group flex min-h-[14rem] flex-col border border-primary/20 bg-card/35 p-6 transition-colors hover:border-accent/70 hover:bg-card/55 md:min-h-[15rem] md:p-7"
                 >
                   {content}
                 </Link>
               ) : (
                 <article
                   key={entry.slug}
-                  className="group border-b border-primary/20 py-8 pr-6 md:py-10 md:pr-8 md:[&:nth-child(even)]:pl-8"
+                  className="group flex min-h-[14rem] flex-col border border-primary/20 bg-card/35 p-6 md:min-h-[15rem] md:p-7"
                 >
                   {content}
                 </article>
